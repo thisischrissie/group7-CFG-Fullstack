@@ -1,0 +1,14 @@
+.card
+{
+    width: 300px;
+    height: 400px;
+    border: 1px #ffffff;
+    border-radius: 20px;
+    margin: 50px auto;
+    background: green;
+}
+
+.card-back
+{
+    background-color: blue;
+}
