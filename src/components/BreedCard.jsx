@@ -16,6 +16,8 @@ function BreedCard(props) {
                 <div key="front" onClick={flipCard}>
                     <div className="card">
                     <img src={props.imageUrl} alt={props.imageAlt} />
+                    <div className="breedName"><h1>{props.dogBreed}</h1></div>
+                    
                 </div>
                 </div>
                 {/* Back side */}
