@@ -23,7 +23,16 @@ function BreedCard(props) {
                 {/* Back side */}
                 <div key="back" onClick={flipCard}>
                     <div className="card card-back">
-                    <h1>{props.dogBreed}</h1>
+                        <div className="breedInfo">
+                        <h3>Qualities</h3>
+                        <p>{props.dogBreed}</p>
+                        <h3>Temperament</h3>
+                        <p>{props.dogBreed}</p>
+                        <h3>Need to knows</h3>
+                        <p>{props.dogBreed}</p>
+
+                        </div>
+                    
                 </div>
                 </div>
             </ReactCardFlip>

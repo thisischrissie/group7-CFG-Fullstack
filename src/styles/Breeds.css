@@ -7,8 +7,8 @@ body
 }
 .card
 {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     border: 1px #ffffff;
     border-radius: 20px;
     margin: 50px auto;
@@ -36,8 +36,8 @@ img
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    width: 250px; 
-    height: 250px; 
+    width: 350px; 
+    height: 350px; 
     border-radius: 50%;
     overflow: hidden;
 }
@@ -52,3 +52,10 @@ img
     color: #8A5D3D;
 }
 
+.breedInfo{
+    padding:20px;
+    
+  align-items: center; /* Center vertically */
+  text-align: center;
+    color: #8A5D3D;
+}
