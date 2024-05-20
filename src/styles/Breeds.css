@@ -7,8 +7,8 @@ body
 }
 .card
 {
-    width: 400px;
-    height: 500px;
+    width: 450px;
+    height: 550px;
     border: 1px #ffffff;
     border-radius: 20px;
     margin: 50px auto;
@@ -17,7 +17,13 @@ body
     display: flex; /* Use Flexbox for easier alignment */
     flex-direction: column; /* Stack items vertically */
     justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
+
+.card:hover {
+    box-shadow: 0 0 20px #CAF377; /* Add glow effect on hover */
+  }
 
 .card-back
 {
