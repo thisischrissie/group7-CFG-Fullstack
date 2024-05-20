@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 
-function Breeds() {
+function Breeds(props) {
     const [isFlipped, setIsFlipped] = useState(false);
 
     function flipCard() {
@@ -14,13 +14,13 @@ function Breeds() {
                 {/* Front side */}
                 <div key="front" onClick={flipCard}>
                     <div className="card"></div>
-                    <h1>Front</h1>
+                    <img src={props.imageUrl} alt={props.imageAlt} />
                 </div>
                 
                 {/* Back side */}
                 <div key="back" onClick={flipCard}>
                     <div className="card card-back"></div>
-                    <h1>Back</h1>
+                    <h1>{props.dogBreed}</h1>
                 </div>
             </ReactCardFlip>
         </div>

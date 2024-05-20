@@ -5,7 +5,7 @@ import Breeds from './pages/InfoBreeds';
 function App() {
   return (
     <div>
-      <Breeds />
+      <Breeds imageUrl="https://example.com/image1.jpg" imageAlt="Image 1 description" dogBreed="Terrior" />
     </div>
   );
 }
