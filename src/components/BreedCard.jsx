@@ -25,11 +25,11 @@ function BreedCard(props) {
                     <div className="card card-back">
                         <div className="breedInfo">
                         <h3>Qualities</h3>
-                        <p>{props.dogBreed}</p>
+                        <p>{props.quality}</p>
                         <h3>Temperament</h3>
-                        <p>{props.dogBreed}</p>
+                        <p>{props.temper}</p>
                         <h3>Need to knows</h3>
-                        <p>{props.dogBreed}</p>
+                        <p>{props.knows}</p>
 
                         </div>
                     

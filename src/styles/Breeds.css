@@ -222,3 +222,29 @@ img {
     justify-content: center !important; /* Align items to the start */
   }
 }
+@media (min-width: 1650px) {
+    /* Large Desktop */
+    .card {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+    .breedName {
+      font-size: 2rem;
+    }
+    .breedInfo {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    .card img {
+      width: 60%; /* Example: Make the image responsive */
+      height: auto;
+    }
+    .grid-container {
+      justify-content: center !important; /* Align items to the start */
+    }
+  }
