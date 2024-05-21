@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+  /* Define a fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
 body
 {
     background-color: #FFF2E8;
@@ -19,6 +29,8 @@ body
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in;
 }
 
 .card:hover {
@@ -28,12 +40,15 @@ body
 .card-back
 {
     background-color: #F5D0A9;
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 40px;
+  padding: 20px;
 }
 
 img
@@ -65,3 +80,45 @@ img
   text-align: center;
     color: #8A5D3D;
 }
+
+@media (max-width: 600px) {
+    /* Mobile */
+    .card {
+      width: 90%;
+      font-size: 0.8rem;
+    }
+    .breedName {
+      font-size: 1.2rem;
+    }
+    .breedInfo {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1200px) {
+    /* Normal Desktop */
+    .card {
+      width: 100%;
+      font-size: 1rem;
+    }
+    .breedName {
+      font-size: 1.5rem;
+    }
+    .breedInfo {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 1201px) {
+    /* Large Desktop */
+    .card {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+    .breedName {
+      font-size: 2rem;
+    }
+    .breedInfo {
+      font-size: 1.2rem;
+    }
+  }

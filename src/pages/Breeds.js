@@ -6,6 +6,7 @@ import '../styles/Breeds.css';
 function Breed()
 {
     return (
+    //NAV BAR GOES HERE
     <div className="grid-container">
       <BreedCard imageUrl="dog1.png" imageAlt="Corgi" dogBreed="Corgi" />
       <BreedCard imageUrl="dog2.png" imageAlt="Image 2 description" dogBreed="Breed 2" />
