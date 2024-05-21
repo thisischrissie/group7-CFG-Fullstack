@@ -1,124 +1,224 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
-  /* Define a fade-in animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+/* Define a fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-
-body
-{
-    background-color: #FFF2E8;
-    font-family: 'Varela', sans-serif;
+  to {
+    opacity: 1;
+  }
 }
-.card
-{
-    width: 450px;
-    height: 550px;
-    border: 1px #ffffff;
-    border-radius: 20px;
-    margin: 50px auto;
-    background: #F5D0A9;
-    position: relative;
-    display: flex; /* Use Flexbox for easier alignment */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    transition: transform 0.3s ease-in-out;
+
+body {
+  background-color: #fff2e8;
+  font-family: "Varela", sans-serif;
+}
+.card {
+  width: 450px;
+  height: 550px;
+  border: 1px #ffffff;
+  border-radius: 20px;
+  margin: 50px auto;
+  background: #f5d0a9;
+  position: relative;
+  display: flex; /* Use Flexbox for easier alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease-in-out;
   animation: fadeIn 1s ease-in;
 }
 
 .card:hover {
-    box-shadow: 0 0 20px #CAF377; /* Add glow effect on hover */
-  }
+  box-shadow: 0 0 20px #caf377; /* Add glow effect on hover */
+}
 
-.card-back
-{
-    background-color: #F5D0A9;
-    transition: transform 0.3s ease-in-out;
-    animation: fadeIn 1s ease-in;
+.card-back {
+  background-color: #f5d0a9;
+  transition: transform 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in;
 }
 
 .grid-container {
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 40px;
   padding: 20px;
+  justify-content: center;
 }
 
-img
-{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 350px; 
-    height: 350px; 
-    border-radius: 50%;
-    overflow: hidden;
+img {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-.breedName{
-    margin-top: auto; 
-    text-align: center; 
-    position: absolute; 
-    bottom: 10px; 
-    left: 0; 
-    right: 0; 
-    color: #8A5D3D;
+.breedName {
+  margin-top: auto;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  color: #8a5d3d;
 }
 
-.breedInfo{
-    padding:20px;
-    
+.breedInfo {
+  padding: 20px;
   align-items: center; /* Center vertically */
   text-align: center;
-    color: #8A5D3D;
+  color: #8a5d3d;
 }
 
-@media (max-width: 600px) {
-    /* Mobile */
-    .card {
-      width: 90%;
-      font-size: 0.8rem;
-    }
-    .breedName {
-      font-size: 1.2rem;
-    }
-    .breedInfo {
-      font-size: 0.8rem;
-    }
+@media (min-width: 400px) {
+  .card {
+    width: 55%; /* Example: Adjust the width of the card */
+    justify-content: center !important;
+    margin: 5% 15%;
   }
-  
-  @media (min-width: 601px) and (max-width: 1200px) {
-    /* Normal Desktop */
-    .card {
-      width: 100%;
-      font-size: 1rem;
-    }
-    .breedName {
-      font-size: 1.5rem;
-    }
-    .breedInfo {
-      font-size: 1rem;
-    }
+  .breedName {
+    font-size: 1.2rem; /* Example: Adjust font size */
   }
-  
-  @media (min-width: 1201px) {
-    /* Large Desktop */
-    .card {
-      width: 100%;
-      font-size: 1.2rem;
-    }
-    .breedName {
-      font-size: 2rem;
-    }
-    .breedInfo {
-      font-size: 1.2rem;
-    }
+  .breedInfo {
+    font-size: 0.9rem; /* Example: Adjust font size */
   }
+  .card img {
+    width: 90%; /* Example: Make the image responsive */
+    height: auto;
+  }
+  .grid-container {
+    justify-content: center !important; /* Align items to the start */
+  }
+ 
+}
+
+@media (min-width: 640px) {
+  .card {
+    width: 65%; /* Example: Adjust the width of the card */
+    justify-content: center !important;
+    margin: 5% 10%;
+  }
+  .breedName {
+    font-size: 1.4rem; /* Example: Adjust font size */
+  }
+  .breedInfo {
+    font-size: 1rem; /* Example: Adjust font size */
+  }
+  .card img {
+    width: 80%; /* Example: Make the image responsive */
+    height: auto;
+  }
+  .grid-container {
+    justify-content: center !important; /* Align items to the start */
+  }
+}
+
+@media (min-width: 768px) {
+  /* Mobile */
+  .card {
+    width: 80%; /* Example: Adjust the width of the card */
+    justify-content: center !important;
+    margin: 5% 10%;
+  }
+  .breedName {
+    font-size: 1.2rem;
+  }
+  .breedInfo {
+    font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .card img {
+    width: 55%; /* Example: Make the image responsive */
+    height: auto;
+  }
+  .grid-container {
+    justify-content: center !important; /* Align items to the start */
+  }
+}
+@media (min-width: 1024px) {
+  /* Normal Desktop */
+  .card {
+    width: 90%; /* Example: Adjust the width of the card */
+    justify-content: center !important;
+    margin: 5% 5%;
+  }
+  .breedName {
+    font-size: 1.5rem;
+  }
+  .breedInfo {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .card img {
+    width: 70%; /* Example: Make the image responsive */
+    height: auto;
+  }
+  .grid-container {
+    justify-content: center !important; /* Align items to the start */
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Large Desktop */
+  .card {
+    width: 100%; /* Example: Adjust the width of the card */
+    justify-content: center !important;
+    margin: 5% 0%;
+  }
+  .breedName {
+    font-size: 2rem;
+  }
+  .breedInfo {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .card img {
+    width: 60%; /* Example: Make the image responsive */
+    height: auto;
+  }
+  .grid-container {
+    justify-content: center !important; /* Align items to the start */
+  }
+}
+@media (min-width: 1536px) {
+  /* Large Desktop */
+  .card {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .breedName {
+    font-size: 2rem;
+  }
+  .breedInfo {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .card img {
+    width: 80%; /* Example: Make the image responsive */
+    height: auto;
+  }
+  .grid-container {
+    justify-content: center !important; /* Align items to the start */
+  }
+}
