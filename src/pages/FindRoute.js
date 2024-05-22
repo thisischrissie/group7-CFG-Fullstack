@@ -1,16 +1,15 @@
 import React from 'react';
 
-export default function Profile () {
+export default function FindRoute() {
   return (
     <div>
       <header>
-        <h1>Profile</h1>
+        <h1>Find a Route</h1>
       </header>
       <main>
-        <p>This is your dog's profile page</p>
+        <p>Find a route for your dog!</p>
         
       </main>
     </div>
   );
 }
-
