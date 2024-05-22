@@ -1,5 +1,5 @@
 import React from 'react';
-import BreedCard from '../components/BreedCard.jsx';
+import BreedCard from '../components/BreedCard.jsx'; //this works and won't start a fight with npm start
 import '../styles/Breeds.css';
 
 
