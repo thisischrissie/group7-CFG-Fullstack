@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "./components/Login";
+import Login from "./pages/Login";
 
 function App() {
   return (

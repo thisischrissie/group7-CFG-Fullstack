@@ -32,10 +32,10 @@ function Login() {
               <GhostButton onClick={() => toggle(true)}>Sign In</GhostButton>
             </LeftOverlayPanel>
             <RightOverlayPanel signinIn={signIn}>
-              <Title>Don't have an account?</Title>
+              <SignUpTitle>Don't have an account?</SignUpTitle>
               <Paragraph>
-                Enter Your personal details <br />
-                and start journey with us
+                Enter your personal details <br />
+                and start the journey with us!
               </Paragraph>
               <GhostButton onClick={() => toggle(false)}>Sign Up</GhostButton>
             </RightOverlayPanel>
@@ -110,6 +110,13 @@ const Form = styled.form`
 const Title = styled.h1`
   font-weight: bold;
   font-size: 30px;
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+`;
+
+const SignUpTitle = styled(Title)`
+  font-weight: bold;
+  font-size: 26px;
   font-family: "Varela Round", sans-serif;
   margin: 0;
 `;
@@ -191,7 +198,7 @@ const OverlayPanel = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 20px;
   text-align: center;
   top: 0;
   height: 100%;
@@ -205,7 +212,7 @@ const LeftOverlayPanel = styled(OverlayPanel)`
   ${(props) => (props.signinIn !== true ? `transform: translateX(0);` : null)}
   justify-content: center;
   align-items: flex-start;
-  padding-left: 40px;
+  padding-left: 30px;
 `;
 
 const RightOverlayPanel = styled(OverlayPanel)`
@@ -214,7 +221,7 @@ const RightOverlayPanel = styled(OverlayPanel)`
   ${(props) => (props.signinIn !== true ? `transform: translateX(20%);` : null)}
   justify-content: center;
   align-items: flex-end;
-  padding-right: 60px; /* Adjusted padding to move content more to the right */
+  padding-right: 40px;
 `;
 
 const Paragraph = styled.p`
@@ -224,6 +231,7 @@ const Paragraph = styled.p`
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
+  padding-right: 40px;
 `;
 
 export default Login;
