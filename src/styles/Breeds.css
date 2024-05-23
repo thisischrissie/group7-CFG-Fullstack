@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"); /* can be removed after merging and using global.css */
 
 /* Define a fade-in animation */
 @keyframes fadeIn {
@@ -10,10 +10,13 @@
   }
 }
 
+/* can be removed after merging and using global.css */
 body {
   background-color: #fff2e8;
   font-family: "Varela", sans-serif;
 }
+
+/* Card component CSS */
 .card {
   width: 450px;
   height: 550px;
@@ -26,8 +29,8 @@ body {
   flex-direction: column; /* Stack items vertically */
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  transition: transform 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease; 
+  transition: transform 0.3s ease-in-out;/* animations */
   animation: fadeIn 1s ease-in;
 }
 
@@ -35,12 +38,14 @@ body {
   box-shadow: 0 0 20px #caf377; /* Add glow effect on hover */
 }
 
+
 .card-back {
   background-color: #f5d0a9;
   transition: transform 0.3s ease-in-out;
   animation: fadeIn 1s ease-in;
 }
 
+/* Card container layout css */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -49,6 +54,7 @@ body {
   justify-content: center;
 }
 
+/* img on the card */
 img {
   position: absolute;
   top: 10%;
@@ -60,6 +66,7 @@ img {
   overflow: hidden;
 }
 
+/* breed of dog name css */
 .breedName {
   margin-top: auto;
   text-align: center;
@@ -70,60 +77,63 @@ img {
   color: #8a5d3d;
 }
 
+/* text content on back of card */
 .breedInfo {
   padding: 20px;
-  align-items: center; /* Center vertically */
+  align-items: center;
   text-align: center;
   color: #8a5d3d;
 }
 
+/* Adding media queries to make our code responsive */
+/* Sizes min-400px to min-1650px */
 @media (min-width: 400px) {
   .card {
-    width: 55%; /* Example: Adjust the width of the card */
+    width: 55%; 
     justify-content: center !important;
     margin: 5% 15%;
   }
   .breedName {
-    font-size: 1.2rem; /* Example: Adjust font size */
+    font-size: 1.2rem;
   }
   .breedInfo {
-    font-size: 0.9rem; /* Example: Adjust font size */
+    font-size: 0.9rem; 
   }
   .card img {
-    width: 90%; /* Example: Make the image responsive */
+    width: 90%; 
     height: auto;
   }
   .grid-container {
-    justify-content: center !important; /* Align items to the start */
+    justify-content: center !important; 
   }
  
 }
 
 @media (min-width: 640px) {
   .card {
-    width: 65%; /* Example: Adjust the width of the card */
+    width: 65%; 
     justify-content: center !important;
     margin: 5% 10%;
   }
   .breedName {
-    font-size: 1.4rem; /* Example: Adjust font size */
+    font-size: 1.4rem;
   }
   .breedInfo {
-    font-size: 1rem; /* Example: Adjust font size */
+    font-size: 1rem; 
   }
   .card img {
-    width: 80%; /* Example: Make the image responsive */
+    width: 80%;
     height: auto;
   }
   .grid-container {
-    justify-content: center !important; /* Align items to the start */
+    justify-content: center !important;
   }
 }
 
 @media (min-width: 768px) {
   /* Mobile */
   .card {
-    width: 80%; /* Example: Adjust the width of the card */
+    width: 80%;
     justify-content: center !important;
     margin: 5% 10%;
   }
@@ -137,17 +147,17 @@ img {
     font-size: 3rem;
   }
   .card img {
-    width: 55%; /* Example: Make the image responsive */
+    width: 55%; 
     height: auto;
   }
   .grid-container {
-    justify-content: center !important; /* Align items to the start */
+    justify-content: center !important; 
   }
 }
 @media (min-width: 1024px) {
   /* Normal Desktop */
   .card {
-    width: 90%; /* Example: Adjust the width of the card */
+    width: 90%; 
     justify-content: center !important;
     margin: 5% 5%;
   }
@@ -161,18 +171,18 @@ img {
     font-size: 2rem;
   }
   .card img {
-    width: 70%; /* Example: Make the image responsive */
+    width: 70%;
     height: auto;
   }
   .grid-container {
-    justify-content: center !important; /* Align items to the start */
+    justify-content: center !important; 
   }
 }
 
 @media (min-width: 1280px) {
   /* Large Desktop */
   .card {
-    width: 100%; /* Example: Adjust the width of the card */
+    width: 100%; 
     justify-content: center !important;
     margin: 5% 0%;
   }
@@ -189,11 +199,11 @@ img {
     font-size: 3rem;
   }
   .card img {
-    width: 60%; /* Example: Make the image responsive */
+    width: 60%; 
     height: auto;
   }
   .grid-container {
-    justify-content: center !important; /* Align items to the start */
+    justify-content: center !important;
   }
 }
 @media (min-width: 1536px) {
@@ -215,11 +225,11 @@ img {
     font-size: 3rem;
   }
   .card img {
-    width: 80%; /* Example: Make the image responsive */
+    width: 80%; 
     height: auto;
   }
   .grid-container {
-    justify-content: center !important; /* Align items to the start */
+    justify-content: center !important; 
   }
 }
 @media (min-width: 1650px) {
@@ -241,10 +251,10 @@ img {
       font-size: 3rem;
     }
     .card img {
-      width: 60%; /* Example: Make the image responsive */
+      width: 60%;
       height: auto;
     }
     .grid-container {
-      justify-content: center !important; /* Align items to the start */
+      justify-content: center !important;
     }
   }

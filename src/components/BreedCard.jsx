@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import "../styles/Breeds.css";
 
+/*Component Definition*/
 function BreedCard(props) {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false); /*State management*/
 
+  /*Event handler Function*/
   function flipCard() {
-    setIsFlipped(!isFlipped);
+    setIsFlipped(!isFlipped); /*When called toggles value of 'isFlipped'*/
   }
 
   return (
@@ -25,6 +27,7 @@ function BreedCard(props) {
         <div key="back" onClick={flipCard}>
           <div className="card card-back">
             <div className="breedInfo">
+              {/*Props*/}
               <h3>Qualities</h3>
               <p>{props.quality}</p>
               <h3>Temperament</h3>
