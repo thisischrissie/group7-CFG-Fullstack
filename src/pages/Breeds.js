@@ -26,6 +26,7 @@ function Breed()
       <BreedCard imageUrl="sheltie.png" imageAlt="Sheltie" dogBreed="Sheltie" quality="Intelligent  Loyal  Energetic" temper="Responsive" knows="•Active lifestyle needed •Thick double coat requires regular brushing to remove matting •Professional grooming required" />
       <BreedCard imageUrl="shiba.png" imageAlt="Shiba Inu" dogBreed="Shiba Inu" quality="Independent  Alert  Loyal" temper="Bold" knows="•Stubborn •Firm training required •Thick double coat requires constant maintainance •Heavy fur sheds" />
     </div>
+    //BACK TO TOP BTN
   );
 }
 
