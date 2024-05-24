@@ -1,0 +1,22 @@
+Image {
+  
+  width: 70px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  
+}
+
+.containerNameBio{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: transparent;
+  color:#8A5D4D;
+
+
+}

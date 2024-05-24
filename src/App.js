@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/Nav';
 import Login from "./pages/Login";
-// import HomePage from './Home';
+import Homepage from './Homepage';
 import AboutUs from './pages/About';
 import Profile from './pages/Profile';
 import Breed from './pages/Breeds';
@@ -14,8 +14,8 @@ function App() {
      <NavBar />
      <main>
        <Routes>
-       <Route path="/" element={<Login />} />
-         {/* <Route path="/" element={<HomePage />} /> */}
+         <Route path="/" element={<HomePage />} />
+         <Route path="/login" element={<Login />} />
          <Route path="/about" element={<AboutUs />} />
          <Route path="/profile" element={<Profile />} />
          <Route path="/breeds" element={<Breed />} />
@@ -25,6 +25,5 @@ function App() {
    </Router>
  );
 };
-
 
 export default App;
