@@ -3,6 +3,7 @@ import BreedCard from '../components/BreedCard.jsx';
 import '../styles/Breeds.css';
 import BackToTop from '@uiw/react-back-to-top';
 import SearchBar from '../components/searchBar.jsx';
+import Banner from '../components/dogFactAPI.jsx'; // Import Banner component
 
 const Breed = () => {
   const breedRefs = useRef({});
@@ -34,6 +35,8 @@ const Breed = () => {
 
   return (
     <div>
+      {/* Banner */}
+      <Banner />
       {/* NAV BAR GOES HERE */}
       <SearchBar breeds={breeds.map(breed => breed.name)} onSearchSelect={handleSearchSelect} />
       <div className="grid-container">

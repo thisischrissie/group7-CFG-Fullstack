@@ -60,7 +60,6 @@ const styles = {
   suggestions: {
     position: 'absolute',
     maxWidth: '60%', // Set maximum width to 100%
-
     top: '100%',
     left: '0',
     right: '0',
