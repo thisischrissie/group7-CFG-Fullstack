@@ -1,6 +1,7 @@
 import React from 'react';
 import BreedCard from '../components/BreedCard.jsx'; //this works and won't start a fight with npm start
 import '../styles/Breeds.css';
+import BackToTop from '@uiw/react-back-to-top'; //Back to top button component import
 
 
 function Breed()
@@ -25,8 +26,9 @@ function Breed()
       <BreedCard imageUrl="Samoyed.png" imageAlt="Samoyed" dogBreed="Samoyed" quality="Friendly  Gentle  Sociable" temper="Affectionate" knows="•Regular grooming needed due to thick double coat •Shed heavily •Coat matting and tangling common •Frequent brushing needed •Regular exercise •Mental stimulation like agility traning beneficial" />
       <BreedCard imageUrl="sheltie.png" imageAlt="Sheltie" dogBreed="Sheltie" quality="Intelligent  Loyal  Energetic" temper="Responsive" knows="•Active lifestyle needed •Thick double coat requires regular brushing to remove matting •Professional grooming required" />
       <BreedCard imageUrl="shiba.png" imageAlt="Shiba Inu" dogBreed="Shiba Inu" quality="Independent  Alert  Loyal" temper="Bold" knows="•Stubborn •Firm training required •Thick double coat requires constant maintainance •Heavy fur sheds" />
+      <BackToTop top={200} size={50} buttonText="Top">Top</BackToTop>  {/*BACK TO TOP BTN*/}
     </div>
-    //BACK TO TOP BTN
+      
   );
 }
 
