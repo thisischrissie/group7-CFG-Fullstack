@@ -10,7 +10,7 @@ function Button(props) {
   
   return (
     <>
-    <button className="newButton" style={buttonStyle} buttonLink={buttonLink} > {buttonName}
+    <button className="newButton" style={buttonStyle} onClick={buttonLink} > {buttonName}
     </button>
     </>
   );

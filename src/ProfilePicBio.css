@@ -1,22 +1,33 @@
-Image {
-  
-  width: 70px;
-  height: 60px;
+img {
+  width: 200px;
+  height: 180px;
   border-radius: 50%;
+  align-content: center ;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  
+
+
+}
+
+
+h1.pupName {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: xx-large;
+  color:#8A5D4D;
+
+}
+h2.pupBio {
+  display: flex;
+  flex-direction: row;
 }
 
 .containerNameBio{
-  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: transparent;
+  background-color: white;
   color:#8A5D4D;
-
-
-}
+ 
+  }
+  

@@ -1,0 +1,98 @@
+
+*{
+    background-color: #FFF2E8;
+  }
+  
+
+  h2 {
+    display:block;
+    margin:15px;
+    color:#8A5D4D;
+    background-color: transparent;
+    
+  }
+  h2.pupBio{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+
+  h1.pupName{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row; 
+    background-color:  #FFF2E8;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+ 
+}
+
+.card-body {
+    flex: 1 1 auto;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+  }
+  
+div.col-xs-12.col-md-6{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+button.newButton {
+    display: flex;
+    border: 1px solid;
+    border-radius:20px;
+    color: black;
+    padding: 7px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+
+}
+.pic-bio-card-body {
+    display:flex;
+    min-height: 33.3vh;
+    justify-content:center;
+    align-items: center;
+}
+
+.doggie-card-body span:first-child {
+    display:flex;
+    align-items: center;
+}
+div.bigProfilePic{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+select{
+    background-color: white;
+    border-radius: 5px;
+
+}
+span{
+    margin:auto;
+    background-color: transparent;
+    display:flex;
+}
+.container {
+    background-color: white;
+}
+.doggieProfileCard{
+    background-color: #F5D0A5;
+    color:#8A5D4D;
+    width: 450px;
+    height: auto;
+    padding: 1vh;
+    border-color: none;
+    margin: 20px;
+}

@@ -13,8 +13,7 @@ function SmallProfilePic({url, src, alt, pupName}) {
             <h2 className='pup-name'> {pupName}</h2></span>
 
         </>
-    
+
     );
 }
 export default SmallProfilePic
-

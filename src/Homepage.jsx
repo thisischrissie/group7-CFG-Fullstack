@@ -3,43 +3,43 @@ import Card from "react-bootstrap/Card";
 import "./homepage.css";
 import SmallProfilePic from "./SmallProfilePic";
 import Button from "./Button";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 function Homepage() {
 
   const acceptButtonLink = "#"; // put or patch to update database.
   const declineButtonLink = "#"; // put or patch to update database.
 
-  const [profiles, setProfiles] = useState([]); //store profiles here
-  const [showAllProfiles, setShowAllProfiles] = useState(false); //make profiles visible or not
-  const maxProfilesShown = 2; //num of profiles initially shown
+  // const [profiles, setProfiles] = useState([]); //store profiles here
+  // const [showAllProfiles, setShowAllProfiles] = useState(false); //make profiles visible or not
+  // const maxProfilesShown = 2; //num of profiles initially shown
 
   //fetch friend request and friends list from backend, order to be friend requests first.
 
-  const fetchProfiles = async () => {
-  try{
-      //API GET Requests here
-      const pupProfileResponse = await fetch('/doggieprofilename')
-      const profileData = await pupProfileResponse.json()
-      setProfiles(profileData);
-    }
-  catch (error) {
-      console.log("Error fetching profiles:", error)
-    }
-  };
+  // const fetchProfiles = async () => {
+  // try{
+  //     //API GET Requests here
+  //     const pupProfileResponse = await fetch('/doggieprofilename')
+  //     const profileData = await pupProfileResponse.json()
+  //     setProfiles(profileData);
+  //   }
+  // catch (error) {
+  //     console.log("Error fetching profiles:", error)
+  //   }
+  // };
 
-  //show more and show less links, max profiles on page shown initially to be 2 profiles
+  // //show more and show less links, max profiles on page shown initially to be 2 profiles
     
-  useEffect(() => {
-    fetchProfiles();
-  },[]);
+  // useEffect(() => {
+  //   fetchProfiles();
+  // },[]);
 
-  const handleShowMore =() => {
-    setShowAllProfiles(true);
-  };
-  const handleShowLess =() => {
-    setShowAllProfiles(false);
-  };
+  // const handleShowMore =() => {
+  //   setShowAllProfiles(true);
+  // };
+  // const handleShowLess =() => {
+  //   setShowAllProfiles(false);
+  // };
 
   return (
         <div className="row">
@@ -54,15 +54,15 @@ function Homepage() {
                       // get id from sql?
                       <li key={request.id}> */}
                       <span>
-                        <SmallProfilePic />{" "} 
+                        <SmallProfilePic />
                         <div className="button-container">
                           <Button
-                          buttonLink={acceptButtonLink}
+                          onClick={acceptButtonLink}
                           buttonName="Accept"
                           color="#CAF377"
-                          />{" "}
+                          />
                           <Button
-                          buttonLink={declineButtonLink}
+                          onClick={declineButtonLink}
                           buttonName="Reject"
                           color="#E08C7E"
                           />
@@ -72,13 +72,13 @@ function Homepage() {
                           ))}
                           </ul> */}
                           </span>
-                          {!showAllProfiles && profiles.length > maxProfilesShown &&(
+                          {/* {!showAllProfiles && profiles.length > maxProfilesShown &&(
                             <a name="See More" onClick={handleShowMore}/>
                           )
                           }
                           {showAllProfiles (
                             <a name="See Less" onClick={handleShowLess}/>
-                          )}
+                          )} */}
                   
                 <span>
                   <h1>Your Pups</h1>
@@ -94,13 +94,13 @@ function Homepage() {
                           </ul> */}
                         </span>
                         <span>
-                  {!showAllProfiles && profiles.length > maxProfilesShown &&(
+                  {/* {!showAllProfiles && profiles.length > maxProfilesShown &&(
                   <a name="See More" onClick={handleShowMore}/>
                     )
                     }
                     {showAllProfiles (
                     <a name="See Less" onClick={handleShowLess}/>
-                    )}
+                    )} */}
                 </span>
                 <h1> Quiz</h1>
               </Card.Body>
