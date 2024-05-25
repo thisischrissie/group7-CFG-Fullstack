@@ -5,6 +5,7 @@ import BackToTop from '@uiw/react-back-to-top';
 import SearchBar from '../components/searchBar.jsx';
 import Banner from '../components/dogFactAPI.jsx'; // Import Banner component
 
+
 const Breed = () => {
   const breedRefs = useRef({});
 
@@ -33,6 +34,7 @@ const Breed = () => {
     }
   };
 
+
   return (
     <div>
       {/* Banner */}
@@ -41,7 +43,8 @@ const Breed = () => {
       <SearchBar breeds={breeds.map(breed => breed.name)} onSearchSelect={handleSearchSelect} />
       <div className="grid-container">
         {breeds.map((breed, index) => (
-          <div key={index} ref={el => breedRefs.current[breed.name] = el}>
+          
+          <div key={index} className="breed-row" ref={el => breedRefs.current[breed.name] = el}>
             <BreedCard
               imageUrl={breed.imageUrl}
               imageAlt={breed.imageAlt}

@@ -39,7 +39,9 @@ function BreedCard(props) {
         </div>
       </ReactCardFlip>
     </div>
+    
   );
+  
 }
 
 export default BreedCard;
