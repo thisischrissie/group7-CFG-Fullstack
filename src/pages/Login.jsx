@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { BigButton, GhostBigButton } from "../components/BigButton";
 
 function Login() {
   const [signIn, toggle] = React.useState(true);
@@ -12,7 +13,7 @@ function Login() {
             <Input type="text" placeholder="Name" />
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Password" />
-            <Button>Sign Up</Button>
+            <BigButton>Sign Up</BigButton>
           </Form>
         </SignUpContainer>
         <SignInContainer signinIn={signIn}>
@@ -21,7 +22,7 @@ function Login() {
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Password" />
             <Anchor href="#">Forgot your password?</Anchor>
-            <Button>Sign In</Button>
+            <BigButton>Sign In</BigButton>
           </Form>
         </SignInContainer>
         <OverlayContainer signinIn={signIn}>
@@ -29,7 +30,9 @@ function Login() {
             <LeftOverlayPanel signinIn={signIn}>
               <Title>Welcome Back!</Title>
               <Paragraph>Please login with your personal info</Paragraph>
-              <GhostButton onClick={() => toggle(true)}>Sign In</GhostButton>
+              <GhostBigButton onClick={() => toggle(true)}>
+                Sign In
+              </GhostBigButton>
             </LeftOverlayPanel>
             <RightOverlayPanel signinIn={signIn}>
               <SignUpTitle>Don't have an account?</SignUpTitle>
@@ -37,7 +40,9 @@ function Login() {
                 Enter your personal details <br />
                 and start the journey with us!
               </Paragraph>
-              <GhostButton onClick={() => toggle(false)}>Sign Up</GhostButton>
+              <GhostBigButton onClick={() => toggle(false)}>
+                Sign Up
+              </GhostBigButton>
             </RightOverlayPanel>
           </Overlay>
         </OverlayContainer>
@@ -127,31 +132,6 @@ const Input = styled.input`
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
-`;
-
-const Button = styled.button`
-  border-radius: 20px;
-  border: 1px solid #60412a;
-  background-color: #8a5d3d;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  font-family: "Varela Round", sans-serif;
-  padding: 12px 45px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;
-  &:active {
-    transform: scale(0.95);
-  }
-  &:focus {
-    outline: none;
-  }
-`;
-
-const GhostButton = styled(Button)`
-  background-color: transparent;
-  border-color: #ffffff;
 `;
 
 const Anchor = styled.a`
