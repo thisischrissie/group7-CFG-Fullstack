@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BigButton, GhostBigButton } from "../components/BigButton";
 
 function Login() {
-  const [signIn, toggle] = React.useState(true);
+  const [signIn, toggle] = useState(true);
   return (
     <Wrapper>
       <Container>
