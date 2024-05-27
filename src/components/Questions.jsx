@@ -19,7 +19,7 @@ const QuestionPage = () => {
   };
 
   const handleSubmit = () => {
-    navigate('/Map', { state: { answers } });
+    navigate('/results', { state: { answers } });
   };
 
   return (

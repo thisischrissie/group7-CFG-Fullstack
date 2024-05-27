@@ -45,7 +45,7 @@ export default function NavBar() {
              </NavLink>
            </li>
            <li className="nav__item">
-             <NavLink to="/route" className="nav__link" onClick={closeMenuOnMobile}>
+             <NavLink to="/FindRoute" className="nav__link" onClick={closeMenuOnMobile}>
                Find a Route
              </NavLink>
            </li>
