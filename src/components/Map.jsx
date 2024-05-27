@@ -1,57 +1,30 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { GoogleMap, LoadScript, DirectionsRenderer } from '@react-google-maps/api';
+import React from 'react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 
-const libraries = ['places'];
-const mapContainerStyle = {
-  width: '100%',
-  height: '500px',
-};
-const center = {
-  lat: -34.397,
-  lng: 150.644,
-};
-
-const MapComponent = ({ trails }) => {
-  const [directions, setDirections] = useState(null);
-  const directionsServiceRef = useRef(null);
-
-  const fetchRoute = useCallback((trail) => {
-    if (directionsServiceRef.current) {
-      directionsServiceRef.current.route(
-        {
-          origin: trail.origin,
-          destination: trail.destination,
-          travelMode: 'DRIVING',
-        },
-        (response, status) => {
-          if (status === 'OK') {
-            setDirections(response);
-          } else {
-            console.error('Directions request failed due to ' + status);
-          }
-        }
-      );
-    }
-  }, []);
-
-  useEffect(() => {
-    if (trails.length > 0) {
-      fetchRoute(trails[0]);  // Fetch the first trail's route by default
-    }
-  }, [trails, fetchRoute]);
-
+const MapComponent = (props) => {
   return (
-    <LoadScript googleMapsApiKey="AIzaSyA3kCKR6Ga3ulS90iodeVoSEm8WHYQorQs" libraries={libraries}>
-      <GoogleMap
-        id="map"
-        mapContainerStyle={mapContainerStyle}
-        center={center}
-        zoom={8}
+    <div style={{ width: '100%', height: '400px' }}>
+      <Map
+        google={props.google}
+        zoom={14}
+        initialCenter={{ lat: 37.774929, lng: -122.419416 }} // Default center coordinates
+        style={{ width: '100%', height: '100%' }} // Set the map container's width and height
       >
-        {directions && <DirectionsRenderer directions={directions} />}
-      </GoogleMap>
-    </LoadScript>
+        {/* Render Markers for each trail */}
+        {props.trails.map((trail) => (
+          trail.originCoords && ( // Check if originCoords exists
+            <Marker
+              key={trail.id}
+              title={trail.name}
+              position={{ lat: trail.originCoords.lat, lng: trail.originCoords.lng }}
+            />
+          )
+        ))}
+      </Map>
+    </div>
   );
 };
 
-export default MapComponent;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyA3kCKR6Ga3ulS90iodeVoSEm8WHYQorQs', // Replace with your Google Maps API key
+})(MapComponent);

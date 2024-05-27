@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const QuestionPage = () => {
+const FindRoute = () => {
   const [answers, setAnswers] = useState({
     breedSize: '',
     likesWater: '',
     childFriendly: '',
-    includesWater: '',
   });
   const navigate = useNavigate();
 
@@ -19,7 +18,7 @@ const QuestionPage = () => {
   };
 
   const handleSubmit = () => {
-    navigate('/Map', { state: { answers } });
+    navigate('/FoundRoute', { state: { answers } });
   };
 
   return (
@@ -51,18 +50,10 @@ const QuestionPage = () => {
             <option value="no">No</option>
           </select>
         </label>
-        <label>
-          Includes Water:
-          <select name="includesWater" onChange={handleChange}>
-            <option value="">Select</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
         <button type="button" onClick={handleSubmit}>Show Me</button>
       </form>
     </div>
   );
 };
 
-export default QuestionPage;
+export default FindRoute;
