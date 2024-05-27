@@ -13,24 +13,19 @@ export default function NavBar() {
     <header className="header">
       <nav className="nav" ref={navRef}>
         <a href="/" className="nav__link">
-          {" "}
-          Home{" "}
+          Home
         </a>
         <a href="/about" className="nav__link">
-          {" "}
-          About Us{" "}
+          About Us
         </a>
         <a href="/profile" className="nav__link">
-          {" "}
           Profile
         </a>
         <a href="/breeds" className="nav__link">
-          {" "}
           Breeds
         </a>
         <a href="/route" className="nav__link">
-          {" "}
-          Find a Route{" "}
+          Find a Route
         </a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
