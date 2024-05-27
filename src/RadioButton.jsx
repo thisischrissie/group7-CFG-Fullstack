@@ -1,23 +1,28 @@
 function RadioButton(props) {
-    const options = props.options;
-    const onSelect = props.onSelect;
-    const placeholder = props.placeholder;
-  
+    const name= props.name;
+    const items = props.items;
+    const onChange= props.onChange;
+    const value = props.value;
     return (
       <>
-       <select onChange={onSelect}>
-        <option value="">{placeholder}</option>
-  
-        {options.map((optionName)=>{
-          return(
-            <option key={optionName} value={optionName}>
-              {optionName}
-            </option>
-          );
-  
-        })}
-       </select>
+       {items.map (item => (
+        <div key={item.value}>
+          <input 
+          name = {name}
+          type="radio"
+          value={item.value}
+          id= {name + item.value}
+          checked={value === item.value}
+          onChange = {e=> onChange(e.target.value)}
+          />
+          <label htmlFor={name + item.value}>{item.value}</label>
+
+        </div>
+       ))}
       </>
+
+      
+
     );
   }
   

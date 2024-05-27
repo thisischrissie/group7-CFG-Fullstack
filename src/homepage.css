@@ -2,6 +2,14 @@
 *{
   background-color: #FFF2E8;
 }
+html {
+  scroll-snap-type: y mandatory;
+}
+
+Card{
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
 
 h1 {
   font-weight: bold;
@@ -18,13 +26,13 @@ h2 {
 .row {
   display: flex;
   flex-direction: row; 
-  width: 100%; 
+  width: auto; 
   background-color:  #FFF2E8;
   justify-content: center;
   align-items: center;
 }
 
-.pupsAndFriends {
+.myPups {
   background-color: #FFF2E8;
   color:#8A5D4D;
   width: 450px;
@@ -113,3 +121,4 @@ img {
   align-content: flex-start ;
   justify-content: space-evenly;
 }
+

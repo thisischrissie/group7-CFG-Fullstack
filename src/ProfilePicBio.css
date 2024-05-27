@@ -3,24 +3,29 @@ img {
   height: 180px;
   border-radius: 50%;
   align-content: center ;
+  justify-content: center;
   display: flex;
-
-
 }
 
 
-h1.pupName {
+h1.name {
   display: flex;
   flex-direction: row;
   font-weight: bold;
   font-size: xx-large;
   color:#8A5D4D;
+  align-content: center ;
+  justify-content: center;
+
 
 }
-h2.pupBio {
+h2.bio {
   display: flex;
+  align-content: center ;
+  justify-content: center;
   flex-direction: row;
 }
+
 
 .containerNameBio{
   display: flex;
@@ -30,4 +35,11 @@ h2.pupBio {
   color:#8A5D4D;
  
   }
-  
+
+  div.bigProfilePic {
+    align-content: center ;
+    justify-content: center;
+    display: flex;
+}
+
+

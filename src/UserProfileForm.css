@@ -6,9 +6,10 @@
 
   h2 {
     display:block;
-    margin:15px;
+    margin:2px;
     color:#8A5D4D;
     background-color: transparent;
+    font-size: small;
     
   }
   h2.pupBio{
@@ -17,10 +18,13 @@
     align-items: center;
   }
 
-  h1.pupName{
+  h1{
     display:flex;
     justify-content:center;
     align-items: center;
+    color:#8A5D4D;
+    background-color: transparent;
+    font-size:large;
   }
 
   .row {
@@ -30,6 +34,7 @@
     justify-content: center;
     align-items: center;
     margin-left: auto;
+    width: auto; 
  
 }
 
@@ -67,6 +72,7 @@ button.newButton {
 .doggie-card-body span:first-child {
     display:flex;
     align-items: center;
+    
 }
 div.bigProfilePic{
     display:flex;
@@ -77,22 +83,53 @@ div.bigProfilePic{
 select{
     background-color: white;
     border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    display:flex;
 
 }
 span{
-    margin:auto;
+    margin:3px;
     background-color: transparent;
     display:flex;
-}
-.container {
-    background-color: white;
 }
 .doggieProfileCard{
     background-color: #F5D0A5;
     color:#8A5D4D;
-    width: 450px;
-    height: auto;
+
     padding: 1vh;
     border-color: none;
     margin: 20px;
+    height: fit-content;
+    width: fit-content;
+}
+
+
+div{
+  background-color: transparent;
+}
+label {
+  background-color: transparent;
+  font-size: small;
+}
+
+.newButton {
+  border: 1px solid #8A5D4D;
+  border-radius:20px;
+  color: black;
+  padding: 2px;
+  width:fit-content;
+  height: fit-content;
+}
+
+section.container {
+  border-color: 1px solid #8A5D4D;
+  background-color: #FFF2E8;
+  padding:3px;
+}
+p{
+  background-color: #FFF2E8;
+}
+em{
+  background-color: #FFF2E8;
 }
