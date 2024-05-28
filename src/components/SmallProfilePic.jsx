@@ -1,6 +1,6 @@
 import Image from 'react-bootstrap/Image';
-import './SmallProfilePic.css';
-import dogProfilePic from './dog-pic.avif';
+import '../styles/SmallProfilePic.css';
+import dogProfilePic from '../images/dog-pic.avif';
 
 function SmallProfilePic({url, src, alt, pupName}) {
     src= dogProfilePic

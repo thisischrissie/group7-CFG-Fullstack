@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
-import "./homepage.css";
-import SmallProfilePic from "./SmallProfilePic";
-import Logo from "./Logo";  
+import "../styles/homepage.css";
+import SmallProfilePic from "../components/SmallProfilePic";
+import Logo from "../components/Logo";  
 
 // import { useState, useEffect } from "react";
 
-function Homepage() {
+function HomePage() {
 
   // const [profiles, setProfiles] = useState([]); //store profiles here
   // const [showAllProfiles, setShowAllProfiles] = useState(false); //make profiles visible or not
@@ -99,4 +99,4 @@ function Homepage() {
 
   );
 }
-export default Homepage;
+export default HomePage;

@@ -5,7 +5,7 @@ import ProfilePicBio from "./ProfilePicBio";
 import userProfilePic from './ColliemeetsbeagleLogo.png';
 import dogProfilepic from './dog-pic.avif'
 
-function Homepage() {
+function UserProfile() {
 
 
   return (
@@ -43,4 +43,4 @@ function Homepage() {
 
   );
 }
-export default Homepage;
+export default UserProfile;
