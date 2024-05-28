@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc56"
+  },
+  "name": "Alex Johnson",
+  "bio": "Alex is an avid dog lover who enjoys spending weekends at the park with his golden retriever, Buddy. He also enjoys hiking and outdoor adventures.",
+  "looking_for": "a playdate",
+  "location": "Birmingham"
+},
+{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc57"
+  },
+  "name": "Samantha Lee",
+  "bio": "Samantha is a software engineer who loves coding and playing with her corgi, Luna. They often go on walks and explore new neighborhoods.",
+  "looking_for": "friend for my dog",
+  "location": "London"
+},
+{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc58"
+  },
+  "name": "David Brown",
+  "bio": "David is a fitness enthusiast and dog dad to Max, a border collie. They enjoy running and agility training together. Always up for new activities.",
+  "looking_for": "activity recommendations",
+  "location": "Liverpool"
+},
+{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc59"
+  },
+  "name": "Maria Gomez",
+  "bio": "Maria, an artist, spends her days painting and hanging out with her dachshund, Bella. She loves finding new dog-friendly cafes and art spots.",
+  "looking_for": "a playdate",
+  "location": "Manchester"
+},
+{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc5a"
+  },
+  "name": "Kevin Smith",
+  "bio": "Kevin, a teacher, enjoys teaching both his students and his German shepherd, Rocky, new tricks. He loves the outdoors and dog sports.",
+  "looking_for": "friend for my dog",
+  "location": "Edinburgh"
+},
+{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc5b"
+  },
+  "name": "Emily Davis",
+  "bio": "Emily, a writer, spends her days crafting stories and taking long walks with her beagle, Toby. They love exploring new trails and parks.",
+  "looking_for": "activity recommendations",
+  "location": "Birmingham"
+},
+{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc5c"
+  },
+  "name": "Chris Wilson",
+  "bio": "Chris, a graphic designer, loves designing and playing with his pug, Milo. They enjoy cozy evenings at home and trips to the beach.",
+  "looking_for": "a playdate",
+  "location": "London"
+},
+{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc5d"
+  },
+  "name": "Rachel Martin",
+  "bio": "Rachel, a nurse, spends her free time caring for her patients and her Labrador, Daisy. They enjoy swimming and playing fetch at the lake.",
+  "looking_for": "friend for my dog",
+  "location": "Liverpool"
+},
+{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc5e"
+  },
+  "name": "Michael Thompson",
+  "bio": "Michael, an architect, loves designing buildings and spending time with his Great Dane, Duke. They enjoy exploring the city's architecture.",
+  "looking_for": "activity recommendations",
+  "location": "Manchester"
+},
+{
+  "_id": {
+    "$oid": "6654ba90507bbb3a0105dc5f"
+  },
+  "name": "Jessica Taylor",
+  "bio": "Jessica, a baker, loves creating new recipes and spending time with her poodle, Coco. They enjoy visiting dog-friendly bakeries and parks.",
+  "looking_for": "a playdate",
+  "location": "Edinburgh"
+}]
