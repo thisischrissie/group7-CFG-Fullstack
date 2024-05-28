@@ -1,0 +1,45 @@
+img {
+  width: 200px;
+  height: 180px;
+  border-radius: 50%;
+  align-content: center ;
+  justify-content: center;
+  display: flex;
+}
+
+
+h1.name {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: xx-large;
+  color:#8A5D4D;
+  align-content: center ;
+  justify-content: center;
+
+
+}
+h2.bio {
+  display: flex;
+  align-content: center ;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.containerNameBio{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: white;
+  color:#8A5D4D;
+ 
+  }
+
+  div.bigProfilePic {
+    align-content: center ;
+    justify-content: center;
+    display: flex;
+}
+
+
