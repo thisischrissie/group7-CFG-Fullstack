@@ -22,13 +22,22 @@ header {
   color: var(--textColor);
 }
 
-nav a {
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__list li {
   margin: 0 1rem;
+}
+
+.nav__link {
   color: var(--textColor);
   text-decoration: none;
 }
 
-nav a:hover {
+.nav__link:hover {
   color: var(--secondaryColor);
 }
 
@@ -81,7 +90,7 @@ nav {
     right: 2rem;
   }
 
-  nav a {
+  .nav__link {
     font-size: 1.5rem;
   }
 }

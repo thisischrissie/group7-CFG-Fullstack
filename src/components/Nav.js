@@ -13,21 +13,33 @@ export default function NavBar() {
   return (
     <header className="header">
       <nav className="nav" ref={navRef}>
-        <Link to="/" className="nav__link">
-          Home
-        </Link>
-        <Link to="/about" className="nav__link">
-          About Us
-        </Link>
-        <Link to="/profile" className="nav__link">
-          Profile
-        </Link>
-        <Link to="/breeds" className="nav__link">
-          Breeds
-        </Link>
-        <Link to="/route" className="nav__link">
-          Find a Route
-        </Link>
+        <ul className="nav__list">
+          <li>
+            <Link to="/" className="nav__link">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="nav__link">
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/profile" className="nav__link">
+              Profile
+            </Link>
+          </li>
+          <li>
+            <Link to="/breeds" className="nav__link">
+              Breeds
+            </Link>
+          </li>
+          <li>
+            <Link to="/route" className="nav__link">
+              Find a Route
+            </Link>
+          </li>
+        </ul>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
