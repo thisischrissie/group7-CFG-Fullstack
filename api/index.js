@@ -1,14 +1,19 @@
 //imports
 import connectDB from "./config/db_utils.js"; 
 import express from 'express';
+import UserRouter from "./routes/UserRouter.js"
 import OwnerRouter from "./routes/OwnerRouter.js"
 import DogRouter from "./routes/DogRouter.js";
 
 //middleware
 const app = express()
-const port = 3000
- 
+const port = 3001
+
+//middleware to parse JSON bodies
 app.use(express.json());
+
+//route endpoints for /signup
+app.use("/api", UserRouter)
 
 //route endpoints for /owners
 app.use("/api", OwnerRouter);
@@ -22,9 +27,9 @@ connectDB();
 
 
 //endpoint to create sign up - For Cecilia?
-app.post('/api/sign-up', (req, res) => {
-    res.send('Sign up with us')
-  })
+// app.post('/api/sign-up', (req, res) => {
+//     res.send('Sign up with us')
+//   })
 
 
 

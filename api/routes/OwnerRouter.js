@@ -1,4 +1,3 @@
-
 import express from "express";
 import OwnerModel from "../models/Owner.js";
 const router = express.Router();
@@ -30,7 +29,7 @@ router.post("/owner", async (request, response) => {
 //PATCH endpoint to update an existing user profile
 router.patch("/owners/:id", async (request, response) => {
   try {
-    const article = await OwnerModel.findByIdAndUpdate(
+    const owner = await OwnerModel.findByIdAndUpdate(
       request.params.id,
       request.body
     );
