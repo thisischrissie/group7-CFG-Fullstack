@@ -29,8 +29,6 @@ const DogForm = ({ trails }) => {
     });
 
     setMatchedArray(matched);
-
-    // Reload the page
     
   };
 
