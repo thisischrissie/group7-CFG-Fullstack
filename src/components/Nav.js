@@ -1,64 +1,52 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { IoClose, IoMenu } from "react-icons/io5";
-import '../styles/Nav.css';
-
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "../styles/Nav.css";
 
 export default function NavBar() {
-  const [showMenu, setShowMenu] = useState(false);
+  const navRef = useRef();
 
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  }
-
-  const closeMenuOnMobile = () => {
-    if (window.innerWidth <= 1150) {
-      setShowMenu(false);
-    }
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive_nav");
   };
 
- return (
-   <header className="header">
-     <nav className="nav">
-       <div
-         className={`nav__menu ${showMenu ? "show-menu" : ""}`}
-         id="nav-menu">
-         <ul className="nav__list">
-           <li className="nav__item">
-             <NavLink to="/" className="nav__link" onClick={closeMenuOnMobile}>
-               Home
-             </NavLink>
-           </li>
-           <li className="nav__item">
-             <NavLink to="/about" className="nav__link" onClick={closeMenuOnMobile}>
-               About Us
-             </NavLink>
-           </li>
-           <li className="nav__item">
-             <NavLink to="/profile" className="nav__link" onClick={closeMenuOnMobile}>
-               Your Profile
-             </NavLink>
-           </li>
-           <li className="nav__item">
-             <NavLink to="/breeds" className="nav__link" onClick={closeMenuOnMobile}>
-               Breeds
-             </NavLink>
-           </li>
-           <li className="nav__item">
-             <NavLink to="/route" className="nav__link" onClick={closeMenuOnMobile}>
-               Find a Route
-             </NavLink>
-           </li>
-         </ul>
-         <div className="nav__close" id="nav-close" onClick={toggleMenu}>
-           <IoClose />
-         </div>
-       </div>
-
-       <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
-         <IoMenu />
-       </div>
-     </nav>
-   </header>
- );
-};
+  return (
+    <header className="header">
+      <nav className="nav" ref={navRef}>
+        <ul className="nav__list">
+          <li>
+            <Link to="/" className="nav__link">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="nav__link">
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/profile" className="nav__link">
+              Profile
+            </Link>
+          </li>
+          <li>
+            <Link to="/breeds" className="nav__link">
+              Breeds
+            </Link>
+          </li>
+          <li>
+            <Link to="/route" className="nav__link">
+              Find a Route
+            </Link>
+          </li>
+        </ul>
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <FaTimes />
+        </button>
+      </nav>
+      <button className="nav-btn" onClick={showNavbar}>
+        <FaBars />
+      </button>
+    </header>
+  );
+}
