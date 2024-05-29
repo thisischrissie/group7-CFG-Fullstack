@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
-import DogForm from './components/DogForm';
-import trails from './data/trails';
+import DogForm from '../components/DogForm';
+import trails from '../components/trails';
 
 function FindRoute() {
   return (

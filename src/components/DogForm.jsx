@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
+//import trails from '../components/trails';
 
-const DogForm = ({ predefinedAnswers }) => {
+const DogForm = ({ trails }) => {
   const [formData, setFormData] = useState({
     size: '',
     likesWater: '',
@@ -19,7 +20,7 @@ const DogForm = ({ predefinedAnswers }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const matched = predefinedAnswers.find((answer, index) => {
+    const matched = trails.find((answer, index) => {
       return (
         answer.size === formData.size &&
         answer.likesWater === formData.likesWater &&
@@ -30,9 +31,7 @@ const DogForm = ({ predefinedAnswers }) => {
     setMatchedArray(matched);
 
     // Reload the page
-    setTimeout(() => {
-      window.location.reload();
-    }, 1000);
+    
   };
 
   return (

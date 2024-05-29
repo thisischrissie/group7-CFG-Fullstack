@@ -19,7 +19,7 @@ function App() {
          <Route path="/about" element={<AboutUs />} />
          <Route path="/profile" element={<Profile />} />
          <Route path="/breeds" element={<Breed />} />
-         <Route path="/route" element={<FindRoute />} />
+         <Route path="/FindRoute" element={<FindRoute />} />
        </Routes>
      </main>
    </Router>
