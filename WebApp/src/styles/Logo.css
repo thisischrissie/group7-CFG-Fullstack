@@ -1,0 +1,14 @@
+img {
+    width:500px;
+    height: 450px;
+    border-radius: 50%;    
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+  }
+  h1 {
+    font-size: xx-large;
+
+
+  }
