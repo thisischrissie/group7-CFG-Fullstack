@@ -1,7 +1,8 @@
-// src/App.js
+
 import React from 'react';
 import DogForm from '../components/DogForm';
 import trails from '../components/trails';
+import Foundmap from '../components/Map';
 
 function FindRoute() {
   return (
@@ -10,6 +11,7 @@ function FindRoute() {
         <h1>Dog Form</h1>
       </header>
       <DogForm trails={trails} />
+      <Foundmap />
     </div>
   );
 }

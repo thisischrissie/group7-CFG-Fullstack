@@ -1,14 +1,15 @@
 
 import React, { useState } from 'react';
-//import trails from '../components/trails';
+
 
 const DogForm = ({ trails }) => {
   const [formData, setFormData] = useState({
     size: '',
     likesWater: '',
-    childFriendly: ''
+    childFriendly: '',
+    city: ''
   });
-  const [matchedArray, setMatchedArray] = useState(null);
+  const [matchedTrail, setMatchedTrail] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,15 +21,16 @@ const DogForm = ({ trails }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const matched = trails.find((answer, index) => {
+    const matched = trails.find((trail) => {
       return (
-        answer.size === formData.size &&
-        answer.likesWater === formData.likesWater &&
-        answer.childFriendly === formData.childFriendly
+        trail.size === formData.size &&
+        trail.likesWater === formData.likesWater &&
+        trail.childFriendly === formData.childFriendly && 
+        trail.city === formData.city
       );
     });
 
-    setMatchedArray(matched);
+    setMatchedTrail(matched);
     
   };
 
@@ -87,18 +89,38 @@ const DogForm = ({ trails }) => {
           /> No
         </label>
         <br />
+        <label>
+          City:
+          <select name="city" value={formData.city} onChange={handleChange} required>
+            <option value="">Select</option>
+            <option value="manchester">Manchester</option>
+            <option value="liverpool">Liverpool</option>
+            <option value="london">London</option>
+          </select>
+        </label>
+        <br />
 
         <button type="submit">Submit</button>
       </form>
 
-      {matchedArray && (
+      {matchedTrail && matchedTrail.city ? (
         <div>
-          <h3>Matched Array:</h3>
-          <pre>{JSON.stringify(matchedArray, null, 2)}</pre>
+          <h3>Matched Trail:</h3>
+          <p>Recommended routes in {matchedTrail.city}</p>
+          <p>Routes: {matchedTrail.route1}</p>
+          <p>Routes: {matchedTrail.route2}</p>
+          <p>Routes: {matchedTrail.route3}</p>
         </div>
+      ) : (
+        matchedTrail && (
+          <div>
+            <h3>No matching trail found</h3>
+          </div>
+        )
       )}
     </div>
   );
 };
+
 
 export default DogForm;

@@ -1,30 +1,32 @@
-import React from 'react';
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+// src/components/Map.jsx
+import React, { useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
+import { APIProvider, Map, MapCameraChangedEvent } from '@vis.gl/react-google-maps';
 
-const MapComponent = (props) => {
-  return (
-    <div style={{ width: '100%', height: '400px' }}>
-      <Map
-        google={props.google}
-        zoom={14}
-        initialCenter={{ lat: 37.774929, lng: -122.419416 }} // Default center coordinates
-        style={{ width: '100%', height: '100%' }} // Set the map container's width and height
-      >
-        {/* Render Markers for each trail */}
-        {props.trails.map((trail) => (
-          trail.originCoords && ( // Check if originCoords exists
-            <Marker
-              key={trail.id}
-              title={trail.name}
-              position={{ lat: trail.originCoords.lat, lng: trail.originCoords.lng }}
-            />
-          )
-        ))}
-      </Map>
-    </div>
-  );
+
+const MapContainer = () => (
+  <APIProvider apiKey={'AIzaSyA3kCKR6Ga3ulS90iodeVoSEm8WHYQorQs'} onLoad={() => console.log('Maps API has loaded.')}>
+    <h1>Hello, world!</h1>
+    <Map
+      defaultZoom={13}
+      defaultCenter={{ lat: -33.860664, lng: 151.208138 }}
+      onCameraChanged={(ev) => console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)}
+    />
+  </APIProvider>
+);
+
+const Foundmap = () => {
+  useEffect(() => {
+    const rootElement = document.getElementById('Foundmap');
+    if (rootElement) {
+      const root = createRoot(rootElement);
+      root.render(<MapContainer />);
+    } else {
+      console.error('Could not find root element with id "Foundmap"');
+    }
+  }, []);
+
+  return null; // This component doesn't render anything directly
 };
 
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyA3kCKR6Ga3ulS90iodeVoSEm8WHYQorQs', // Replace with your Google Maps API key
-})(MapComponent);
+export default Foundmap;
