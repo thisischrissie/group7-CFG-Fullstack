@@ -18,9 +18,9 @@ function BreedCard(props) {
         {/* Front side */}
         <div key="front" onClick={flipCard}>
           <div className="cardDog">
-            <img src={props.imageUrl} alt={props.imageAlt} />
+            <img className = "card-image" src={props.imageUrl} alt={props.imageAlt} />
             <div className="breedName">
-              <h1>{props.dogBreed}</h1>
+              <h1 className="h1Breeds" >{props.dogBreed}</h1>
             </div>
           </div>
         </div>
@@ -30,11 +30,11 @@ function BreedCard(props) {
             <div className="breedInfo">
               {/*Props*/}
               <h3>Qualities</h3>
-              <p>{props.quality}</p>
+              <p className="pBreeds">{props.quality}</p>
               <h3>Temperament</h3>
-              <p>{props.temper}</p>
+              <p className="pBreeds">{props.temper}</p>
               <h3>Need to knows</h3>
-              <p>{props.knows}</p>
+              <p className="pBreeds">{props.knows}</p>
             </div>
           </div>
         </div>

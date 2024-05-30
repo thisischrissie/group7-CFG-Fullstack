@@ -49,7 +49,7 @@
 }
 
 /* img on the card */
-img {
+.card-image {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -93,7 +93,7 @@ img {
   .breedInfo {
     font-size: 0.9rem; 
   }
-  .cardDog img {
+  .card-image {
     width: 90%; 
     height: auto;
   }
@@ -115,7 +115,7 @@ img {
   .breedInfo {
     font-size: 1rem; 
   }
-  .cardDog img {
+  .card-image {
     width: 80%;
     height: auto;
   }
@@ -137,10 +137,10 @@ img {
   .breedInfo {
     font-size: 0.8rem;
   }
-  h1 {
+  .h1Breeds {
     font-size: 3rem;
   }
-  .cardDog img {
+  .card-image {
     width: 55%; 
     height: auto;
   }
@@ -161,10 +161,10 @@ img {
   .breedInfo {
     font-size: 1rem;
   }
-  h1 {
+  .h1Breeds {
     font-size: 2rem;
   }
-  .cardDog img {
+  .card-image {
     width: 70%;
     height: auto;
   }
@@ -186,13 +186,13 @@ img {
   .breedInfo {
     font-size: 1.2rem;
   }
-  p {
+  .pBreeds{
     font-size: 1rem;
   }
-  h1 {
+  .h1Breeds {
     font-size: 3rem;
   }
-  .cardDog img {
+  .card-image {
     width: 60%; 
     height: auto;
   }
@@ -212,13 +212,13 @@ img {
   .breedInfo {
     font-size: 1.2rem;
   }
-  p {
+  .pBreeds{
     font-size: 1rem;
   }
-  h1 {
+  .h1Breeds {
     font-size: 3rem;
   }
-  .cardDog img {
+  .card-image {
     width: 80%; 
     height: auto;
   }
@@ -238,13 +238,13 @@ img {
     .breedInfo {
       font-size: 1.2rem;
     }
-    p {
+    .pBreeds{
       font-size: 1rem;
     }
-    h1 {
+    .h1Breeds {
       font-size: 3rem;
     }
-    .cardDog img {
+    .card-image {
       width: 60%;
       height: auto;
     }
