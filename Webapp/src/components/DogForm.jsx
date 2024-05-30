@@ -32,7 +32,10 @@ const DogForm = ({ trails }) => {
 
     setMatchedTrail(matched);
     
+    // Navigate to /foundroute
+    window.location.href = '/foundroute';
   };
+
 
   return (
     <div>
@@ -100,27 +103,12 @@ const DogForm = ({ trails }) => {
         </label>
         <br />
 
-        <button type="submit">Submit</button>
+        <a href="/FoundRoute">
+  <button type="button">Submit</button>
+</a>
       </form>
-
-      {matchedTrail && matchedTrail.city ? (
-        <div>
-          <h3>Matched Trail:</h3>
-          <p>Recommended routes in {matchedTrail.city}</p>
-          <p>Routes: {matchedTrail.route1}</p>
-          <p>Routes: {matchedTrail.route2}</p>
-          <p>Routes: {matchedTrail.route3}</p>
-        </div>
-      ) : (
-        matchedTrail && (
-          <div>
-            <h3>No matching trail found</h3>
-          </div>
-        )
-      )}
-    </div>
+      </div>
   );
 };
-
 
 export default DogForm;

@@ -35,7 +35,7 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/FoundRoute" className="nav__link">
+            <Link to="/FindRoute" className="nav__link">
               Find a Route
             </Link>
           </li>
