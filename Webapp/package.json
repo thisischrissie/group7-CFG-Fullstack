@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
+    "@iconify/icons-mdi": "^1.2.48",
+    "@iconify/react": "^5.0.0",
     "@react-google-maps/api": "^2.19.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

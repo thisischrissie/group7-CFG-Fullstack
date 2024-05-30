@@ -1,32 +1,41 @@
-// src/components/Map.jsx
-import React, { useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
-import { APIProvider, Map, MapCameraChangedEvent } from '@vis.gl/react-google-maps';
+import React from "react";
+import "../styles/map.css";
+import GoogleMapReact from "google-map-react";
+import { Icon } from "@iconify/react";
+import locationIcon from "@iconify/icons-mdi/map-marker";
 
-
-const MapContainer = () => (
-  <APIProvider apiKey={'AIzaSyA3kCKR6Ga3ulS90iodeVoSEm8WHYQorQs'} onLoad={() => console.log('Maps API has loaded.')}>
-    <h1>Hello, world!</h1>
-    <Map
-      defaultZoom={13}
-      defaultCenter={{ lat: -33.860664, lng: 151.208138 }}
-      onCameraChanged={(ev) => console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)}
-    />
-  </APIProvider>
-);
-
-const Foundmap = () => {
-  useEffect(() => {
-    const rootElement = document.getElementById('Foundmap');
-    if (rootElement) {
-      const root = createRoot(rootElement);
-      root.render(<MapContainer />);
-    } else {
-      console.error('Could not find root element with id "Foundmap"');
-    }
-  }, []);
-
-  return null; // This component doesn't render anything directly
+const location = {
+  address: "1600 Amphitheatre Parkway, Mountain View, california.",
+  lat: 37.42216,
+  lng: -122.08427,
 };
 
-export default Foundmap;
+const LocationPin = ({ text }) => (
+  <div className="pin">
+    <Icon icon={locationIcon} className="pin-icon" />
+    <p className="pin-text">{text}</p>
+  </div>
+);
+
+const Map = () => {
+  return (
+    <div className="map">
+      <h2 className="map-h2">Come Visit Us At Our Campus</h2>
+
+      <div className="google-map">
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyBTJRNSMRED1Iz4DmpKGRVg87NhfsHCJ8s" }}
+          defaultCenter={location}
+          defaultZoom={5}>
+          <LocationPin
+            lat={location.lat}
+            lng={location.lng}
+            text={location.address}
+          />
+        </GoogleMapReact>
+      </div>
+    </div>
+  );
+};
+
+export default Map;
