@@ -12,11 +12,10 @@ const location = {
 const Map = () => {
   return (
     <div className="map">
-      <h2 className="map-h2">Come Visit Us At Our Campus</h2>
-
+      {/* <h2 className="map-h2"></h2> */}
       <div className="google-map">
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyBTJRNSMRED1Iz4DmpKGRVg87NhfsHCJ8s" }}
+          bootstrapURLKeys={{ key: "Secret key" }}
           defaultCenter={location}
           defaultZoom={5}>
         </GoogleMapReact>
