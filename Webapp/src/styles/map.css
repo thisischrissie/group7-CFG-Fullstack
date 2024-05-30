@@ -6,7 +6,7 @@
     height: 60vh;
   }
   
-  .pin {
+  /* .pin {
     display: flex;
     align-items: center;
     color: var(--main-blue);
@@ -26,7 +26,7 @@
     padding: 10px;
     font-size: 1.3em;
     color: var(--main-blue);
-  }
+  } */
   
   @media screen and (min-width: 799px) {
     .google-map {
@@ -40,12 +40,12 @@
       padding: 20px;
     }
   
-    .pin {
+    /* .pin {
       width: 15vw;
     }
   
     .pin-icon {
       font-size: 10vw;
-    }
+    } */
   }
   

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import trails from './trails'; // Import your trails data
 
-const DogForm = () => {
+const DogForm = ({ trails }) => {
   const [formData, setFormData] = useState({
     size: '',
     likesWater: '',
@@ -12,6 +11,7 @@ const DogForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log('Form Change');
     setFormData({
       ...formData,
       [name]: value
@@ -20,15 +20,17 @@ const DogForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('Form submitted');
+    console.log('Form data:', formData);
     const matched = trails.find((trail) => {
       return (
         trail.size === formData.size &&
         trail.likesWater === formData.likesWater &&
-        trail.childFriendly === formData.childFriendly && 
+        trail.childFriendly === formData.childFriendly &&
         trail.city === formData.city
       );
     });
-
+    console.log('Matched trail:', matched);
     setMatchedTrail(matched);
   };
 
@@ -105,18 +107,14 @@ const DogForm = () => {
       {matchedTrail ? (
         <div>
           <h3>Matched Trail:</h3>
-          {matchedTrail.city ? (
-            <div>
-              <p>Recommended routes in {matchedTrail.city}</p>
-              {matchedTrail.route1 && <p>Routes: {matchedTrail.route1}</p>}
-              {matchedTrail.route2 && <p>Routes: {matchedTrail.route2}</p>}
-              {matchedTrail.route3 && <p>Routes: {matchedTrail.route3}</p>}
-            </div>
-          ) : (
-            <div>
-              <h3>No matching trail found</h3>
-            </div>
-          )}
+          <p>City: {matchedTrail.city}</p>
+          <p>Routes:</p>
+          <ul>
+            {matchedTrail.routes.map((route, index) => (
+              <li key={index}>{route}</li>
+            ))}
+          </ul>
+          {/* You can display other properties of matchedTrail here */}
         </div>
       ) : null}
     </div>

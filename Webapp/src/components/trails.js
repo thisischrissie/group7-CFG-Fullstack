@@ -1,9 +1,32 @@
 
 const trails = [
-  { size: 'big', likesWater: 'yes', childFriendly: 'yes', city: 'manchester', route1: 'Example1', route2: 'Example2', route3: 'Example3' },
-  { size: 'medium', likesWater: 'no', childFriendly: 'yes' },
-  { size: 'small', likesWater: 'yes', childFriendly: 'no' },
-
+  {
+    size: 'big',
+    likesWater: 'yes',
+    childFriendly: 'yes',
+    city: 'manchester',
+    routes: ['route1', 'route2', 'route3'],
+    locations: [
+      { lat: 51.5074, lng: -0.1278 }, // Location 1
+      { lat: 51.5098, lng: -0.1180 }, // Location 2
+      // Other locations...
+    ],
+    // Other properties...
+  },
+  {
+    size: 'medium',
+    likesWater: 'yes',
+    childFriendly: 'yes',
+    city: 'liverpool',
+    routes: ['route4', 'route5'],
+    locations: [
+      { lat: 53.4084, lng: -2.9916 }, // Location 1
+      { lat: 53.4072, lng: -2.9946 }, // Location 2
+      // Other locations...
+    ],
+    // Other properties...
+  },
+  // Other trails...
 ];
 
 export default trails;
