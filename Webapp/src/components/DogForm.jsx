@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
+import trails from './trails'; // Import your trails data
 
-
-const DogForm = ({ trails }) => {
+const DogForm = () => {
   const [formData, setFormData] = useState({
     size: '',
     likesWater: '',
@@ -31,11 +30,7 @@ const DogForm = ({ trails }) => {
     });
 
     setMatchedTrail(matched);
-    
-    // Navigate to /foundroute
-    window.location.href = '/foundroute';
   };
-
 
   return (
     <div>
@@ -92,6 +87,7 @@ const DogForm = ({ trails }) => {
           /> No
         </label>
         <br />
+
         <label>
           City:
           <select name="city" value={formData.city} onChange={handleChange} required>
@@ -103,11 +99,27 @@ const DogForm = ({ trails }) => {
         </label>
         <br />
 
-        <a href="/FoundRoute">
-  <button type="button">Submit</button>
-</a>
+        <button type="submit">Submit</button>
       </form>
-      </div>
+      
+      {matchedTrail ? (
+        <div>
+          <h3>Matched Trail:</h3>
+          {matchedTrail.city ? (
+            <div>
+              <p>Recommended routes in {matchedTrail.city}</p>
+              {matchedTrail.route1 && <p>Routes: {matchedTrail.route1}</p>}
+              {matchedTrail.route2 && <p>Routes: {matchedTrail.route2}</p>}
+              {matchedTrail.route3 && <p>Routes: {matchedTrail.route3}</p>}
+            </div>
+          ) : (
+            <div>
+              <h3>No matching trail found</h3>
+            </div>
+          )}
+        </div>
+      ) : null}
+    </div>
   );
 };
 
