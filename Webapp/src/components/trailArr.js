@@ -1,4 +1,3 @@
-// src/components/trails.js
 const trails = [
   {
     size: 'big',

@@ -9,10 +9,9 @@ import HomePage from "./pages/Homepage";
 import AboutUs from "./pages/About";
 import Profile from "./pages/Profile";
 import Breed from './pages/Breeds'; // Import Breed component
-import FindRoute from "./pages/FindRoute";
+
 import { selectUser } from "./redux/userSlice";
 import { useSelector } from "react-redux";
-
 
 function App() {
   const user = useSelector(selectUser);
@@ -26,8 +25,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/breeds" element={<Breed />} />
-          <Route path="/route" element={<FindRoute />} />
-          <Route path="/FindRoute" element={<DogForm trails={trails} />} /> {/* Pass trails data to DogForm */}
+          <Route path="/FindRoute" element={<DogForm trails={trails} />} />
           <Route path="/FoundRoute" element={<FoundRoute />} />
         </Routes>
       </main>

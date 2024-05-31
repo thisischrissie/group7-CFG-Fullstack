@@ -15,7 +15,7 @@ const Map = ({ markers }) => {
         defaultZoom={mapSettings.zoom}
       >
         {/* Render markers on the map */}
-        {markers.map((marker, index) => (
+        {markers && markers.map((marker, index) => (
           <Marker key={index} lat={marker.lat} lng={marker.lng} />
         ))}
       </GoogleMapReact>
@@ -23,7 +23,6 @@ const Map = ({ markers }) => {
   );
 };
 
-// Marker component (if needed)
 const Marker = () => <div className="marker">Marker</div>;
 
 export default Map;

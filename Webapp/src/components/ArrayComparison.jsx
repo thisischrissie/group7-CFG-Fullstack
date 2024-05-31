@@ -1,4 +1,3 @@
-// src/components/FilterGeolocation.js
 import React from 'react';
 
 const FilterGeolocation = ({ city, geolocationData, setFilteredData }) => {

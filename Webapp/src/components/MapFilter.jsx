@@ -5,7 +5,7 @@ const MapView = () => {
   const locations = [
     { lat: 51.5074, lng: -0.1278 }, // London
     { lat: 53.4808, lng: -2.2426 }, // Manchester
-    // Add more locations as needed
+    // Add more locations
   ];
 
   return (
