@@ -7,8 +7,8 @@ const trails = [
     city: 'manchester',
     routes: ['route1', 'route2', 'route3'],
     locations: [
-      { lat: 51.5074, lng: -0.1278 }, // Location 1
-      { lat: 51.5098, lng: -0.1180 }, // Location 2
+      { lat: 51.5074, lng: -0.1278 }, 
+      { lat: 51.5098, lng: -0.1180 }, 
       // Other locations...
     ],
     // Other properties...
@@ -20,8 +20,8 @@ const trails = [
     city: 'liverpool',
     routes: ['route4', 'route5'],
     locations: [
-      { lat: 53.4084, lng: -2.9916 }, // Location 1
-      { lat: 53.4072, lng: -2.9946 }, // Location 2
+      { lat: 53.4084, lng: -2.9916 }, 
+      { lat: 53.4072, lng: -2.9946 }, 
       // Other locations...
     ],
     // Other properties...
