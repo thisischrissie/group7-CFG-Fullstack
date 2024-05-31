@@ -1,4 +1,3 @@
-// DisplayAnswers.js - Component to display form answers
 import React from 'react';
 
 function DisplayAnswers({ formData }) {

@@ -1,4 +1,3 @@
-
 const trails = [
   {
     size: 'big',

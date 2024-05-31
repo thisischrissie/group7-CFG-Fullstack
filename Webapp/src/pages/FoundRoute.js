@@ -9,7 +9,7 @@ function FoundRoute() {
   const [formData, setFormData] = useState(null);
 
   const handleFormSubmit = (data) => {
-    setFormData(data); // Store form data in parent component state
+    setFormData(data); 
   };
 
   return (

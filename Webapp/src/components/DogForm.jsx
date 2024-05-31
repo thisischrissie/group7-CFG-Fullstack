@@ -114,7 +114,7 @@ const DogForm = ({ trails }) => {
               <li key={index}>{route}</li>
             ))}
           </ul>
-          {/* You can display other properties of matchedTrail here */}
+          {/* other properties of matchedTrail here */}
         </div>
       ) : null}
     </div>
