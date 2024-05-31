@@ -1,7 +1,9 @@
+/* commented out styles below interfering with navbar */
 
-*{
+
+/* *{
   background-color: #FFF2E8;
-}
+} */
 html {
   scroll-snap-type: y mandatory;
 }
