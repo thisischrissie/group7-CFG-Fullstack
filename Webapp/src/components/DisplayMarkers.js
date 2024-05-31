@@ -1,6 +1,5 @@
-// src/components/DisplayMarkers.jsx
 import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import GoogleMapReact from 'google-map-react'; 
 
 const DisplayMarkers = ({ locations }) => {
   const mapContainerStyle = {
@@ -14,14 +13,34 @@ const DisplayMarkers = ({ locations }) => {
   };
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyBTJRNSMRED1Iz4DmpKGRVg87NhfsHCJ8s">
-      <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={10}>
+    <div style={{ height: '400px', width: '100%' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: 'AIzaSyBTJRNSMRED1Iz4DmpKGRVg87NhfsHCJ8s' }}
+        defaultCenter={center}
+        defaultZoom={10}
+      >
         {locations.map((location, index) => (
-          <Marker key={index} position={{ lat: location.lat, lng: location.lng }} />
+          <Marker key={index} lat={location.lat} lng={location.lng} text="My Marker" />
         ))}
-      </GoogleMap>
-    </LoadScript>
+      </GoogleMapReact>
+    </div>
   );
 };
+
+const Marker = ({ text }) => (
+  <div style={{
+    color: 'white', 
+    background: 'grey',
+    padding: '10px 15px',
+    display: 'inline-flex',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '100%',
+    transform: 'translate(-50%, -50%)'
+  }}>
+    {text}
+  </div>
+);
 
 export default DisplayMarkers;

@@ -1,12 +1,11 @@
-// src/pages/MapView.js
 import React from 'react';
-import DisplayMarkers from '../components/DisplayMarkers'; // Assuming you have a component for displaying markers
+import DisplayMarkers from '../components/DisplayMarkers'; 
 
 const MapView = () => {
-  // Dummy locations for illustration, you can pass actual locations via props or state
   const locations = [
-    { lat: 51.5074, lng: -0.1278 },
-    { lat: 53.4084, lng: -2.9916 },
+    { lat: 51.5074, lng: -0.1278 }, // London
+    { lat: 53.4808, lng: -2.2426 }, // Manchester
+    // Add more locations as needed
   ];
 
   return (

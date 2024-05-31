@@ -1,27 +1,29 @@
-import React from "react";
-import "../styles/map.css";
-import GoogleMapReact from "google-map-react";
+import React from 'react';
+import GoogleMapReact from 'google-map-react'; 
 
+const Map = ({ markers }) => {
+  const mapSettings = {
+    center: { lat: 51.5074, lng: -0.1278 }, // Default center for the map
+    zoom: 10 // Default zoom level
+  };
 
-const location = {
-  address: "Manchester",
-  lat: 53.29012,
-  lng: -2.15226,
-};
-
-const Map = () => {
   return (
-    <div className="map">
-      {/* <h2 className="map-h2"></h2> */}
-      <div className="google-map">
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyBTJRNSMRED1Iz4DmpKGRVg87NhfsHCJ8s" }}
-          defaultCenter={location}
-          defaultZoom={5}>
-        </GoogleMapReact>
-      </div>
+    <div style={{ height: '400px', width: '100%' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: 'AIzaSyBTJRNSMRED1Iz4DmpKGRVg87NhfsHCJ8s' }}
+        defaultCenter={mapSettings.center}
+        defaultZoom={mapSettings.zoom}
+      >
+        {/* Render markers on the map */}
+        {markers.map((marker, index) => (
+          <Marker key={index} lat={marker.lat} lng={marker.lng} />
+        ))}
+      </GoogleMapReact>
     </div>
   );
 };
+
+// Marker component (if needed)
+const Marker = () => <div className="marker">Marker</div>;
 
 export default Map;
