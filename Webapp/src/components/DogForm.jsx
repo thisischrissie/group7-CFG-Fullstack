@@ -22,6 +22,12 @@ const DogForm = ({ trails }) => {
     e.preventDefault();
     console.log('Form submitted');
     console.log('Form data:', formData);
+    
+    if (!trails) {
+      console.error('Trails data is not available');
+      return;
+    }
+
     const matched = trails.find((trail) => {
       return (
         trail.size === formData.size &&
@@ -30,6 +36,7 @@ const DogForm = ({ trails }) => {
         trail.city === formData.city
       );
     });
+
     console.log('Matched trail:', matched);
     setMatchedTrail(matched);
   };

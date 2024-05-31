@@ -1,8 +1,8 @@
-// src/components/FoundRoute.jsx
+// src/pages/MapView.jsx
 import React from 'react';
 import DisplayMarkers from '../components/DisplayMarkers'; // Assuming this is the correct path to DisplayMarkers component
 
-const FoundRoute = () => {
+const MapView = () => {
   // Dummy locations for illustration, you can pass actual locations via props or state
   const locations = [
     { lat: 51.5074, lng: -0.1278 }, // London
@@ -12,10 +12,10 @@ const FoundRoute = () => {
 
   return (
     <div>
-      <h1>Found Route</h1>
+      <h1>Map View</h1>
       <DisplayMarkers locations={locations} />
     </div>
   );
 };
 
-export default FoundRoute;
+export default MapView;

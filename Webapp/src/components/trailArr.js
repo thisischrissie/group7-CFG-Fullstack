@@ -1,3 +1,4 @@
+// src/components/trails.js
 const trails = [
   {
     size: 'big',
@@ -6,11 +7,10 @@ const trails = [
     city: 'manchester',
     routes: ['route1', 'route2', 'route3'],
     locations: [
-      { lat: 51.5074, lng: -0.1278 }, 
-      { lat: 51.5098, lng: -0.1180 }, 
-      // Other locations...
+      { lat: 53.483959, lng: -2.244644 }, // Manchester Central Library
+      { lat: 53.471666, lng: -2.231402 }, // Heaton Park
+      { lat: 53.480759, lng: -2.242631 }, // Manchester Piccadilly Gardens
     ],
-    // Other properties...
   },
   {
     size: 'medium',
@@ -19,13 +19,10 @@ const trails = [
     city: 'liverpool',
     routes: ['route4', 'route5'],
     locations: [
-      { lat: 53.4084, lng: -2.9916 }, 
-      { lat: 53.4072, lng: -2.9946 }, 
-      // Other locations...
+      { lat: 53.408371, lng: -2.991573 }, // Liverpool Lime Street Station
+      { lat: 53.406553, lng: -2.994516 }, // Liverpool Central Library
     ],
-    // Other properties...
   },
-  // Other trails...
 ];
 
 export default trails;

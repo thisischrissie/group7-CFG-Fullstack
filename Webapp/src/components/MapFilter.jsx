@@ -1,27 +1,20 @@
-// src/components/DisplayMarkers.js
+// src/pages/MapView.js
 import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import DisplayMarkers from '../components/DisplayMarkers'; // Assuming you have a component for displaying markers
 
-const DisplayMarkers = ({ filteredData }) => {
-  const mapContainerStyle = {
-    height: '400px',
-    width: '800px',
-  };
-
-  const center = {
-    lat: 53.4808, // Default center (latitude of Manchester)
-    lng: -2.2426, // Default center (longitude of Manchester)
-  };
+const MapView = () => {
+  // Dummy locations for illustration, you can pass actual locations via props or state
+  const locations = [
+    { lat: 51.5074, lng: -0.1278 },
+    { lat: 53.4084, lng: -2.9916 },
+  ];
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyBTJRNSMRED1Iz4DmpKGRVg87NhfsHCJ8s">
-      <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={10}>
-        {filteredData.map((location, index) => (
-          <Marker key={index} position={{ lat: location.lat, lng: location.lng }} />
-        ))}
-      </GoogleMap>
-    </LoadScript>
+    <div>
+      <h1>Map View</h1>
+      <DisplayMarkers locations={locations} />
+    </div>
   );
 };
 
-export default DisplayMarkers;
+export default MapView;
