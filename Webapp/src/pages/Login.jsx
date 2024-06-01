@@ -1,27 +1,68 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { BigButton, GhostBigButton } from "../components/BigButton";
+import { useLogin } from "../Hooks/useLogin";
+import { useRegister } from "../Hooks/useRegister";
 
 function Login() {
   const [signIn, toggle] = useState(true);
+  const { error, register } = useRegister();
+  const [registerName, setRegisterName] = useState("");
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    await register(registerName, registerEmail, registerPassword);
+  };
   return (
     <Wrapper>
       <Container>
         <SignUpContainer signinIn={signIn}>
           <Form>
             <Title>Create Account</Title>
-            <Input type="text" placeholder="Name" />
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
-            <BigButton>Sign Up</BigButton>
+            <Input
+              type="text"
+              placeholder="Name"
+              onChange={(e) => setRegisterName(e.target.value)}
+              value={registerName}
+            />
+            <Input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setRegisterEmail(e.target.value)}
+              value={registerEmail}
+            />
+            <Input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setRegisterPassword(e.target.value)}
+              value={registerPassword}
+            />
+            {error && <p>{error}</p>}
+            <BigButton type="submit" onClick={handleRegister}>
+              Sign Up
+            </BigButton>
           </Form>
         </SignUpContainer>
         <SignInContainer signinIn={signIn}>
           <Form>
             <Title>Sign in</Title>
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
-            <Anchor href="#">Forgot your password?</Anchor>
+            <Input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setLoginEmail(e.target.value)}
+              value={loginEmail}
+            />
+            <Input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setLoginPassword(e.target.value)}
+              value={loginPassword}
+            />
+            {/* <Anchor href="#">Forgot your password?</Anchor> */}
             <BigButton>Sign In</BigButton>
           </Form>
         </SignInContainer>
