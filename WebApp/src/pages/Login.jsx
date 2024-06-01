@@ -7,6 +7,7 @@ import { useRegister } from "../Hooks/useRegister";
 function Login() {
   const [signIn, toggle] = useState(true);
   const { error, register } = useRegister();
+  const { error: loginError, login } = useLogin();
   const [registerName, setRegisterName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -16,6 +17,10 @@ function Login() {
   const handleRegister = async (e) => {
     e.preventDefault();
     await register(registerName, registerEmail, registerPassword);
+  };
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    await register(loginEmail, loginPassword);
   };
   return (
     <Wrapper>
@@ -63,7 +68,10 @@ function Login() {
               value={loginPassword}
             />
             {/* <Anchor href="#">Forgot your password?</Anchor> */}
-            <BigButton>Sign In</BigButton>
+            {error && <p>{error}</p>}
+            <BigButton type="submit" onClick={handleLogin}>
+              Sign In
+            </BigButton>
           </Form>
         </SignInContainer>
         <OverlayContainer signinIn={signIn}>
