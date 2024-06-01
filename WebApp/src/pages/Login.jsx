@@ -20,7 +20,7 @@ function Login() {
   };
   const handleLogin = async (e) => {
     e.preventDefault();
-    await register(loginEmail, loginPassword);
+    await login(loginEmail, loginPassword);
   };
   return (
     <Wrapper>
@@ -68,7 +68,7 @@ function Login() {
               value={loginPassword}
             />
             {/* <Anchor href="#">Forgot your password?</Anchor> */}
-            {error && <p>{error}</p>}
+            {loginError && <p>{loginError}</p>}
             <BigButton type="submit" onClick={handleLogin}>
               Sign In
             </BigButton>
