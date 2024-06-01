@@ -13,7 +13,8 @@ export const useLogin = () => {
       .then(() => {
         //TODO: add redux
       })
-      .catch(() => {
+      .catch((e) => {
+        console.error(e);
         setError(true);
       });
   };
