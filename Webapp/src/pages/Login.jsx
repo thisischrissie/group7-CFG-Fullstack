@@ -1,28 +1,81 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { BigButton, GhostBigButton } from "../components/BigButton";
+import { useLogin } from "../Hooks/useLogin";
+import { useRegister } from "../Hooks/useRegister";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   const [signIn, toggle] = useState(true);
+  const { error, signup } = useRegister();
+  const { error: loginError, signin } = useLogin();
+  const [registerName, setRegisterName] = useState("");
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    await signup(registerName, registerEmail, registerPassword);
+    navigate("/profile");
+  };
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    await signin(loginEmail, loginPassword);
+    navigate("/");
+  };
   return (
     <Wrapper>
       <Container>
-        <SignUpContainer signinIn={signIn}>
+        <SignUpContainer signinin={signIn}>
           <Form>
             <Title>Create Account</Title>
-            <Input type="text" placeholder="Name" />
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
-            <BigButton>Sign Up</BigButton>
+            <Input
+              type="text"
+              placeholder="Name"
+              onChange={(e) => setRegisterName(e.target.value)}
+              value={registerName}
+            />
+            <Input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setRegisterEmail(e.target.value)}
+              value={registerEmail}
+            />
+            <Input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setRegisterPassword(e.target.value)}
+              value={registerPassword}
+            />
+            {error && <p>{error}</p>}
+            <BigButton type="submit" onClick={handleRegister}>
+              Sign Up
+            </BigButton>
           </Form>
         </SignUpContainer>
-        <SignInContainer signinIn={signIn}>
+        <SignInContainer signinin={signIn}>
           <Form>
             <Title>Sign in</Title>
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
-            <Anchor href="#">Forgot your password?</Anchor>
-            <BigButton>Sign In</BigButton>
+            <Input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setLoginEmail(e.target.value)}
+              value={loginEmail}
+            />
+            <Input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setLoginPassword(e.target.value)}
+              value={loginPassword}
+            />
+            {/* <Anchor href="#">Forgot your password?</Anchor> */}
+            {loginError && <p>{loginError}</p>}
+            <BigButton type="submit" onClick={handleLogin}>
+              Sign In
+            </BigButton>
           </Form>
         </SignInContainer>
         <OverlayContainer signinIn={signIn}>
@@ -80,7 +133,7 @@ const SignUpContainer = styled.div`
   opacity: 0;
   z-index: 1;
   ${(props) =>
-    props.signinIn !== true
+    props.signinin !== true
       ? `
     transform: translateX(100%);
     opacity: 1;
@@ -98,7 +151,7 @@ const SignInContainer = styled.div`
   width: 50%;
   z-index: 2;
   ${(props) =>
-    props.signinIn !== true ? `transform: translateX(100%);` : null}
+    props.signinin !== true ? `transform: translateX(100%);` : null}
 `;
 
 const Form = styled.form`
