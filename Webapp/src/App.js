@@ -17,7 +17,8 @@ function App() {
   const user = useSelector(selectUser);
   return (
     <Router>
-      {user && <NavBar />}
+      <NavBar />
+      {/* previously {user && <NavBar />} on line 20 but the Navbar disappeared on webpage*/}
       <main>
         <Routes>
           <Route path="/" element={user ? <HomePage /> : <Login />} />
