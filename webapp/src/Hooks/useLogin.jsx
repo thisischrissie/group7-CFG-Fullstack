@@ -15,7 +15,7 @@ export const useLogin = () => {
       })
       .then(() => {
         const userInfo = { email: email, password: password };
-        dispatch(login(JSON.stringify(userInfo)));
+        dispatch(login(userInfo));
 
         console.log("success");
       })
