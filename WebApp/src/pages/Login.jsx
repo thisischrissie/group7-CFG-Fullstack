@@ -3,11 +3,13 @@ import styled from "styled-components";
 import { BigButton, GhostBigButton } from "../components/BigButton";
 import { useLogin } from "../Hooks/useLogin";
 import { useRegister } from "../Hooks/useRegister";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   const [signIn, toggle] = useState(true);
-  const { error, register } = useRegister();
-  const { error: loginError, login } = useLogin();
+  const { error, signup } = useRegister();
+  const { error: loginError, signin } = useLogin();
   const [registerName, setRegisterName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -16,16 +18,18 @@ function Login() {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    await register(registerName, registerEmail, registerPassword);
+    await signup(registerName, registerEmail, registerPassword);
+    navigate("/profile");
   };
   const handleLogin = async (e) => {
     e.preventDefault();
-    await login(loginEmail, loginPassword);
+    await signin(loginEmail, loginPassword);
+    navigate("/");
   };
   return (
     <Wrapper>
       <Container>
-        <SignUpContainer signinIn={signIn}>
+        <SignUpContainer signinin={signIn}>
           <Form>
             <Title>Create Account</Title>
             <Input
@@ -52,7 +56,7 @@ function Login() {
             </BigButton>
           </Form>
         </SignUpContainer>
-        <SignInContainer signinIn={signIn}>
+        <SignInContainer signinin={signIn}>
           <Form>
             <Title>Sign in</Title>
             <Input
@@ -129,7 +133,7 @@ const SignUpContainer = styled.div`
   opacity: 0;
   z-index: 1;
   ${(props) =>
-    props.signinIn !== true
+    props.signinin !== true
       ? `
     transform: translateX(100%);
     opacity: 1;
@@ -147,7 +151,7 @@ const SignInContainer = styled.div`
   width: 50%;
   z-index: 2;
   ${(props) =>
-    props.signinIn !== true ? `transform: translateX(100%);` : null}
+    props.signinin !== true ? `transform: translateX(100%);` : null}
 `;
 
 const Form = styled.form`
