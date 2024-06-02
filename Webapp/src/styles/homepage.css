@@ -78,15 +78,14 @@ div.pupsNearYou{
 
 
 }
-div{
+div {
   border-style: 1px solid #8A5D4D;
   display: flex;
   justify-content: center; 
   flex-direction: column;
   background-color: transparent;
-
-
 }
+
 span {
   border-style: 1px solid #8A5D4D;
   display: flex;
@@ -115,12 +114,14 @@ span {
   color:#8A5D4D;
   background-color: transparent;
 }
-img {
+
+/* commented out img - conflict with map */
+/* img {
   width: 70px;
   height: 60px;
   border-radius: 50%;
   display: flex;
   align-content: flex-start ;
   justify-content: space-evenly;
-}
+} */
 
