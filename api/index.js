@@ -4,6 +4,8 @@ import express from "express";
 import UserRouter from "./routes/UserRouter.js";
 import OwnerRouter from "./routes/OwnerRouter.js";
 import DogRouter from "./routes/DogRouter.js";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 
 //middleware
 const app = express();
