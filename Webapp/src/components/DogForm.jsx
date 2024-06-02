@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Map from './Map';
+import Map from './Map'; // Import Map component
 
 const DogForm = ({ trails }) => {
   const [formData, setFormData] = useState({
@@ -112,6 +112,12 @@ const DogForm = ({ trails }) => {
         <div>
           <h3>Matched Trail:</h3>
           <p>City: {matchedTrail.city}</p>
+          <p>Routes:</p>
+          <ul>
+            {matchedTrail.routes.map((route, index) => (
+              <li key={index}>{route}</li>
+            ))}
+          </ul>
           {/* Display other details of the matched trail */}
           <Map /> {/* Show the map */}
         </div>
