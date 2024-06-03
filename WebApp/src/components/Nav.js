@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/Nav.css";
 import { useDispatch } from "react-redux";
-import { BigButton } from "./BigButton";
+import { GhostBigButton } from "./BigButton";
 import { logout } from "../redux/userSlice";
 
 export default function NavBar() {
@@ -49,7 +49,11 @@ export default function NavBar() {
               Find a Route
             </Link>
           </li>
-          <BigButton onClick={handleLogout}>Log out</BigButton>
+          <li>
+            <GhostBigButton className="nav__logout" onClick={handleLogout}>
+              Log out
+            </GhostBigButton>
+          </li>
         </ul>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />

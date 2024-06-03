@@ -58,7 +58,9 @@ nav {
   display: flex;
   align-items: center;
 }
-
+.nav__logout {
+  justify-content: flex-end;
+}
 @media only screen and (max-width: 1024px) {
   header .nav-btn {
     visibility: visible;
