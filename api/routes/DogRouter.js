@@ -6,6 +6,7 @@ const router = express.Router();
 
 //GET endpoint to retrieve list of dogs
 router.get("/dogs", async (request, response) => {
+  // response.set('Access-Control-Allow-Origin', '*')
   try {
    const dogs = await DogModel.find({});
     response.send(dogs);

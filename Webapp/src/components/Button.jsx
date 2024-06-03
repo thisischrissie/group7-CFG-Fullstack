@@ -1,4 +1,4 @@
-import './Button.css'
+import '../styles/Button.css';
 
 // button to be able to change text, link and color so it is reusable throughout the web app. 
 function Button(props) {

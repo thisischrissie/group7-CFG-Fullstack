@@ -13,6 +13,16 @@ router.get("/owners", async (request, response) => {
   }
 });
 
+//GET endpoint to retrieve one owner by ID
+router.get("/owners/:id", async (request, response) => {
+  try {
+    const owner = await OwnerModel.findOne({ _id: request.params.id });
+    response.send(owner);
+  } catch (error) {
+    response.status(500).send({ error });
+  }
+});
+
 //POST endpoint to create new user profile
 router.post("/owner", async (request, response) => {
   const owner = new OwnerModel(request.body);
