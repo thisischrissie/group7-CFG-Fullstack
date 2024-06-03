@@ -1,0 +1,143 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-content {
+    background-color: #FFF2E8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #8A5D3D;
+  }
+  
+  .App-link {
+    color: #8A5D3D;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+  }
+
+  body{
+    background-color: #FFF2E8;
+    color: #8A5D3D;
+
+
+  }
+  .container{
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+
+  }
+
+  section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+
+  }
+
+  hi{
+    font-size: 50px;
+    line-height: 60px;
+    text-align:center;
+    margin-bottom: 40px;
+  }
+
+  .cards{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cards {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    width: 100%;
+    background: #FFF2E8;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: .3s;
+    border: 2px solid transparent 
+
+}
+
+.card:hover{
+  border-color: #CAF377;
+
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: #CAF377;
+  color: #fff; 
+  border-radius: 10px;
+  max-width: 120px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: .3s;
+  border: 1px solid #1d39c4
+
+
+}
+
+.btn:hover{
+    background: transparent;
+    color: #1d39c4;
+
+}
+
+@media(max-width: 969px){
+    section {
+        padding:20px 0;
+    }
+    h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .card {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        width: 100%;
+
+    }
+        
+    
+}
