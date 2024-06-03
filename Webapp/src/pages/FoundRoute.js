@@ -11,7 +11,7 @@ const FoundRoute = () => {
   return (
     <div>
       <h2>Found Route</h2>
-      <Map markers={markers} /> {/* Pass markers data to the Map component */}
+      <Map markers={markers} /> 
     </div>
   );
 };

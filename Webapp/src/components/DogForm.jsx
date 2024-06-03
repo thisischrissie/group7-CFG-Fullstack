@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Map from './Map'; // Import Map component
+import Map from '../components/Map'; 
 
 const DogForm = ({ trails }) => {
   const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ const DogForm = ({ trails }) => {
     city: ''
   });
   const [matchedTrail, setMatchedTrail] = useState(null);
-  const [isMapShown, setIsMapShown] = useState(false); // State to track if map should be shown
+  const [isMapShown, setIsMapShown] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +18,7 @@ const DogForm = ({ trails }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (!trails) {
       console.error('Trails data is not available');
       return;
@@ -34,7 +34,7 @@ const DogForm = ({ trails }) => {
     });
 
     setMatchedTrail(matched);
-    setIsMapShown(true); // Show the map after submitting the form
+    setIsMapShown(true);
   };
 
   return (
@@ -118,8 +118,10 @@ const DogForm = ({ trails }) => {
               <li key={index}>{route}</li>
             ))}
           </ul>
-          {/* Display other details of the matched trail */}
-          <Map /> {/* Show the map */}
+          <Map
+            markers={matchedTrail.locations}
+            center={matchedTrail.locations[0]}
+          />
         </div>
       ) : null}
     </div>
