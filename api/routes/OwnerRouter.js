@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 //GET endpoint to retrieve list of owners
-router.get("/owners", async (request, response) => {
+router.get("/owners", async (response) => {
   try {
    const owners = await OwnerModel.find({});
     response.send(owners);
@@ -14,6 +14,7 @@ router.get("/owners", async (request, response) => {
 });
 
 //GET endpoint to retrieve one owner by ID
+//want to change the model to aggregate for the dog details
 router.get("/owners/:id", async (request, response) => {
   try {
     const owner = await OwnerModel.findOne({ _id: request.params.id });
