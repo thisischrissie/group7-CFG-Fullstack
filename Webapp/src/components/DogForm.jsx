@@ -8,7 +8,8 @@ const PageWrapper = styled.div`
   align-items: center;
   height: 100vh;
   background-color: #f9f9f9; //Behind the user input form
-  padding: 20px;
+  // padding: 20px;
+  padding-top: 200px;
 `;
 
 const FormContainer = styled.div`
@@ -106,6 +107,13 @@ const ButtonGroup = styled.div`
   margin-top: auto;
 `;
 
+const ImageGroup = styled.div`
+display: flex;
+flex-direction: column;
+align-self: center;
+width: 50%;
+overflow: hidden;
+`;
 
 const DogForm = ({ trails }) => {
   const [formData, setFormData] = useState({
@@ -175,6 +183,8 @@ const DogForm = ({ trails }) => {
   return (
     <PageWrapper>
       <FormContainer isFormSubmitted={isFormSubmitted}>
+        <ImageGroup>
+        <img src="./Walk.png" alt="Find your perfect route"/></ImageGroup>
         <Title>Find your Perfect Route</Title>
         <form onSubmit={handleSubmit}>
           <Label>
