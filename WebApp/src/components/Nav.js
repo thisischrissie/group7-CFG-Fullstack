@@ -49,12 +49,13 @@ export default function NavBar() {
               Find a Route
             </Link>
           </li>
-          <li>
+          <div className="nav__logout-container">
             <GhostBigButton className="nav__logout" onClick={handleLogout}>
               Log out
             </GhostBigButton>
-          </li>
+          </div>
         </ul>
+
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
