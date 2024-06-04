@@ -4,9 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function About() { //  function to About
   const [cards] = useState([
-    {
-      title: 'Meet our developers',
-    },
+
     {
       title: 'Cecilia',
       text: "Born in Taiwan, currently living in London. The inspiration for my project came from my partner’s family, who often call him while walking their dogs because they’re bored. Walking your dog can sometimes feel like a mundane chore, so why not make it more enjoyable by connecting with fellow dog lovers for joint walks? My favourite dog breed is Sheltie. For this project, I will primarily focus on developing the front-end using React, with a particular emphasis on the Login page. Additionally, I aim to implement a hash function to encrypt user passwords, enhancing the security of our website for all users."
@@ -25,9 +23,13 @@ function About() { //  function to About
     },
     {
       title: 'Grace',
-      text: 'Born in London and grew up in Kent. I love the idea of connecting dog lovers! Living in London, I often hear of dog owners looking for fellow dog lovers to connect with. Community is often difficult to find, and our app solves this issue. I love minature dashounds and often dog-sit. I am currently working as a Tech Recruiter, and keen to switch to being a Developer. I have challenged myself with doing a frontend page with react on this project as my strongest experience is backend with Python and SQL. '
+      text: 'Born in London and grew up in Kent. I love the idea of connecting dog lovers! Living in London, I often hear of dog owners looking for fellow dog lovers to connect with. Community is often difficult to find, and our app solves this issue. I love minature dachsunds and often dog-sit. I am currently working as a Tech Recruiter, and keen to switch to being a Developer. I have challenged myself with doing a frontend page with react on this project as my strongest experience is backend with Python and SQL. '
     },
   ]);
+
+  const meetDevelopers = {
+    title: 'Meet our Developers',
+  };
 
   return (
     <div className="App">
@@ -45,6 +47,8 @@ function About() { //  function to About
       </div>
       <div className='container'>
         <h1>About Us</h1>
+        <h2>{meetDevelopers.title}</h2>
+        </div>
         <div className="accordion" id="accordionExample">
           {
             cards.map((card, i) => (
@@ -65,7 +69,7 @@ function About() { //  function to About
           }
         </div>
       </div>
-    </div>
+
   );
 }
 
