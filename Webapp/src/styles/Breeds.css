@@ -10,14 +10,8 @@
   }
 }
 
-/* can be removed after merging and using global.css */
-body {
-  background-color: #fff2e8;
-  font-family: "Varela", sans-serif;
-}
-
 /* Card component CSS */
-.card {
+.cardDog {
   width: 450px;
   height: 550px;
   border: 1px #ffffff;
@@ -34,12 +28,12 @@ body {
   animation: fadeIn 1s ease-in;
 }
 
-.card:hover {
+.cardDog:hover {
   box-shadow: 0 0 20px #caf377; /* Add glow effect on hover */
 }
 
 
-.card-back {
+.cardDog-back {
   background-color: #f5d0a9;
   transition: transform 0.3s ease-in-out;
   animation: fadeIn 1s ease-in;
@@ -55,7 +49,7 @@ body {
 }
 
 /* img on the card */
-img {
+.card-image {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -88,7 +82,7 @@ img {
 /* Adding media queries to make our code responsive */
 /* Sizes min-400px to min-1650px */
 @media (min-width: 400px) {
-  .card {
+  .cardDog {
     width: 55%; 
     justify-content: center !important;
     margin: 5% 15%;
@@ -99,7 +93,7 @@ img {
   .breedInfo {
     font-size: 0.9rem; 
   }
-  .card img {
+  .card-image {
     width: 90%; 
     height: auto;
   }
@@ -110,7 +104,7 @@ img {
 }
 
 @media (min-width: 640px) {
-  .card {
+  .cardDog {
     width: 65%; 
     justify-content: center !important;
     margin: 5% 10%;
@@ -121,7 +115,7 @@ img {
   .breedInfo {
     font-size: 1rem; 
   }
-  .card img {
+  .card-image {
     width: 80%;
     height: auto;
   }
@@ -132,7 +126,7 @@ img {
 
 @media (min-width: 768px) {
   /* Mobile */
-  .card {
+  .cardDog {
     width: 80%;
     justify-content: center !important;
     margin: 5% 10%;
@@ -143,10 +137,10 @@ img {
   .breedInfo {
     font-size: 0.8rem;
   }
-  h1 {
+  .h1Breeds {
     font-size: 3rem;
   }
-  .card img {
+  .card-image {
     width: 55%; 
     height: auto;
   }
@@ -156,7 +150,7 @@ img {
 }
 @media (min-width: 1024px) {
   /* Normal Desktop */
-  .card {
+  .cardDog {
     width: 90%; 
     justify-content: center !important;
     margin: 5% 5%;
@@ -167,10 +161,10 @@ img {
   .breedInfo {
     font-size: 1rem;
   }
-  h1 {
+  .h1Breeds {
     font-size: 2rem;
   }
-  .card img {
+  .card-image {
     width: 70%;
     height: auto;
   }
@@ -181,7 +175,7 @@ img {
 
 @media (min-width: 1280px) {
   /* Large Desktop */
-  .card {
+  .cardDog {
     width: 100%; 
     justify-content: center !important;
     margin: 5% 0%;
@@ -192,13 +186,13 @@ img {
   .breedInfo {
     font-size: 1.2rem;
   }
-  p {
+  .pBreeds{
     font-size: 1rem;
   }
-  h1 {
+  .h1Breeds {
     font-size: 3rem;
   }
-  .card img {
+  .card-image {
     width: 60%; 
     height: auto;
   }
@@ -208,7 +202,7 @@ img {
 }
 @media (min-width: 1536px) {
   /* Large Desktop */
-  .card {
+  .cardDog {
     width: 100%;
     font-size: 1.2rem;
   }
@@ -218,13 +212,13 @@ img {
   .breedInfo {
     font-size: 1.2rem;
   }
-  p {
+  .pBreeds{
     font-size: 1rem;
   }
-  h1 {
+  .h1Breeds {
     font-size: 3rem;
   }
-  .card img {
+  .card-image {
     width: 80%; 
     height: auto;
   }
@@ -234,7 +228,7 @@ img {
 }
 @media (min-width: 1650px) {
     /* Large Desktop */
-    .card {
+    .cardDog {
       width: 100%;
       font-size: 1.2rem;
     }
@@ -244,13 +238,13 @@ img {
     .breedInfo {
       font-size: 1.2rem;
     }
-    p {
+    .pBreeds{
       font-size: 1rem;
     }
-    h1 {
+    .h1Breeds {
       font-size: 3rem;
     }
-    .card img {
+    .card-image {
       width: 60%;
       height: auto;
     }

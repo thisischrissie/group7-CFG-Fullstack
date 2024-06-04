@@ -1,6 +1,8 @@
-*{
+/* commented out styles below interfering with navbar */
+
+/* *{
     background-color: #FFF2E8;
-  }
+  } */
 
   h1 {
     font-weight: bold;
@@ -23,8 +25,8 @@
     align-items: center;
     margin:5%;
     padding:5%;
-
   }
+  /* }
   div.col-xs-12.col-md-6{
     display:flex;
     justify-content: center;
@@ -35,7 +37,7 @@
     margin:auto;
     padding: auto;
 
-  }
+  } */
   
   
   .card-body {

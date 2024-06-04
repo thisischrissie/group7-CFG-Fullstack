@@ -1,8 +1,10 @@
+/* commented out styles below interfering with navbar */
 
+/* 
 *{
     background-color: #FFF2E8;
   }
-  
+   */
 
   h2 {
     display:block;
@@ -45,11 +47,11 @@
     justify-content: center;
   }
   
-div.col-xs-12.col-md-6{
+/* div.col-xs-12.col-md-6{
     display:flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
 button.newButton {
     display: flex;
@@ -105,9 +107,9 @@ span{
 }
 
 
-div{
+/* div{
   background-color: transparent;
-}
+} */
 label {
   background-color: transparent;
   font-size: small;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import "../styles/Breeds.css";
+import "../styles/Global.css";
 
 /*Component Definition*/
 function BreedCard(props) {
@@ -16,24 +17,24 @@ function BreedCard(props) {
       <ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped}>
         {/* Front side */}
         <div key="front" onClick={flipCard}>
-          <div className="card">
-            <img src={props.imageUrl} alt={props.imageAlt} />
+          <div className="cardDog">
+            <img className = "card-image" src={props.imageUrl} alt={props.imageAlt} />
             <div className="breedName">
-              <h1>{props.dogBreed}</h1>
+              <h1 className="h1Breeds" >{props.dogBreed}</h1>
             </div>
           </div>
         </div>
         {/* Back side */}
         <div key="back" onClick={flipCard}>
-          <div className="card card-back">
+          <div className="cardDog cardDog-back">
             <div className="breedInfo">
               {/*Props*/}
               <h3>Qualities</h3>
-              <p>{props.quality}</p>
+              <p className="pBreeds">{props.quality}</p>
               <h3>Temperament</h3>
-              <p>{props.temper}</p>
+              <p className="pBreeds">{props.temper}</p>
               <h3>Need to knows</h3>
-              <p>{props.knows}</p>
+              <p className="pBreeds">{props.knows}</p>
             </div>
           </div>
         </div>

@@ -1,3 +1,12 @@
+<<<<<<< HEAD:WebApp/src/styles/homepage.css
+=======
+/* commented out styles below interfering with navbar */
+
+
+/* *{
+  background-color: #FFF2E8;
+} */
+>>>>>>> origin/api-login:Webapp/src/styles/homepage.css
 html {
   scroll-snap-type: y mandatory;
 }
