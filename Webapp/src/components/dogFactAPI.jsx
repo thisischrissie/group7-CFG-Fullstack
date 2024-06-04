@@ -37,6 +37,7 @@ const Banner = () => {
   );
 };
 
+//Bleeding from other pages, so keep here for now
 const styles = {
   banner: {
     backgroundColor: '#caf377',

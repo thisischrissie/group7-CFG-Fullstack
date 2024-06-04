@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Nav";
 import DogForm from './components/DogForm'; 
 import FoundRoute from './pages/FoundRoute';
-import trails from './components/trailArr'; 
+import trails from './components/Trails'; 
 import Login from "./pages/Login";
 import HomePage from "./pages/Homepage";
 import AboutUs from "./pages/About";

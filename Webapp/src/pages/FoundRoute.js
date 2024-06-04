@@ -1,6 +1,6 @@
 import React from 'react';
 import Map from '../components/Map';
-import trails from '../components/trailArr'; 
+import trails from '../components/Trails'; 
 
 const FoundRoute = () => {
   const markers = trails.map(trail => ({
