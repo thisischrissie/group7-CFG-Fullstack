@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import '../styles/About.css'; // importing the CSS file - connecting it
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function About() { //  function to About
+function About() { // function to About
   const [cards] = useState([
-
+    {
+      title: 'Meet our developers',
+    },
     {
       title: 'Cecilia',
       text: "Born in Taiwan, currently living in London. The inspiration for my project came from my partner’s family, who often call him while walking their dogs because they’re bored. Walking your dog can sometimes feel like a mundane chore, so why not make it more enjoyable by connecting with fellow dog lovers for joint walks? My favourite dog breed is Sheltie. For this project, I will primarily focus on developing the front-end using React, with a particular emphasis on the Login page. Additionally, I aim to implement a hash function to encrypt user passwords, enhancing the security of our website for all users."
     }, 
     {
       title: 'Tara',
-      text: "From Fermanagh, NI. I wanted to be involved in a project where I loved the concept and would also push me out of my comfort zone whilst having fun! Since I took my first breath I’ve loved dogs! My favourite dog breed is Jack Russel Terrier. My little dog Socks, who has since passed showed me dogs really are mans best friend, he would follow me loyally everywhere for 17 years. I want the website to show owners new routes to discover that may be more accommodating to both them and their dogs, promoting a healthy doggy lifestyle while doing so. Helping to implement the API, building web pages, testing and documentation."
+      text: "From Fermanagh, NI. I wanted to be involved in a project where I loved the concept and would also push me out of my comfort zone whilst having fun! Since I took my first breath I’ve loved dogs! My favourite dog breed is Jack Russel Terrier. My little dog Socks, who has since passed showed me dogs really are mans best friend, he would follow me loyally everywhere for 17 years. I want the website to show owners new routes to discover that may be more accommodating to both them and their dogs, promoting a healthy doggy lifestyle while doing so. Helping to implement the API, building web pages, testing and documentation."
     },
     {
       title: 'Emily',
-      text:"Living in Manchester UK. I wanted to bring a sense of community to dog parents. I have loved dogs since i was a little kid! Favourite breed: Samoyeds. My favourite social media dog: @mayapolarbear she is so clever and such a sweet girl. I hope that this website is easy to navigate and makes dog walking much more enjoyable and exciting to both the dog owner and their dog! Project contribution: designing the website and doing the frontend of the homepage and the profile pages. Fun fact: I have switched from a career in nutrition to web development to explore my creative side"
+      text:"Living in Manchester UK. I wanted to bring a sense of community to dog parents. I have loved dogs since I was a little kid! Favourite breed: Samoyeds. My favourite social media dog: @mayapolarbear she is so clever and such a sweet girl. I hope that this website is easy to navigate and makes dog walking much more enjoyable and exciting to both the dog owner and their dog! Project contribution: designing the website and doing the frontend of the homepage and the profile pages. Fun fact: I have switched from a career in nutrition to web development to explore my creative side"
     },
     {
       title: 'Chrissie',
@@ -23,13 +25,9 @@ function About() { //  function to About
     },
     {
       title: 'Grace',
-      text: 'Born in London and grew up in Kent. I love the idea of connecting dog lovers! Living in London, I often hear of dog owners looking for fellow dog lovers to connect with. Community is often difficult to find, and our app solves this issue. I love minature dachsunds and often dog-sit. I am currently working as a Tech Recruiter, and keen to switch to being a Developer. I have challenged myself with doing a frontend page with react on this project as my strongest experience is backend with Python and SQL. '
+      text: 'Born in London and grew up in Kent. I love the idea of connecting dog lovers! Living in London, I often hear of dog owners looking for fellow dog lovers to connect with. Community is often difficult to find, and our app solves this issue. I love miniature dachshunds and often dog-sit. I am currently working as a Tech Recruiter, and keen to switch to being a Developer. I have challenged myself with doing a frontend page with react on this project as my strongest experience is backend with Python and SQL.'
     },
   ]);
-
-  const meetDevelopers = {
-    title: 'Meet our Developers',
-  };
 
   return (
     <div className="App">
@@ -46,22 +44,23 @@ function About() { //  function to About
         </a>
       </div>
       <div className='container'>
-        <h1>About Us</h1>
-        <h2>{meetDevelopers.title}</h2>
-        </div>
-        <div className="accordion" id="accordionExample">
+        <div className="row row-cols-1 row-cols-md-2 g-4">
           {
             cards.map((card, i) => (
-              <div key={i} className="accordion-item">
-                <h2 className="accordion-header" id={`heading${i}`}>
-                  <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${i}`} aria-expanded="true" aria-controls={`collapse${i}`}>
-                    {card.title}
-                  </button>
-                </h2>
-                <div id={`collapse${i}`} className="accordion-collapse collapse" aria-labelledby={`heading${i}`} data-bs-parent="#accordionExample">
-                  <div className="accordion-body">
-                    <p>{card.text}</p>
-                    <button className="btn btn-primary">Explore</button>
+              <div key={i} className="col">
+                <div className="card">
+                  <div className="card-header">
+                    <h2 className="accordion-header" id={`heading${i}`}>
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${i}`} aria-expanded="false" aria-controls={`collapse${i}`}>
+                        {card.title}
+                      </button>
+                    </h2>
+                  </div>
+                  <div id={`collapse${i}`} className="accordion-collapse collapse" aria-labelledby={`heading${i}`} data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                      <p>{card.text}</p>
+                      <button className="btn btn-primary">Explore</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -69,7 +68,7 @@ function About() { //  function to About
           }
         </div>
       </div>
-
+    </div>
   );
 }
 
