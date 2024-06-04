@@ -181,6 +181,11 @@ const DogForm = ({ trails }) => {
     if (matchedTrail) {
       const newRandomRoute = getRandomRoute(matchedTrail.routes, randomRoute);
       setRandomRoute(newRandomRoute);
+  
+      // Check if there's only 1 route available
+      if (matchedTrail.routes.length === 1) {
+        alert('There is only 1 route available.');
+      }
     }
   };
 
