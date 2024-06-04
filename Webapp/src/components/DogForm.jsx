@@ -6,10 +6,8 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   background-color: #f9f9f9; //Behind the user input form
-  // padding: 20px;
-  padding-top: 200px;
+  padding-top: 20px; //removed height so this does not have to be so large to account for navbar
 `;
 
 const FormContainer = styled.div`
@@ -18,7 +16,7 @@ background-color: white; //Form colour
 border-radius: 10px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 width: 100%;
-max-width: 700px;
+max-width: 400px;
 display: ${({ isFormSubmitted }) => (isFormSubmitted ? 'none' : 'flex')};
 flex-direction: column;
 `;
@@ -79,11 +77,13 @@ const Button = styled.button`
 `;
 
 const ResultWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
+display: grid;
+grid-template-columns: 3fr 2fr;
+gap: 20px;
+max-width: 100%;
+max-height: 80%; // Maximum height
+margin: 0 auto;
+overflow: auto; // Enable scrollbars
 `;
 
 const ResultContainer = styled.div`
@@ -113,6 +113,14 @@ flex-direction: column;
 align-self: center;
 width: 50%;
 overflow: hidden;
+`;
+
+const WalkImage = styled.div`
+display: flex;
+align-self: center;
+overflow: hidden;
+max-height: 200px;
+max-width: 700px;
 `;
 
 const DogForm = ({ trails }) => {
@@ -253,9 +261,9 @@ const DogForm = ({ trails }) => {
             City:
             <Select name="city" value={formData.city} onChange={handleChange} required>
               <option value="">Select</option>
-              <option value="manchester">Manchester</option>
-              <option value="liverpool">Liverpool</option>
-              <option value="london">London</option>
+              <option value="Manchester">Manchester</option>
+              <option value="Liverpool">Liverpool</option>
+              <option value="London">London</option>
             </Select>
           </Label>
           
@@ -269,7 +277,10 @@ const DogForm = ({ trails }) => {
           <ResultContainer>
             <h3>Recommended for you in <b>{matchedTrail.city}</b></h3>
             {/* <p>City: </p> */}
-            <p>Route: {randomRoute}</p>
+            <p>Route: {randomRoute.name}</p>
+            <WalkImage>
+            <img src={randomRoute.ImageURL} alt={randomRoute.name} /></WalkImage>
+            <p>{randomRoute.description}</p>
             <ButtonGroup>
             <Button type="button" onClick={handleRefresh}>Refresh</Button>
             <Button type="button" onClick={handleReload}>Reload</Button>
