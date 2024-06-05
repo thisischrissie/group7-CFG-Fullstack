@@ -48,12 +48,16 @@ export default function UserProfile() {
         <Card >
           <Card.Body >
             {isLoading ? <span>loading</span> :
-              <ProfilePicBio
-                name={user.dogs[0].name}
+              user.dogs.map((dog) => (
+              <div>
+                <ProfilePicBio
+                name={dog.name}
                 src={dogProfilepic}
                 alt='User profile picture'
-                bio={user.dogs[0].bio}
-              />}
+                bio={dog.bio}
+                />
+              </div>)) 
+            }
         
           </Card.Body>
         </Card>
