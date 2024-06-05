@@ -9,13 +9,19 @@ import dogProfilepic from '../images/dog-pic.avif';
 
 export default function UserProfile() {
 
-  const [user, setUser] = useState([]);
-//fetching user by ID; test ID endpoint is used line 14
+  //is loading 
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [user, setUser] = useState({});
+  //fetching user by ID; test ID endpoint is used line 14
   useEffect(() => {
-    fetch('http://localhost:3001/api/owners/6654ba90507bbb3a0105dc57')
+    fetch('http://localhost:3001/api/owners/6654ba90507bbb3a0105dc56')
       .then(response => response.json())
       .then(data => setUser(data))
+      .then(() => setIsLoading(false))
+
       .catch(error => console.error('Error fetching users:', error));
+
   }, []);
 
 
@@ -25,15 +31,15 @@ export default function UserProfile() {
 
         <Card className>
           <Card.Body className>
-            <ProfilePicBio
-              name={user.name}
-              src={userProfilePic}
-              alt='User profile picture'
-              bio={user.bio}
-            />
+            {isLoading ? <span>loading</span> :
+              <ProfilePicBio
+                name={user.name}
+                src={userProfilePic}
+                alt='User profile picture'
+                bio={user.bio}
+              />}
             <span>
-              
-{/* should I turn these parts into two separate cards, attempt to call two different endpoints? */}
+
             </span>
           </Card.Body>
         </Card>
@@ -41,17 +47,17 @@ export default function UserProfile() {
       <div className="col-xs-12 col-md-6 ">
         <Card >
           <Card.Body >
-            <ProfilePicBio
-              name="Poppy"
-              src={dogProfilepic}
-              alt='User profile picture'
-              bio="I am fun and affectionate! I love the beach and splashing around!"
-            />
-
+            {isLoading ? <span>loading</span> :
+              <ProfilePicBio
+                name={user.dogs[0].name}
+                src={dogProfilepic}
+                alt='User profile picture'
+                bio={user.dogs[0].bio}
+              />}
+        
           </Card.Body>
         </Card>
       </div>
     </div>
-
-  );
-}
+      )
+};
