@@ -3,7 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/Nav.css";
 import { useDispatch } from "react-redux";
+<<<<<<< HEAD:WebApp/src/components/Nav.js
+import { GhostBigButton } from "./BigButton";
+=======
 import { BigButton } from "./BigButton";
+>>>>>>> origin/api-login:Webapp/src/components/Nav.js
 import { logout } from "../redux/userSlice";
 
 export default function NavBar() {
@@ -49,8 +53,17 @@ export default function NavBar() {
               Find a Route
             </Link>
           </li>
+<<<<<<< HEAD:WebApp/src/components/Nav.js
+          <div className="nav__logout-container">
+            <GhostBigButton className="nav__logout" onClick={handleLogout}>
+              Log out
+            </GhostBigButton>
+          </div>
+=======
           <BigButton onClick={handleLogout}>Log out</BigButton>
+>>>>>>> origin/api-login:Webapp/src/components/Nav.js
         </ul>
+
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>

@@ -71,7 +71,11 @@ function Login() {
               onChange={(e) => setLoginPassword(e.target.value)}
               value={loginPassword}
             />
+<<<<<<< HEAD:WebApp/src/pages/Login.jsx
+
+=======
             {/* <Anchor href="#">Forgot your password?</Anchor> */}
+>>>>>>> origin/api-login:Webapp/src/pages/Login.jsx
             {loginError && <p>{loginError}</p>}
             <BigButton type="submit" onClick={handleLogin}>
               Sign In
@@ -185,14 +189,6 @@ const Input = styled.input`
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
-`;
-
-const Anchor = styled.a`
-  color: #333;
-  font-size: 14px;
-  text-decoration: none;
-  margin: 15px 0;
-  font-family: "Varela Round", sans-serif;
 `;
 
 const OverlayContainer = styled.div`
