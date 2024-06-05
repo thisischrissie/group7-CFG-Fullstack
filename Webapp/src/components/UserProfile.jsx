@@ -4,8 +4,7 @@ import Card from "react-bootstrap/Card";
 import "../styles/UserProfile.css";
 import ProfilePicBio from "./ProfilePicBio";
 import userProfilePic from '../images/ColliemeetsbeagleLogo.png';
-import dogProfilepic from '../images/dog-pic.avif';
-
+import SmallProfilePic from './SmallProfilePic';
 
 export default function UserProfile() {
 
@@ -52,7 +51,7 @@ export default function UserProfile() {
               <div>
                 <ProfilePicBio
                 name={dog.name}
-                src={dogProfilepic}
+                src={SmallProfilePic}
                 alt='User profile picture'
                 bio={dog.bio}
                 />
