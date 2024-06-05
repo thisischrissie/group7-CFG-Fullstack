@@ -71,10 +71,28 @@
     }
     .card {
         flex: 0 0 calc(50% - 10px);
-        max-width: calc(50% - 10px);
-        width: 100%;
+        max-width: calc(90% - 0px);
+        width: 500%;
 
     }
         
+    .mission-box {
+        background-color: #f3ece5;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      
+      .mission-box p {
+        color: #333;
+        font-size: 1.1em;
+      }
+      
+      .mission-box strong {
+        color: #000;
+      }
     
+      
 }
+

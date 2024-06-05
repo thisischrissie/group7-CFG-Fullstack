@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import '../styles/About.css'; // importing the CSS file - connecting it
+import '../styles/About.css'; // Importing the CSS file
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function About() { // function to About
+function About() {
   const [cards] = useState([
     {
-      title: 'Meet our developers!',
+      title: 'Meet our developers!👩‍💻',
     },
     {
       title: 'Cecilia 🐾',
@@ -17,7 +17,7 @@ function About() { // function to About
     },
     {
       title: 'Emily 🦴',
-      text:"Living in Manchester UK. I wanted to bring a sense of community to dog parents. I have loved dogs since I was a little kid! Favourite breed: Samoyeds. My favourite social media dog: @mayapolarbear she is so clever and such a sweet girl. I hope that this website is easy to navigate and makes dog walking much more enjoyable and exciting to both the dog owner and their dog! Project contribution: designing the website and doing the frontend of the homepage and the profile pages. Fun fact: I have switched from a career in nutrition to web development to explore my creative side"
+      text:"Living in Manchester. I wanted to bring a sense of community to dog parents. I have loved dogs since I was a little kid! Favourite breed: Samoyeds. My favourite social media dog: @mayapolarbear she is so clever and such a sweet girl. I hope that this website is easy to navigate and makes dog walking much more enjoyable and exciting to both the dog owner and their dog! Project contribution: designing the website and doing the frontend of the homepage and the profile pages. Fun fact: I have switched from a career in nutrition to web development to explore my creative side"
     },
     {
       title: 'Chrissie 🐕‍🦺',
@@ -25,7 +25,7 @@ function About() { // function to About
     },
     {
       title: 'Grace 🐩',
-      text: 'Born in London and grew up in Kent. I love the idea of connecting dog lovers! Living in London, I often hear of dog owners looking for fellow dog lovers to connect with. Community is often difficult to find, and our app solves this issue. I love miniature dachshunds and often dog-sit. I am currently working as a Tech Recruiter, and keen to switch to being a Developer. I have challenged myself with doing a frontend page with react on this project as my strongest experience is backend with Python and SQL.'
+      text: 'Born in London and grew up in Kent. I love the idea of connecting dog lovers! Living in London, I often hear of dog owners looking for fellow dog lovers to connect with. Community is often difficult to find, and our app solves this issue. I love miniature dachshunds and often dog-sit. I am currently working as a Tech Recruiter, and keen to switch to being a Developer. I have challenged myself with doing this frontend page with react on this project as my strongest experience is backend with Python and SQL.'
     },
   ]);
 
@@ -44,10 +44,10 @@ function About() { // function to About
         </a>
       </div>
       <div className='container'>
-        <div className="row row-cols-1">
+        <div className="row row-cols-1 row-cols-md-2">
           {
             cards.map((card, i) => (
-              <div key={i} className="col">
+              <div key={i} className="col mb-4">
                 <div className="card">
                   <div className="card-header">
                     <h2 className="accordion-header" id={`heading${i}`}>
@@ -59,7 +59,6 @@ function About() { // function to About
                   <div id={`collapse${i}`} className="accordion-collapse collapse" aria-labelledby={`heading${i}`} data-bs-parent="#accordionExample">
                     <div className="accordion-body">
                       <p>{card.text}</p>
-
                     </div>
                   </div>
                 </div>
@@ -72,4 +71,4 @@ function About() { // function to About
   );
 }
 
-export default About; // Export the component 
+export default About; // Export the component
