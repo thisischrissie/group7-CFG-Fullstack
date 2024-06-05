@@ -1,4 +1,4 @@
-import './ProfilePicBio.css';
+import '../styles/ProfilePicBio.css';
 import Card from 'react-bootstrap/Card';
 
 function ProfilePicBio(props) {

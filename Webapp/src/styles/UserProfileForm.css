@@ -129,9 +129,11 @@ section.container {
   background-color: #FFF2E8;
   padding:3px;
 }
-p{
+
+/* commented out - interfering with signup p tag */
+/* p{
   background-color: #FFF2E8;
-}
+} */
 em{
   background-color: #FFF2E8;
 }

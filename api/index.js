@@ -5,12 +5,13 @@ import UserRouter from "./routes/UserRouter.js";
 import OwnerRouter from "./routes/OwnerRouter.js";
 import DogRouter from "./routes/DogRouter.js";
 import { createRequire } from "module";
+import cors from 'cors';
 const require = createRequire(import.meta.url);
+
 
 //middleware
 const app = express();
 const port = 3001;
-const cors = require("cors");
 
 //middleware to parse JSON bodies
 app.use(express.json());
