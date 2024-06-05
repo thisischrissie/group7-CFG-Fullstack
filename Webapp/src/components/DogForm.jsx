@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Map from './Map';
 
 const DogForm = ({ trails }) => {
   const [formData, setFormData] = useState({
@@ -8,20 +9,21 @@ const DogForm = ({ trails }) => {
     city: ''
   });
   const [matchedTrail, setMatchedTrail] = useState(null);
+  const [isMapShown, setIsMapShown] = useState(false); // State to track if map should be shown
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log('Form Change');
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted');
-    console.log('Form data:', formData);
+    
+    if (!trails) {
+      console.error('Trails data is not available');
+      return;
+    }
+
     const matched = trails.find((trail) => {
       return (
         trail.size === formData.size &&
@@ -30,12 +32,14 @@ const DogForm = ({ trails }) => {
         trail.city === formData.city
       );
     });
-    console.log('Matched trail:', matched);
+
     setMatchedTrail(matched);
+    setIsMapShown(true); // Show the map after submitting the form
   };
 
   return (
     <div>
+      <h2>Dog Form</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Size of Dog:
@@ -104,17 +108,12 @@ const DogForm = ({ trails }) => {
         <button type="submit">Submit</button>
       </form>
       
-      {matchedTrail ? (
+      {matchedTrail && isMapShown ? (
         <div>
           <h3>Matched Trail:</h3>
           <p>City: {matchedTrail.city}</p>
-          <p>Routes:</p>
-          <ul>
-            {matchedTrail.routes.map((route, index) => (
-              <li key={index}>{route}</li>
-            ))}
-          </ul>
-          {/* other properties of matchedTrail here */}
+          {/* Display other details of the matched trail */}
+          <Map /> {/* Show the map */}
         </div>
       ) : null}
     </div>

@@ -1,24 +1,19 @@
-import React, { useState } from 'react'
-import DogForm from '../components/DogForm';
-//import trails from '../components/trails';
+import React from 'react';
 import Map from '../components/Map';
-import Useransers from '../components/UserAnswersArr';
+import trails from '../components/trailArr'; 
 
-function FoundRoute() {
-
-  const [formData, setFormData] = useState(null);
-
-  const handleFormSubmit = (data) => {
-    setFormData(data); 
-  };
+const FoundRoute = () => {
+  const markers = trails.map(trail => ({
+    lat: trail.locations[0].lat,
+    lng: trail.locations[0].lng
+  }));
 
   return (
     <div>
-      <DogForm onSubmit={handleFormSubmit} />
-      {formData && <Useransers formData={formData} />}
-      <Map />
+      <h2>Found Route</h2>
+      <Map markers={markers} /> {/* Pass markers data to the Map component */}
     </div>
   );
-}
+};
 
 export default FoundRoute;

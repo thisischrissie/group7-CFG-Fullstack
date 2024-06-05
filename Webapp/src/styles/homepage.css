@@ -1,12 +1,8 @@
-<<<<<<< HEAD:WebApp/src/styles/homepage.css
-=======
-/* commented out styles below interfering with navbar */
-
 
 /* *{
   background-color: #FFF2E8;
 } */
->>>>>>> origin/api-login:Webapp/src/styles/homepage.css
+
 html {
   scroll-snap-type: y mandatory;
 }
@@ -77,11 +73,13 @@ div.pupsNearYou {
 }
 div {
   border-style: 1px solid #8a5d4d;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
   background-color: transparent;
 }
+
 span {
   border-style: 1px solid #8a5d4d;
   display: flex;
@@ -110,11 +108,15 @@ span {
   color: #8a5d4d;
   background-color: transparent;
 }
-img {
+
+/* commented out img - conflict with map */
+/* img {
   width: 70px;
   height: 60px;
   border-radius: 50%;
   display: flex;
   align-content: flex-start;
   justify-content: space-evenly;
+
 }
+
