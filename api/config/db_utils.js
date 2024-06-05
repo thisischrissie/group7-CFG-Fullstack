@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-// import config from "./config"
 
 export default function connectDB() {
   const url = "mongodb://localhost:27017/CollieMeetsBeagle";

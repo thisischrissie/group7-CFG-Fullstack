@@ -3,41 +3,36 @@ import Card from "react-bootstrap/Card";
 import "../styles/homepage.css";
 import SmallProfilePic from "../components/SmallProfilePic";
 import Logo from "../components/Logo";  
+import { useState, useEffect } from "react";
 
-// import { useState, useEffect } from "react";
+export default function HomePage() {
 
-function HomePage() {
+  const [profiles, setProfiles] = useState([]); //store profiles here
+  const [showAllProfiles, setShowAllProfiles] = useState(false); //make profiles visible or not
+  const maxProfilesShown = 2; //2 profiles initially shown for my pups, 4 profiles for pups near you
+  const fetchProfiles = async () => {
+    try {
+      const pupProfileResponse = await fetch('http://localhost:3001/api/dogs')
+      const profileData = await pupProfileResponse.json()
+      setProfiles(profileData);
+    }
+  catch (error) {
+      console.log("Error fetching profiles:", error)
+    }
+  };
 
-  // const [profiles, setProfiles] = useState([]); //store profiles here
-  // const [showAllProfiles, setShowAllProfiles] = useState(false); //make profiles visible or not
-  // const maxProfilesShown = 2; //2 profiles initially shown for my pups, 4 profiles for pups near you
-
-
-
-  // const fetchProfiles = async () => {
-  // try{
-  //     //API GET Requests here
-  //     const pupProfileResponse = await fetch('')
-  //     const profileData = await pupProfileResponse.json()
-  //     setProfiles(profileData);
-  //   }
-  // catch (error) {
-  //     console.log("Error fetching profiles:", error)
-  //   }
-  // };
-
-  // //show more and show less links, max profiles on page shown initially to be 2 profiles for my pups
+  //show more and show less links, max profiles on page shown initially to be 2 profiles for my pups
     
-  // useEffect(() => {
-  //   fetchProfiles();
-  // },[]);
+  useEffect(() => {
+    fetchProfiles();
+  },[]);
 
-  // const handleShowMore =() => {
-  //   setShowAllProfiles(true);
-  // };
-  // const handleShowLess =() => {
-  //   setShowAllProfiles(false);
-  // };
+  const handleShowMore =() => {
+    setShowAllProfiles(true);
+  };
+  const handleShowLess =() => {
+    setShowAllProfiles(false);
+  };
 
   return (
         <div className="row">
@@ -78,20 +73,21 @@ function HomePage() {
               <Card.Body className="card-body">
                 <div>
                   <h1>Pups near you</h1>
-                </div>
-                <span>
-                  <SmallProfilePic />
-                </span>
-                <span>
-                  <SmallProfilePic />
-                </span>
+                  </div>
+            <span>
+            <ul> 
+              {/* //endpoint works but it breaks the css - commented out for now */}
 
-                <span>
-                  <SmallProfilePic />
-                </span>
-                <span>
-                  <SmallProfilePic />
-                </span>
+                {/* {profiles.map((dog) => (
+                  <li key={dog.id}>
+                    <SmallProfilePic />
+                    <span>{dog.name}</span>
+                  </li>
+                )
+                )} */}
+              </ul>
+              <SmallProfilePic />
+            </span>
               </Card.Body>
             </Card>
           </div>
@@ -99,4 +95,3 @@ function HomePage() {
 
   );
 }
-export default HomePage;

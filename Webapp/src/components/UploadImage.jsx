@@ -1,6 +1,6 @@
 import React from 'react'
 import {useDropzone} from 'react-dropzone'
-import './UploadImage.css'
+import '../styles/UploadImage.css'
 
 function UploadImage(){
     const {

@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Dropdown from './Dropdown';
 import Button from './Button';
 import { useState } from "react";
-import './UserProfileForm.css'
+import '../styles/UserProfileForm.css'
 import RadioButton from './RadioButton';
 import React from 'react';
 
