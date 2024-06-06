@@ -6,15 +6,18 @@ import FoundRoute from './pages/FoundRoute';
 import trails from './components/trailArr'; // Import trails data
 import Login from "./pages/Login";
 import HomePage from "./pages/Homepage";
-import AboutUs from "./pages/About";
+import About from "./pages/About";
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Profile from "./pages/Profile";
 import Breed from './pages/Breeds'; // Import Breed component
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import bootstrap
 
-import { selectUser } from "./redux/userSlice";
-import { useSelector } from "react-redux";
+
+  import { selectUser } from "./redux/userSlice";
+  import { useSelector } from "react-redux";
 
 function App() {
-  const user = useSelector(selectUser);
+const user = useSelector(selectUser);
   return (
     <Router>
       <NavBar />
@@ -30,8 +33,8 @@ function App() {
           <Route path="/FoundRoute" element={<FoundRoute />} />
         </Routes>
       </main>
-    </Router>
-  );
-}
+     </Router>
+   );
+ }
 
 export default App;
