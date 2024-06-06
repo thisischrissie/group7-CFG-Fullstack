@@ -71,7 +71,6 @@ function Login() {
               onChange={(e) => setLoginPassword(e.target.value)}
               value={loginPassword}
             />
-            {/* <Anchor href="#">Forgot your password?</Anchor> */}
             {loginError && <p>{loginError}</p>}
             <BigButton type="submit" onClick={handleLogin}>
               Sign In
