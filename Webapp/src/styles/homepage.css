@@ -1,14 +1,13 @@
-/* commented out styles below interfering with navbar */
-
 
 /* *{
   background-color: #FFF2E8;
 } */
+
 html {
   scroll-snap-type: y mandatory;
 }
 
-Card{
+Card {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -16,49 +15,46 @@ Card{
 h1 {
   font-weight: bold;
   font-size: xx-large;
-  color:#8A5D4D;
+  color: #8a5d4d;
   padding-right: 20px;
   background-color: transparent;
 }
 
 h2 {
-  display:block;
-  color:#8A5D4D;
+  display: block;
+  color: #8a5d4d;
 }
 .row {
   display: flex;
-  flex-direction: row; 
-  width: auto; 
-  background-color:  #FFF2E8;
+  flex-direction: row;
+  width: auto;
+  background-color: #fff2e8;
   justify-content: center;
   align-items: center;
 }
 
 .myPups {
-  background-color: #FFF2E8;
-  color:#8A5D4D;
+  background-color: #fff2e8;
+  color: #8a5d4d;
   width: 450px;
   height: auto;
   margin: 20px;
   padding: 1vh;
-  border-color: #8A5D4D;
+  border-color: #8a5d4d;
   align-content: center;
-
 }
 .pupsNearYou {
-  background-color: #F5D0A5;
-  color:#8A5D4D;
+  background-color: #f5d0a5;
+  color: #8a5d4d;
   width: 450px;
   height: auto;
   padding: 1vh;
   border-color: none;
   margin: 20px;
-
-
 }
 
-div.col-xs-12.col-md-6{
-  display:flex;
+div.col-xs-12.col-md-6 {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -68,35 +64,33 @@ div.col-xs-12.col-md-6{
   background-color: transparent;
 }
 
-div.pupsNearYou{
-  border-style: 1px solid #8A5D4D;
+div.pupsNearYou {
+  border-style: 1px solid #8a5d4d;
   display: flex;
-  justify-content: center; 
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-
-
-
 }
 div {
-  border-style: 1px solid #8A5D4D;
+  border-style: 1px solid #8a5d4d;
+
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-direction: column;
   background-color: transparent;
 }
 
 span {
-  border-style: 1px solid #8A5D4D;
+  border-style: 1px solid #8a5d4d;
   display: flex;
-  justify-content: flex-start; 
-  flex-direction:column;
+  justify-content: flex-start;
+  flex-direction: column;
   padding: 5px;
   flex-wrap: wrap;
   align-self: flex-start;
 }
 
-.pup-name{
+.pup-name {
   font-weight: bold;
   font-size: x-large;
   display: block;
@@ -111,17 +105,19 @@ span {
   font-size: medium;
   align-content: wrap;
   padding-left: 10px;
-  color:#8A5D4D;
+  color: #8a5d4d;
   background-color: transparent;
 }
 
 /* commented out img - conflict with map */
+
 /* img {
   width: 70px;
   height: 60px;
   border-radius: 50%;
   display: flex;
-  align-content: flex-start ;
+  align-content: flex-start;
   justify-content: space-evenly;
-} */
 
+}
+ */

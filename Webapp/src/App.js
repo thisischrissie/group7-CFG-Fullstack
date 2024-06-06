@@ -20,18 +20,18 @@ function App() {
 const user = useSelector(selectUser);
   return (
     <Router>
-       <NavBar />
-       {/* previously {user && <NavBar />} on line 20 but the Navbar disappeared on webpage*/}
-       <main>
-         <Routes>
-           <Route path="/" element={user ? <HomePage /> : <Login />} />
-           <Route path="/login" element={<Login />} /> 
-           <Route path="/about" element={<About />} />
-           <Route path="/profile" element={<Profile />} /> 
-           <Route path="/breeds" element={<Breed />} /> 
-           <Route path="/FindRoute" element={<DogForm trails={trails} />} /> 
-           <Route path="/FoundRoute" element={<FoundRoute />} /> 
-        </Routes> 
+      <NavBar />
+      {/* previously {user && <NavBar />} on line 20 but the Navbar disappeared on webpage*/}
+      <main>
+        <Routes>
+          <Route path="/" element={user ? <HomePage /> : <Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/breeds" element={<Breed />} />
+          <Route path="/FindRoute" element={<DogForm trails={trails} />} />
+          <Route path="/FoundRoute" element={<FoundRoute />} />
+        </Routes>
       </main>
      </Router>
    );

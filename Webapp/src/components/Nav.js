@@ -51,6 +51,7 @@ export default function NavBar() {
           </li>
           <BigButton onClick={handleLogout}>Log out</BigButton>
         </ul>
+
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>

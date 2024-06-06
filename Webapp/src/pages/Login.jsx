@@ -187,14 +187,6 @@ const Input = styled.input`
   width: 100%;
 `;
 
-const Anchor = styled.a`
-  color: #333;
-  font-size: 14px;
-  text-decoration: none;
-  margin: 15px 0;
-  font-family: "Varela Round", sans-serif;
-`;
-
 const OverlayContainer = styled.div`
   position: absolute;
   top: 0;
