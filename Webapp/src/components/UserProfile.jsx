@@ -3,8 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import "../styles/UserProfile.css";
 import ProfilePicBio from "./ProfilePicBio";
-import userProfilePic from '../images/ColliemeetsbeagleLogo.png';
-import SmallProfilePic from './SmallProfilePic';
 
 export default function UserProfile() {
 
