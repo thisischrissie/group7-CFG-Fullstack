@@ -45,10 +45,12 @@ const SearchBar = ({ breeds, onSearchSelect }) => {
   );
 };
 
+//CSS HERE
+//Experienced css bleeding problems in over pages, so css is in-page for now
 const styles = {
   searchBar: {
     position: 'relative',
-    maxWidth: '60%', // Set maximum width to 100%
+    maxWidth: '60%', // Set maximum width to 60%, as 100% was cutting off
   },
   input: {
     width: '60%',
@@ -59,7 +61,7 @@ const styles = {
   },
   suggestions: {
     position: 'absolute',
-    maxWidth: '60%', // Set maximum width to 100%
+    maxWidth: '60%', // Set maximum width to 60%, the dropdown suggestions should be same as search bar
     top: '100%',
     left: '0',
     right: '0',

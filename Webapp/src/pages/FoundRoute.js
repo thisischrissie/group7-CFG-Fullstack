@@ -1,6 +1,6 @@
 import React from 'react';
 import Map from '../components/Map';
-import trails from '../components/trailArr'; 
+import trails from '../components/Trails'; 
 
 const FoundRoute = () => {
   const markers = trails.map(trail => ({
@@ -11,7 +11,7 @@ const FoundRoute = () => {
   return (
     <div>
       <h2>Found Route</h2>
-      <Map markers={markers} /> {/* Pass markers data to the Map component */}
+      <Map markers={markers} /> 
     </div>
   );
 };
