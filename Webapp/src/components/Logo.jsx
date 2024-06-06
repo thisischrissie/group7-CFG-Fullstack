@@ -22,7 +22,7 @@ export default function Logo() {
     );
 }
 
-//logo css
+// // logo css
 // const Image = styled(Image)`
 //     width:500px;
 //     height: 450px;

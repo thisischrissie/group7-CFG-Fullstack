@@ -52,7 +52,7 @@ export default function UserProfile() {
               <div>
                 <SmallProfilePic
                 name={dog.name}
-                src={userProfilePic}
+                src={dog.images[0]}
                 alt='dog profile picture'
                 bio={dog.bio}
                 />
