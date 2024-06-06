@@ -23,7 +23,7 @@ export default function UserProfile() {
 
   }, []);
 
-
+  
   return (
     <div className="row">
       <div className="col-xs-12 col-md-6 " >
@@ -48,11 +48,12 @@ export default function UserProfile() {
           <Card.Body >
             {isLoading ? <span>loading</span> :
               user.dogs.map((dog) => (
+               
               <div>
-                <ProfilePicBio
+                <SmallProfilePic
                 name={dog.name}
-                src={SmallProfilePic}
-                alt='User profile picture'
+                src={userProfilePic}
+                alt='dog profile picture'
                 bio={dog.bio}
                 />
               </div>)) 

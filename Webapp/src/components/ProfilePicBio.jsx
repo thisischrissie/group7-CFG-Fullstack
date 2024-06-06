@@ -1,19 +1,18 @@
-// import '../styles/ProfilePicBio.css';
 import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/esm/Image';
 import styled from 'styled-components';
 
-export default function ProfilePicBio(props) {
-    const { url, src, alt, name, bio } = props
+export default function ProfilePicBio({ url, src, alt, name, bio }) {
 
     return (
         <container>
-            <BigProfilePic>
-                <Image
+            <BigProfileDiv>
+                <ProfilePic
                 href={url}
                 src={src}
                 alt={alt}
                 roundedCircle />
-            </BigProfilePic>
+            </BigProfileDiv>
             <Card>
                 <div>
                     <Name>{name}</Name>
@@ -28,14 +27,18 @@ export default function ProfilePicBio(props) {
 
 
 //component css
-const Image = styled.image`
+
+const ProfilePic = styled.img.attrs(({ src }) => ({
+    src: src,
+    alt: 'Profile Pic',
+}))`
     width: 200px;
     height: 180px;
     border-radius: 50%;
     align-content: center ;
     justify-content: center;
     display: flex;
-  `
+    `
 
 const Name = styled.h1`
     display: flex;
@@ -62,7 +65,7 @@ const Bio = styled.h2`
 //     color:#8A5D4D;
 //    `
 
-const BigProfilePic = styled.div`
+const BigProfileDiv = styled.div`
     align - content: center;
     justify - content: center;
     display: flex;

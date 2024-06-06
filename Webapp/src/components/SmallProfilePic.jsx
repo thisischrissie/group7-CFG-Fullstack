@@ -1,46 +1,54 @@
+import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 import dogProfilePic from '../images/dog-pic.avif';
 import styled from 'styled-components';
 
-function SmallProfilePic({url, src, alt, pupName}) {
-    src= dogProfilePic
-    alt='Dog profile picture'
-    url='/pupProfile/Leroy'
+export default function SmallProfilePic({url, src, alt, name}) {
 
     return (
-        <>
-            <Span>
-                <Image 
+        <container>
+            <SmallProfileDiv>
+                <DogProfilePic
                 href={url} 
                 src={src} 
                 alt={alt} 
                 roundedCircle />
-            <h2 className='pup-name'> {pupName}</h2></Span>
-
-        </>
+            </SmallProfileDiv>
+            <Card>
+                <div>
+                 <DogName>{name}</DogName>
+                </div>
+            </Card>
+        </container>
 
     );
 }
-export default SmallProfilePic
+
 
 //component css
-// const Image = styled.img `
-//     width: 70px;
-//     height: 60px;
-//     border-radius: 50%;    
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: transparent;
-//     `
+const DogProfilePic = styled.img.attrs(({ src }) => ({
+    src: src,
+    alt: 'Dog Profile Pic',
+}))`
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    `
   
-const Span = styled.span `
+const SmallProfileDiv = styled.div `
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: transparent;
     `
     
-//styling for h2 className 'pup-name'?
-const PupName = styled.h2 `
+const DogName = styled.h2 `
+    display: flex;
+    align-content: center ;
+    justify-content: center;
+    flex-direction: row;
 `
