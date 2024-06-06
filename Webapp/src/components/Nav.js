@@ -4,7 +4,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/Nav.css";
 import { useDispatch } from "react-redux";
 import { GhostBigButton } from "./BigButton";
-
 import { logout } from "../redux/userSlice";
 
 export default function NavBar() {
