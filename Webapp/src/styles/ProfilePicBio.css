@@ -1,4 +1,4 @@
-img {
+/* img {
   width: 200px;
   height: 180px;
   border-radius: 50%;
@@ -6,7 +6,7 @@ img {
   justify-content: center;
   display: flex;
 }
-
+ */
 
 h1.name {
   display: flex;
