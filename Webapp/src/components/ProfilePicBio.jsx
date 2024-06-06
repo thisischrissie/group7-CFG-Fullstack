@@ -1,25 +1,69 @@
-import '../styles/ProfilePicBio.css';
+// import '../styles/ProfilePicBio.css';
 import Card from 'react-bootstrap/Card';
+import styled from 'styled-components';
 
-function ProfilePicBio(props) {
-    const {url, src, alt, name, bio } = props
- 
+export default function ProfilePicBio(props) {
+    const { url, src, alt, name, bio } = props
+
     return (
-    <container>
-            <div className ="bigProfilePic"><img 
-            href={url} 
-            src={src} 
-            alt={alt} 
-            roundedCircle /></div>
-            <Card className="nameBio">
-            <div><h1 className="name">{name}</h1></div>
-            <div><h2 className="bio">{bio}</h2></div>
-
+        <container>
+            <BigProfilePic>
+                <Image
+                href={url}
+                src={src}
+                alt={alt}
+                roundedCircle />
+            </BigProfilePic>
+            <Card>
+                <div>
+                    <Name>{name}</Name>
+                </div>
+                <div>
+                    <Bio>{bio}</Bio>
+                </div>
             </Card>
         </container>
-
-
-    
-    );
+    )
 }
-export default ProfilePicBio
+
+
+//component css
+const Image = styled.image`
+    width: 200px;
+    height: 180px;
+    border-radius: 50%;
+    align-content: center ;
+    justify-content: center;
+    display: flex;
+  `
+
+const Name = styled.h1`
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: xx-large;
+    color:#8A5D4D;
+    align-content: center ;
+    justify-content: center;
+  `
+
+const Bio = styled.h2`
+    display: flex;
+    align-content: center ;
+    justify-content: center;
+    flex-direction: row;
+  `
+
+// const Card = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-evenly;
+//     background-color: white;
+//     color:#8A5D4D;
+//    `
+
+const BigProfilePic = styled.div`
+    align - content: center;
+    justify - content: center;
+    display: flex;
+`

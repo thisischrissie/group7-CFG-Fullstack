@@ -1,18 +1,39 @@
 import Image from 'react-bootstrap/Image';
-import '../styles/SmallProfilePic.css';
 import logo from '../images/ColliemeetsbeagleLogo.png';
+import styled from 'styled-components';
 
-function Logo() {
-  
+export default function Logo() {
 
     return (
         <>
-            <div><h1 className='appName'> colliemeetsbeagle</h1></div>
-            <div><Image src={logo} alt="Our logo of a cartoon person lifting a dog" roundedCircle /> </div>
-            
+            <div>
+                <AppName> colliemeetsbeagle</AppName>
+            </div>
+            <div>
+                <Image
+                src={logo}
+                alt="Our logo of a cartoon person lifting a dog"
+                roundedCircle /> 
+            </div>
+
 
         </>
 
     );
 }
-export default Logo;
+
+//logo css
+// const Image = styled(Image)`
+//     width:500px;
+//     height: 450px;
+//     border-radius: 50%;    
+//     display: block;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: transparent;
+// `
+
+
+const AppName = styled.h1`
+    font-size: xx-large
+`
