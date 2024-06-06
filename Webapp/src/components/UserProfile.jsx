@@ -33,7 +33,7 @@ export default function UserProfile() {
             {isLoading ? <span>loading</span> :
               <ProfilePicBio
                 name={user.name}
-                src={userProfilePic}
+                src={user.photo}
                 alt='User profile picture'
                 bio={user.bio}
               />}
