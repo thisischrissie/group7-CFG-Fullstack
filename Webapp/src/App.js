@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={user ? <HomePage /> : <Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<AboutUs />} />
+          <Route path="/about" element={<About />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/breeds" element={<Breed />} />
           <Route path="/FindRoute" element={<DogForm trails={trails} />} />
