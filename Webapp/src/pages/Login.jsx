@@ -71,11 +71,7 @@ function Login() {
               onChange={(e) => setLoginPassword(e.target.value)}
               value={loginPassword}
             />
-<<<<<<< HEAD:WebApp/src/pages/Login.jsx
-
-=======
             {/* <Anchor href="#">Forgot your password?</Anchor> */}
->>>>>>> origin/api-login:Webapp/src/pages/Login.jsx
             {loginError && <p>{loginError}</p>}
             <BigButton type="submit" onClick={handleLogin}>
               Sign In
