@@ -24,7 +24,7 @@ const user = useSelector(selectUser);
        {/* previously {user && <NavBar />} on line 20 but the Navbar disappeared on webpage*/}
        <main>
          <Routes>
-           {/* <Route path="/" element={user ? <HomePage /> : <Login />} /> */}
+           <Route path="/" element={user ? <HomePage /> : <Login />} />
            <Route path="/login" element={<Login />} /> 
            <Route path="/about" element={<About />} />
            <Route path="/profile" element={<Profile />} /> 
