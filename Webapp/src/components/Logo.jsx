@@ -5,16 +5,9 @@ import styled from 'styled-components';
 export default function Logo() {
 
     return (
-        <>
-            <div>
-                <AppName> colliemeetsbeagle</AppName>
-            </div>
-            <div>
-                <Image
-                src={logo}
-                alt="Our logo of a cartoon person lifting a dog"
-                roundedCircle /> 
-            </div>
+   
+            <div><h1 className='appName'> colliemeetsbeagle</h1></div>
+            <div><Image className="profilePicBioImg" src={logo} alt="Our logo of a cartoon person lifting a dog" roundedCircle /> </div>
 
 
         </>
