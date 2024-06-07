@@ -4,7 +4,7 @@
     background-color: #FFF2E8;
   } */
 
-  h1 {
+/* h1 {
     font-weight: bold;
     font-size: xx-large;
     color:#8A5D4D;
@@ -15,8 +15,8 @@
   h2 {
     display:block;
     color:#8A5D4D;
-  }
-  div.row {
+  } */
+  .userProfileRow {
     display: flex;
     flex-direction: row; 
     width: auto; 
@@ -25,7 +25,7 @@
     align-items: center;
     margin:5%;
     padding:5%;
-  }
+  } 
   /* }
   div.col-xs-12.col-md-6{
     display:flex;
@@ -40,10 +40,10 @@
   } */
   
   
-  .card-body {
+  /* .card-body {
     flex: 1 1 auto;
     background-color: #FFF2E8;
     
-  }
+  } */
 
 

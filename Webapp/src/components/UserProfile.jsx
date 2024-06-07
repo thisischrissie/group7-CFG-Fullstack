@@ -21,8 +21,9 @@ export default function UserProfile() {
   }, []);
 
   return (
-    <div className="row">
-      <div className="col-xs-12 col-md-6 ">
+    <div className="userProfileRow">
+      <div className="col-xs-12 col-md-6 " >
+
         <Card className>
           <Card.Body className>
             {isLoading ? (

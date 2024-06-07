@@ -44,7 +44,6 @@ console.log(user)
   return (
         <div className="row">
           <div className="col-xs-12 col-md-6 " >
-            
             <Card className="myPups">
               <Card.Body className="homepageCardBody">
                 <div>
@@ -52,6 +51,10 @@ console.log(user)
                   <h1>Your Pups</h1>
                   </div>
                   
+              </Card.Body> 
+              </Card>  
+               </div>
+
             {/* {isLoading ? <span>loading</span> : 
             <div><p>{user.name} </p> 
             {user.dogs.map((dog)=>(
@@ -65,21 +68,20 @@ console.log(user)
             } */}
             
           
-          </Card.Body>
-        </Card>
+              
 
-          <div className="col-xs-12 col-md-6 ">
-            <Card className="pupsNearYou">
-              <Card.Body className="card-body">
+        <div className="col-xs-12 col-md-6 ">
+            <Card className="myPups">
+              <Card.Body className="homepageCardBody">
                 <div>
                   <h1>Connect with more puppy pals</h1>
                   </div>
-                  <span>
+                  <span className="homepageSpan">
                     <ul> 
                       {profiles.slice(0,4).map((dog) => (
                         <li key={dog.id}>
                           <SmallProfilePic />
-                          <span>{dog.name}</span>
+                          <span className="homepageSpan">{dog.name}</span>
                           </li>
                 )
                 )}
@@ -90,6 +92,6 @@ console.log(user)
             </Card>
           </div>
           </div>
-     </div>
+
   );
 }

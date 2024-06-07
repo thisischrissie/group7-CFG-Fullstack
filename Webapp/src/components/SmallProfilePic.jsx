@@ -10,7 +10,7 @@ function SmallProfilePic({url, src, alt, pupName}) {
 
     return (
         <>
-            <span><Image className="profilePicBioImg" href={url} src={src} alt={alt} roundedCircle />
+            <span className="smallProfilePicNameSpan"><Image className="profilePicBioImg" href={url} src={src} alt={alt} roundedCircle />
             <h2 className='pup-name'> {pupName}</h2></span>
 
         </>
