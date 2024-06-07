@@ -15,17 +15,30 @@ function Login() {
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const [formError, setFormError] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    if (!registerName || !registerEmail || !registerPassword) {
+      setFormError("All fields are required for registration.");
+      return;
+    }
+    setFormError("");
     await signup(registerName, registerEmail, registerPassword);
     navigate("/profile");
   };
+
   const handleLogin = async (e) => {
     e.preventDefault();
+    if (!loginEmail || !loginPassword) {
+      setFormError("Both email and password are required for login.");
+      return;
+    }
+    setFormError("");
     await signin(loginEmail, loginPassword);
     navigate("/");
   };
+
   return (
     <Wrapper>
       <Container>
@@ -50,6 +63,7 @@ function Login() {
               onChange={(e) => setRegisterPassword(e.target.value)}
               value={registerPassword}
             />
+            {formError && <p>{formError}</p>}
             {error && <p>{error}</p>}
             <BigButton type="submit" onClick={handleRegister}>
               Sign Up
@@ -71,6 +85,7 @@ function Login() {
               onChange={(e) => setLoginPassword(e.target.value)}
               value={loginPassword}
             />
+            {formError && <p>{formError}</p>}
             {loginError && <p>{loginError}</p>}
             <BigButton type="submit" onClick={handleLogin}>
               Sign In
@@ -173,6 +188,7 @@ const Title = styled.h1`
 
 const SignUpTitle = styled(Title)`
   font-weight: bold;
+  color: #faedcd;
   font-size: 26px;
   font-family: "Varela Round", sans-serif;
   margin: 0;
@@ -200,9 +216,9 @@ const OverlayContainer = styled.div`
 `;
 
 const Overlay = styled.div`
-  background: #f5d0a9;
-  background: -webkit-linear-gradient(to right, #f5d0a9, #8a5d3d);
-  background: linear-gradient(to right, #f5d0a9, #8a5d3d);
+  background: #8a5d3d;
+  background: -webkit-linear-gradient(to right, #8a5d3d, #d4a373);
+  background: linear-gradient(to right, #8a5d3d, #d4a373);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
