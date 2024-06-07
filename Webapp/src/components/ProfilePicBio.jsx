@@ -3,28 +3,24 @@ import Image from "react-bootstrap/esm/Image";
 import styled from "styled-components";
 
 function ProfilePicBio(props) {
-  const { url, src, alt, name, bio } = props;
-  return (
+    const {url, src, alt, name, bio } = props
+    return (
     <container>
-      <div className="bigProfilePic">
-        <img
-          className="profilePicBioImg"
-          href={url}
-          src={src}
-          alt={alt}
-          roundedCircle
-        />
-      </div>
-      <Card className="nameBio">
-        <div>
-          <h1 className="name">{name}</h1>
-        </div>
-        <div>
-          <h2 className="bio">{bio}</h2>
-        </div>
-      </Card>
-    </container>
-  );
+            <div className ="bigProfilePic"><img className="profilePicBioImg" 
+            href={url} 
+            src={src} 
+            alt={alt} 
+            roundedCircle /></div>
+            <Card className="nameBio">
+            <div><h1 className="name">{name}</h1></div>
+            <div><h2 className="bio">{bio}</h2></div>
+
+            </Card>
+        </container>
+
+
+    
+    );
 }
 
 //component css

@@ -61,28 +61,7 @@ span {
   align-self: flex-start;
 }
 
-ul {
-  list-style-type: none;
-}
-/* .view-all {
-  text-decoration: underline;
-  display: inline;
-  font-size: medium;
-  align-content: wrap;
-  padding-left: 10px;
-  color: #8a5d4d;
-  background-color: transparent;
-} */
+ ul {
+  list-style-type:none;
+ }
 
-/* commented out img - conflict with map */
-
-/* img {
-  width: 70px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-content: flex-start;
-  justify-content: space-evenly;
-
-}
- */
