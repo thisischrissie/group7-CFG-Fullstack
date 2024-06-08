@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Map from '../components/Map'; // Ensure this path is correct
+import React, { useState } from "react";
+import styled from "styled-components";
+import Map from "../components/Map"; 
 
 const PageWrapper = styled.div`
   display: flex;
@@ -15,29 +15,30 @@ padding: 20px;
 background-color: white; //Form colour
 border-radius: 10px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-width: 100%;
+width: 50%;
+height:100%
 max-width: 400px;
-display: ${({ isFormSubmitted }) => (isFormSubmitted ? 'none' : 'flex')};
+display: ${({ isFormSubmitted }) => (isFormSubmitted ? "none" : "flex")};
 flex-direction: column;
+
 `;
 
 const SubmitButton = styled.button`
-padding: 10px 20px;
-background-color: #8a5d3d;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-align-self: center;
+  padding: 10px 20px;
+  background-color: #606C38;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
 
   &:hover {
-    background-color: #B4927A;
+    background-color: #CCD5AE;
   }
 `;
 
-
 const Title = styled.h2`
-  color: #333;
+  color: #8a5d3d;
 `;
 
 const Label = styled.label`
@@ -65,25 +66,52 @@ const RadioLabel = styled.label`
 const Button = styled.button`
   padding: 10px 20px;
   margin-right: 10px;
-  background-color: #8a5d3d;
+  background-color: #606C38;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 
   &:hover {
-    background-color: #B4927A;
+    background-color: #CCD5AE;
   }
 `;
 
 const ResultWrapper = styled.div`
-display: grid;
-grid-template-columns: 3fr 2fr;
-gap: 20px;
-max-width: 100%;
-max-height: 80%; // Maximum height
-margin: 0 auto;
-overflow: auto; // Enable scrollbars
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+  max-width: 100%;
+  height: 100%; // Maximum height
+  margin: 0 auto;
+  overflow: auto; // Enable scrollbars
+
+ @media (max-width: 400px) {
+    max-width: 400px;
+    height: 400px
+  }
+
+  @media (max-width: 800px) {
+    max-width: 800px;
+
+  }
+
+  @media (max-width: 1000px) {
+    width: 1000px;
+    max-height:1000px
+  }
+
+   @media (max-width: 1200px) {
+    width: 1200px;
+  }
+
+  @media (max-width: 1600px) {
+    width: 1600px;
+  }
+
+  @media (max-width: 1900px) {
+    width: 1900px;
+  }
 `;
 
 const ResultContainer = styled.div`
@@ -99,6 +127,11 @@ const MapContainer = styled.div`
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100%;
+
+  @media (min-width: 1200px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const ButtonGroup = styled.div`
@@ -108,27 +141,32 @@ const ButtonGroup = styled.div`
 `;
 
 const ImageGroup = styled.div`
-display: flex;
-flex-direction: column;
-align-self: center;
-width: 50%;
-overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 50%;
+  overflow: hidden;
+
+  @media (min-width: 1200px) {
+    width: 30%;
+    height: 50%;
+  }
 `;
 
 const WalkImage = styled.div`
-display: flex;
-align-self: center;
-overflow: hidden;
-max-height: 200px;
-max-width: 700px;
+  display: flex;
+  align-self: center;
+  overflow: hidden;
+  max-height: 200px;
+  max-width: 700px;
 `;
 
 const DogForm = ({ trails }) => {
   const [formData, setFormData] = useState({
-    size: '',
-    likesWater: '',
-    childFriendly: '',
-    city: ''
+    size: "",
+    likesWater: "",
+    childFriendly: "",
+    city: "",
   });
   const [matchedTrail, setMatchedTrail] = useState(null);
   const [randomRoute, setRandomRoute] = useState(null);
@@ -140,7 +178,7 @@ const DogForm = ({ trails }) => {
   };
 
   const getRandomRoute = (routes, excludeRoute) => {
-    const filteredRoutes = routes.filter(route => route !== excludeRoute);
+    const filteredRoutes = routes.filter((route) => route !== excludeRoute);
     if (filteredRoutes.length === 0) return excludeRoute;
     const randomIndex = Math.floor(Math.random() * filteredRoutes.length);
     return filteredRoutes[randomIndex];
@@ -150,7 +188,7 @@ const DogForm = ({ trails }) => {
     e.preventDefault();
 
     if (!trails) {
-      console.error('Trails data is not available');
+      console.error("Trails data is not available");
       return;
     }
 
@@ -181,10 +219,10 @@ const DogForm = ({ trails }) => {
     if (matchedTrail) {
       const newRandomRoute = getRandomRoute(matchedTrail.routes, randomRoute);
       setRandomRoute(newRandomRoute);
-  
+
       // Check if there's only 1 route available
       if (matchedTrail.routes.length === 1) {
-        alert('There is only 1 route available.');
+        alert("There is only 1 route available.");
       }
     }
   };
@@ -197,12 +235,18 @@ const DogForm = ({ trails }) => {
     <PageWrapper>
       <FormContainer isFormSubmitted={isFormSubmitted}>
         <ImageGroup>
-        <img src="./Walk.png" alt="Find your perfect route"/></ImageGroup>
+          <img src="./Walk.png" alt="Find your perfect route" />
+        </ImageGroup>
         <Title>Find your Perfect Route</Title>
         <form onSubmit={handleSubmit}>
           <Label>
             Size of Dog:
-            <Select name="size" value={formData.size} onChange={handleChange} required>
+            <Select
+              name="size"
+              value={formData.size}
+              onChange={handleChange}
+              required
+            >
               <option value="">Select</option>
               <option value="big">Big</option>
               <option value="medium">Medium</option>
@@ -218,20 +262,22 @@ const DogForm = ({ trails }) => {
                   type="radio"
                   name="likesWater"
                   value="yes"
-                  checked={formData.likesWater === 'yes'}
+                  checked={formData.likesWater === "yes"}
                   onChange={handleChange}
                   required
-                /> Yes
+                />{" "}
+                Yes
               </RadioLabel>
               <RadioLabel>
                 <input
                   type="radio"
                   name="likesWater"
                   value="no"
-                  checked={formData.likesWater === 'no'}
+                  checked={formData.likesWater === "no"}
                   onChange={handleChange}
                   required
-                /> No
+                />{" "}
+                No
               </RadioLabel>
             </RadioGroup>
           </Label>
@@ -244,51 +290,66 @@ const DogForm = ({ trails }) => {
                   type="radio"
                   name="childFriendly"
                   value="yes"
-                  checked={formData.childFriendly === 'yes'}
+                  checked={formData.childFriendly === "yes"}
                   onChange={handleChange}
                   required
-                /> Yes
+                />{" "}
+                Yes
               </RadioLabel>
               <RadioLabel>
                 <input
                   type="radio"
                   name="childFriendly"
                   value="no"
-                  checked={formData.childFriendly === 'no'}
+                  checked={formData.childFriendly === "no"}
                   onChange={handleChange}
                   required
-                /> No
+                />{" "}
+                No
               </RadioLabel>
             </RadioGroup>
           </Label>
 
           <Label>
             City:
-            <Select name="city" value={formData.city} onChange={handleChange} required>
+            <Select
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+              required
+            >
               <option value="">Select</option>
               <option value="Manchester">Manchester</option>
               <option value="Liverpool">Liverpool</option>
               <option value="London">London</option>
             </Select>
           </Label>
-          
-          <SubmitButton><Button type="submit">Submit</Button></SubmitButton>
-          
+
+          <SubmitButton>
+            <Button type="submit">Submit</Button>
+          </SubmitButton>
         </form>
       </FormContainer>
 
       {isFormSubmitted && matchedTrail && (
         <ResultWrapper>
           <ResultContainer>
-            <h3>Recommended for you in <b>{matchedTrail.city}</b></h3>
+            <h3>
+              Recommended for you in <b>{matchedTrail.city}</b>
+            </h3>
             {/* <p>City: </p> */}
             <p>Route: {randomRoute.name}</p>
             <WalkImage>
-            <img src={randomRoute.ImageURL} alt={randomRoute.name} /></WalkImage>
+              <img src={randomRoute.ImageURL} alt={randomRoute.name} />
+            </WalkImage>
             <p>{randomRoute.description}</p>
             <ButtonGroup>
-            <Button type="button" onClick={handleRefresh}>Refresh</Button>
-            <Button type="button" onClick={handleReload}>Reload</Button>
+              <Button type="button" onClick={handleRefresh}>
+                Refresh
+              </Button>
+              <Button type="button" onClick={handleReload}>
+                Reload
+              </Button>
             </ButtonGroup>
           </ResultContainer>
           <MapContainer>
