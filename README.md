@@ -58,6 +58,7 @@ Coding & Touch Ups & presentation & submission
 Ensure you have the following installed:
 - Node.js (includes npm) - Download and install from nodejs.org.
 - MongoDB - Download and install from mongodb.com. **Ensure MongoDB server is running.**
+- You will also need a Google API key if you don't have one already, you can follow our instructions [here](#how-to-create-google-maps-api-key-for-free) to create one for free.
   
 1. Clone the Repository:
    
@@ -129,4 +130,24 @@ Preview of the user’s profile(?)
 - [Grace Tachie-Lewis](https://github.com/graceleewis)
 - [Tara Patterson](https://github.com/Tara2805)
 
+## How To Create Google Maps API key For Free
 
+### What is it?
+The Google Maps API (Application Programming Interface) is a set of web services and tools provided by Google that allows developers to integrate Google Maps into their websites, applications, and services. The API enables developers to customize maps, embed them into web pages - which is our primary use of the API in our project, create location-based services, and access various features and data from Google Maps.
+
+### Steps:
+1. Firstly Go to [Google Maps](https://console.cloud.google.com)
+2. Sign In with your Google account and agree to the terms and conditions
+3. Create a project and name it as you want
+4. Select the project and click on it
+5. Navigate to APIs and Services and  click on Libraries
+6. Enable the following Libraries one by one
+   - Google Javascript API
+   - Google Place API
+   - Google Direction  API
+   - Google Geolocation API
+   - Google Geocoding  API
+7. Navigate to APIs and Services and  click on Credentials
+8. Click on Create Credentials and then the API key will show up your screen
+9. Now you can optionally restrict the API key.
+10. Copy the Key into your project
