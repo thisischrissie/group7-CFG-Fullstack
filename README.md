@@ -42,7 +42,7 @@ We will make use of the paired programme technique, this enables us to work effi
 - Google drive
 
 
-We have created a roadmap (seen on figma: https://www.figma.com/file/eJMM61TC07tVzUr0sEWPKW/User-flow%2Froadmap%2Fplan?type=whiteboard&node-id=0-1)
+We have created a [roadmap](https://www.figma.com/file/eJMM61TC07tVzUr0sEWPKW/User-flow%2Froadmap%2Fplan?type=whiteboard&node-id=0-1).
 We have organised the workload split depending on an individual members want to learn more about a specific feature to be implemented. E.g. Working on the Location feature to learn and practise more using APIs. 
 As seen on the roadmap, the entire app's progress is shown in phases. Every member has been assigned work to do in every phase as agreed upon in our zoom meetings beforehand. 
 
