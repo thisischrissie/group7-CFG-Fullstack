@@ -8,10 +8,10 @@ The user signs-up, inputs their preferences and will be allowed to use our Locat
 * [Project Description](#project-description)
 * [Local Setup Instructions](#local-setup-instructions)
 * [Features](#features)
-    * [UI/UX Design and wireframe](#uiux-design-and-wireframe)
-    * [Login/Signup System](#functional-loginsignup-system)
-    * [Find a Route Feature](#find-a-route-feature)
-* [Future Improvements](#future-improvements)
+    * [UI/UX Design and wireframe](#%EF%B8%8F-uiux-design-and-wireframe)
+    * [Login/Signup System](#-functional-loginsignup-system)
+    * [Find a Route Feature](#-find-a-route-feature)
+* [Future Improvements](#future-developments-)
 * [Contributors](#contributors)
 
 <!--te-->
@@ -97,31 +97,36 @@ Ensure you have the following installed:
 
 ## Features
 
-### UI/UX Design and wireframe
-- Colour (Law of contracts meaning of color something like that)
-- Utilised Figma to design
-- You can find our wireframe [here](https://www.figma.com/file/aXhDpbtc9nfqlttswALZmx/web-app-design-idea%3F?type=design&node-id=0-1&mode=design&t=uS4Rtrcs5v1xFMbt-0).
+### ✏️ UI/UX Design and wireframe!
 
-### Functional Login/Signup System
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://github.com/thisischrissie/group7-CFG-Fullstack/assets/153684178/dcc76fdf-55d2-447d-b7dd-ac932233ee13" alt="Design Image 1" style="width: 48%;">
+    <img src="https://github.com/thisischrissie/group7-CFG-Fullstack/assets/153684178/94b703e4-1f91-472a-ba57-467b3acbd4c4" alt="Design Image 2" style="width: 48%;">
+</div>
+
+- Colour (Law of contracts meaning of color something like that)
+- Utilised Figma to design, you can find our wireframe [here](https://www.figma.com/file/aXhDpbtc9nfqlttswALZmx/web-app-design-idea%3F?type=design&node-id=0-1&mode=design&t=uS4Rtrcs5v1xFMbt-0).
+
+### 🪄 Functional Login/Signup System
 (needs to insert an image or gif of Login here)
 - Users can sign up for a new account using a username, email and password
 - Utilising hash function to encrypt user's password
 - Implement Redux to manage user's login state across the application
 
-### Find a Route feature
+### 🪵 Find a Route feature
 - Location that directs users to the best walks for their dogs
 - 
 - 
 
-### Breed Info feature
+### 🐶 Breed Info feature
 - Learn more about your breed page
-- 
+- any technology incorporated worth mentioning?
 
-### Homepage feature
-Preview of the user’s profile(?)
+### 🏠 Homepage feature
+- Preview of the user’s profile(?) API?
 
 
-## Future Developments
+## Future Developments ✨
 
 > Due to time constraints, we were unable to implement certain features that would significantly enhance the user experience. We recommend considering the following additions for future development:
 - **Sending/Accepting Friend Requests**: Enable users to connect with one another, fostering a community of dog walkers.
@@ -141,7 +146,7 @@ Preview of the user’s profile(?)
 - [Grace Tachie-Lewis](https://github.com/graceleewis)
 - [Tara Patterson](https://github.com/Tara2805)
 
-## How To Create Google Maps API key For Free
+## How To Create Google Maps API Key for Free
 
 ### What is it?
 The Google Maps API (Application Programming Interface) is a set of web services and tools provided by Google that allows developers to integrate Google Maps into their websites, applications, and services. The API enables developers to customize maps, embed them into web pages - which is our primary use of the API in our project, create location-based services, and access various features and data from Google Maps.
