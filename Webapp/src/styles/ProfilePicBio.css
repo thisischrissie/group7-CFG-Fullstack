@@ -1,4 +1,4 @@
-.profilePicBioImg {
+.profilePicBioImg  {
   width: 200px;
   height: 180px;
   border-radius: 50%;
@@ -35,3 +35,5 @@ div.bigProfilePic {
   justify-content: center;
   display: flex;
 }
+
+
