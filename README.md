@@ -116,9 +116,9 @@ Ensure you have the following installed:
 - Implement Redux to manage user's login state across the application
 
 ### 🪵 Find a Route feature
+- Enter customizable details to tailor walking preferences
 - Location that directs users to the best walks for their dogs
-- 
-- 
+- Perfectly adapt your route to fit your dogs needs
 
 ### 🐶 Breed Info feature
 - Learn more about your breed page
@@ -168,4 +168,4 @@ The Google Maps API (Application Programming Interface) is a set of web services
 7. Navigate to APIs and Services and  click on Credentials
 8. Click on Create Credentials and then the API key will show up your screen
 9. Now you can optionally restrict the API key.
-10. Copy the Key into your project
+10. Copy the Key into your project as plain text at the path  /Webapp/.env

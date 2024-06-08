@@ -15,6 +15,6 @@ test("renders the BreedCard component", () => {
         dogBreed="Example Breed"
       />
     ); // Adjust props as needed
-    const breedName = screen.getByText("Example Breed"); // Adjust text to match what's on the front side of the card
+    const breedName = screen.getByText("Example Breed"); // Example data - testing if truw
     expect(breedName).toBeInTheDocument(); // Expects BreedName to be in document if true = test pass
   });
