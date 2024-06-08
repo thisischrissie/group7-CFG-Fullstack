@@ -1,24 +1,3 @@
-html {
-  scroll-snap-type: y mandatory;
-}
-
-Card {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-h1 {
-  font-weight: bold;
-  font-size: xx-large;
-  color: #8a5d4d;
-  padding-right: 20px;
-  background-color: transparent;
-}
-
-h2 {
-  display: block;
-  color: #8a5d4d;
-}
 .row {
   display: flex;
   flex-direction: row;
@@ -38,15 +17,6 @@ h2 {
   border-color: #8a5d4d;
   align-content: center;
 }
-.pupsNearYou {
-  background-color: #f5d0a5;
-  color: #8a5d4d;
-  width: 450px;
-  height: auto;
-  padding: 1vh;
-  border-color: none;
-  margin: 20px;
-}
 
 div.col-xs-12.col-md-6 {
   display: flex;
@@ -54,17 +24,23 @@ div.col-xs-12.col-md-6 {
   align-items: center;
 }
 
-.card-body {
+.homepageCardBody {
   flex: 1 1 auto;
   background-color: transparent;
 }
 
-div.pupsNearYou {
+.pupsNearYou {
   border-style: 1px solid #8a5d4d;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #f5d0a5;
+  color: #8a5d4d;
+  width: 450px;
+  height: auto;
+  padding: 1vh;
+  margin: 20px;
 }
 div {
   border-style: 1px solid #8a5d4d;
@@ -85,16 +61,10 @@ span {
   align-self: flex-start;
 }
 
-.pup-name {
-  font-weight: bold;
-  font-size: x-large;
-  display: block;
-  align-self: flex-start;
-  padding: 10px 10px;
-  background-color: transparent;
+ul {
+  list-style-type: none;
 }
-
-.view-all {
+/* .view-all {
   text-decoration: underline;
   display: inline;
   font-size: medium;
@@ -102,7 +72,7 @@ span {
   padding-left: 10px;
   color: #8a5d4d;
   background-color: transparent;
-}
+} */
 
 /* commented out img - conflict with map */
 

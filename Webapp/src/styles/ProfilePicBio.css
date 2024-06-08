@@ -1,45 +1,37 @@
-/* img {
+.profilePicBioImg {
   width: 200px;
   height: 180px;
   border-radius: 50%;
-  align-content: center ;
+  align-content: center;
   justify-content: center;
   display: flex;
 }
- */
-
-h1.name {
+*/ h1.name {
   display: flex;
   flex-direction: row;
   font-weight: bold;
   font-size: xx-large;
-  color:#8A5D4D;
-  align-content: center ;
+  color: #8a5d4d;
+  align-content: center;
   justify-content: center;
-
-
 }
 h2.bio {
   display: flex;
-  align-content: center ;
+  align-content: center;
   justify-content: center;
   flex-direction: row;
 }
 
-
-.containerNameBio{
+.containerNameBio {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   background-color: white;
-  color:#8A5D4D;
- 
-  }
-
-  div.bigProfilePic {
-    align-content: center ;
-    justify-content: center;
-    display: flex;
+  color: #8a5d4d;
 }
 
-
+div.bigProfilePic {
+  align-content: center;
+  justify-content: center;
+  display: flex;
+}
