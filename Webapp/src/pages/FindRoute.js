@@ -7,7 +7,7 @@ const FindRoute = ({ trails }) => {
     <div>
       <h1>Find a Dog-Friendly Route</h1>
       <DogForm trails={trails} />
-      <Map markers={markers} />
+      <Map/>
     </div>
   );
 };

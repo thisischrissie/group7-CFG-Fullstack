@@ -2,21 +2,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import "../styles/homepage.css";
 import SmallProfilePic from "../components/SmallProfilePic";
-import Logo from "../components/Logo";  
+import Logo from "../components/Logo";
 import { useState, useEffect } from "react";
+import Banner from '../components/dogFactAPI.jsx';
 
 export default function HomePage() {
-
   const [profiles, setProfiles] = useState([]); //store profiles here
 
   const fetchProfiles = async () => {
     try {
-      const pupProfileResponse = await fetch('http://localhost:3001/api/dogs')
-      const profileData = await pupProfileResponse.json()
+      const pupProfileResponse = await fetch("http://localhost:3001/api/dogs");
+      const profileData = await pupProfileResponse.json();
       setProfiles(profileData);
-    }
-  catch (error) {
-      console.log("Error fetching profiles:", error)
+    } catch (error) {
+      console.log("Error fetching profiles:", error);
     }
   };
 
@@ -36,7 +35,7 @@ export default function HomePage() {
 
     useEffect(() => {
     fetchProfiles();
-  },[]);
+  }, []);
 
 
 
@@ -88,10 +87,9 @@ console.log(user)
               </ul>
 
             </span>
-              </Card.Body>
-            </Card>
-          </div>
-          </div>
-
+          </Card.Body>
+        </Card>
+      </div>
+    </div>
   );
 }

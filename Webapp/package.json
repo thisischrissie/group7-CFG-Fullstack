@@ -18,7 +18,9 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "google-map-react": "^2.2.1",
+    "next": "^14.2.3",
     "react": "^18.3.1",
     "react-awesome-reveal": "^4.2.11",
     "react-bootstrap": "^2.10.2",
@@ -38,7 +40,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "next dev"
   },
   "eslintConfig": {
     "extends": [

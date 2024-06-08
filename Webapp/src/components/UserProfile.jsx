@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import SmallProfilePic from "./SmallProfilePic";
 import "../styles/UserProfile.css";
 import ProfilePicBio from "./ProfilePicBio";
+import SmallProfilePic from './SmallProfilePic';
 
 export default function UserProfile() {
   //is loading
