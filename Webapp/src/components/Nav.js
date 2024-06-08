@@ -8,11 +8,15 @@ import { logout } from "../redux/userSlice";
 
 export default function NavBar() {
   const dispatch = useDispatch();
-  const navRef = useRef();
+  const navRef = useRef(null);
   const navigate = useNavigate();
 
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
+  };
+
+  const closeNavbar = () => {
+    navRef.current.classList.remove("responsive_nav");
   };
 
   const handleLogout = () => {
@@ -25,27 +29,27 @@ export default function NavBar() {
       <nav className="nav" ref={navRef}>
         <ul className="nav__list">
           <li>
-            <Link to="/" className="nav__link">
+            <Link to="/" className="nav__link" onClick={closeNavbar}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="nav__link">
+            <Link to="/about" className="nav__link" onClick={closeNavbar}>
               About Us
             </Link>
           </li>
           <li>
-            <Link to="/profile" className="nav__link">
+            <Link to="/profile" className="nav__link" onClick={closeNavbar}>
               Profile
             </Link>
           </li>
           <li>
-            <Link to="/breeds" className="nav__link">
+            <Link to="/breeds" className="nav__link" onClick={closeNavbar}>
               Breeds
             </Link>
           </li>
           <li>
-            <Link to="/FindRoute" className="nav__link">
+            <Link to="/FindRoute" className="nav__link" onClick={closeNavbar}>
               Find a Route
             </Link>
           </li>
