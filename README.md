@@ -11,6 +11,8 @@ The user signs-up, inputs their preferences and will be allowed to use our Locat
     * [UI/UX Design and wireframe](#%EF%B8%8F-uiux-design-and-wireframe)
     * [Login/Signup System](#-functional-loginsignup-system)
     * [Find a Route Feature](#-find-a-route-feature)
+    * [Breed Info Feature](#-breed-info-feature)
+    * [Homepage Feature](#-homepage-feature)
 * [Future Improvements](#future-developments-)
 * [Contributors](#contributors)
 
