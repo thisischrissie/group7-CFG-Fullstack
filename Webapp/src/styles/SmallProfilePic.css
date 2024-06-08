@@ -1,10 +1,10 @@
 .profilePicBioImg  {
-  width: 200px;
-  height: 180px;
+  width: 70px;
+  height: 60px;
   border-radius: 50%;
-  align-content: center ;
-  justify-content: center;
   display: flex;
+  align-content: flex-start;
+  justify-content: space-evenly;
 }
 span.smallProfilePicNameSpan {
   display: flex;
