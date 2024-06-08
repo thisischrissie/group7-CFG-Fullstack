@@ -1,34 +1,5 @@
-html {
-  scroll-snap-type: y mandatory;
-}
 
-Card {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-h1 {
-  font-weight: bold;
-  font-size: xx-large;
-  color: #8a5d4d;
-  padding-right: 20px;
-  background-color: transparent;
-}
-
-h2 {
-  display: block;
-  color: #8a5d4d;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  background-color: #fff2e8;
-  justify-content: center;
-  align-items: center;
-}
-
-.myPups {
+Card .myPups {
   background-color: #fff2e8;
   color: #8a5d4d;
   width: 450px;
@@ -38,15 +9,6 @@ h2 {
   border-color: #8a5d4d;
   align-content: center;
 }
-.pupsNearYou {
-  background-color: #f5d0a5;
-  color: #8a5d4d;
-  width: 450px;
-  height: auto;
-  padding: 1vh;
-  border-color: none;
-  margin: 20px;
-}
 
 div.col-xs-12.col-md-6 {
   display: flex;
@@ -54,28 +16,18 @@ div.col-xs-12.col-md-6 {
   align-items: center;
 }
 
-.card-body {
+.homepageCardBody {
   flex: 1 1 auto;
   background-color: transparent;
+  width: auto;
 }
+ul {
+  list-style-type:none;
+  display:block
+  
+ } 
 
-div.pupsNearYou {
-  border-style: 1px solid #8a5d4d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-div {
-  border-style: 1px solid #8a5d4d;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: transparent;
-}
-
-span {
+span .homepageSpan{
   border-style: 1px solid #8a5d4d;
   display: flex;
   justify-content: flex-start;
@@ -85,34 +37,6 @@ span {
   align-self: flex-start;
 }
 
-.pup-name {
-  font-weight: bold;
-  font-size: x-large;
-  display: block;
-  align-self: flex-start;
-  padding: 10px 10px;
-  background-color: transparent;
-}
+ 
 
-.view-all {
-  text-decoration: underline;
-  display: inline;
-  font-size: medium;
-  align-content: wrap;
-  padding-left: 10px;
-  color: #8a5d4d;
-  background-color: transparent;
-}
 
-/* commented out img - conflict with map */
-
-/* img {
-  width: 70px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-content: flex-start;
-  justify-content: space-evenly;
-
-}
- */
