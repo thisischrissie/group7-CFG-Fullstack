@@ -27,17 +27,17 @@ Another scenario is a new dog parent looking to train their puppy and will need 
 Our team will be working in short sprint cycles, with constant communication of new changes being stated in our work chat on slack. Additionally meetings will be made whenever any new idea or change is introduced. This allows all team members to be well established with all progress made on the app. 
 We will make use of the paired programme technique, this enables us to work efficiently and learn together in a collaborative setting. Furthermore, the workload of the entire app will be split equally depending on each team member's wants and needs. 
 
-### Technology and library used:
-Jira
-Slack
-Figma
-VScode
-React
-Redux
-Jest
-Node.JS
-MongoDB
-Google drive
+### Technology and tools used:
+- Jira
+- Slack
+- Figma
+- VScode
+- React
+- Redux
+- Jest
+- Node.JS
+- MongoDB
+- Google drive
 
 
 We have created a roadmap (seen on figma: https://www.figma.com/file/eJMM61TC07tVzUr0sEWPKW/User-flow%2Froadmap%2Fplan?type=whiteboard&node-id=0-1)
@@ -90,6 +90,10 @@ Ensure you have the following installed:
    ```
    npm start
    ```
+7. You can log in using our test account if you don't want to create an account:
+   email: group7@test.com
+   password: 1234567
+   (for testing purpose only)
 
 ## Features
 
@@ -117,9 +121,16 @@ Ensure you have the following installed:
 Preview of the user’s profile(?)
 
 
-## Future Improvements
+## Future Developments
 
-> Due to time constraints, 
+> Due to time constraints, we were unable to implement certain features that would significantly enhance the user experience. We recommend considering the following additions for future development:
+- **Sending/Accepting Friend Requests**: Enable users to connect with one another, fostering a community of dog walkers.
+  
+- **Chatroom**: Provide a platform for users to communicate, facilitating easier scheduling of dog walking times and dates together.
+  
+- **Third-Party Login Authentication**: Integrate login options via Google, Facebook, or Apple to streamline the signup and login process.
+  
+- **Location-Based Services**: Implement features that help users locate the nearest refill stations and waste bins, improving the overall dog-walking experience.
 
 
 ## Contributors
