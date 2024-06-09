@@ -25,7 +25,7 @@ The target audience will be mainly dog owners who are looking for recommendation
 It could help in scenarios where a new dog owner has moved into the area and is searching for walking routes that fit their specific needs. 
 Another scenario is a new dog parent looking to train their puppy and will need to develop their social skills around other dogs.
 
-### How will you be working? What tools will help with that?
+### Working Methodology and Organisation of Workload
 Our team will be working in short sprint cycles, with constant communication of new changes being stated in our work chat on slack. Additionally meetings will be made whenever any new idea or change is introduced. This allows all team members to be well established with all progress made on the app. 
 We will make use of the paired programme technique, this enables us to work efficiently and learn together in a collaborative setting. Furthermore, the workload of the entire app will be split equally depending on each team member's wants and needs. 
 
@@ -46,14 +46,6 @@ We have created a [roadmap](https://www.figma.com/file/eJMM61TC07tVzUr0sEWPKW/Us
 We have organised the workload split depending on an individual members want to learn more about a specific feature to be implemented. E.g. Working on the Location feature to learn and practise more using APIs. 
 As seen on the roadmap, the entire app's progress is shown in phases. Every member has been assigned work to do in every phase as agreed upon in our zoom meetings beforehand. 
 
-* Week 1
-Design & Planning & Research & Git setup
-* Week 2
-Coding
-* Week 3
-Coding & Testing & Combining entire app
-* Week 4
-Coding & Touch Ups & presentation & submission
 ## Local Setup Instructions
 ### Steps to run the application:
 
@@ -168,4 +160,4 @@ The Google Maps API (Application Programming Interface) is a set of web services
 7. Navigate to APIs and Services and  click on Credentials
 8. Click on Create Credentials and then the API key will show up your screen
 9. Now you can optionally restrict the API key.
-10. Copy the Key into your project
+10. Copy the Key into your project as plain text at the path /Webapp/.env
