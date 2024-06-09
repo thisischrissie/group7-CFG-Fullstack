@@ -12,8 +12,7 @@ import Breed from "./pages/Breeds";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { selectUser } from "./redux/userSlice";
 import { useSelector } from "react-redux";
-import DogProfile from "./pages/DogProfile";
-
+// import DogProfile from "./pages/DogProfile"; //future feature
 function App() {
   const user = useSelector(selectUser);
   return (
@@ -27,7 +26,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/breeds" element={<Breed />} />
           <Route path="/FindRoute" element={<DogForm trails={trails} />} />
-          <Route path="/dogs" element={<DogProfile/>} />
+          {/* <Route path="/dogs" element={<DogProfile/>} /> */}
         </Routes>
       </main>
     </Router>
