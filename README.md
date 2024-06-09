@@ -151,7 +151,7 @@ Ensure you have the following installed:
 ## How To Create Google Maps API Key for Free
 
 ### What is it?
-The Google Maps API (Application Programming Interface) is a set of web services and tools provided by Google that allows developers to integrate Google Maps into their websites, applications, and services. The API enables developers to customize maps, embed them into web pages - which is our primary use of the API in our project, create location-based services, and access various features and data from Google Maps.
+The Google Maps API (Application Programming Interface) is a set of web services and tools provided by Google that allows developers to integrate Google Maps into their websites, applications, and services. The API enables developers to customize maps, embed them into web pages - which is our primary use of the API in our project, create location-based services, and access various features and data from Google Maps. Please note that the use of VPNs and AD-Blockers may interfere with the API, so it is recommended you turn them off. 
 
 ### Steps:
 1. Firstly Go to [Google Maps](https://console.cloud.google.com)
@@ -169,3 +169,4 @@ The Google Maps API (Application Programming Interface) is a set of web services
 8. Click on Create Credentials and then the API key will show up your screen
 9. Now you can optionally restrict the API key.
 10. Copy the Key into your project as plain text at the path /Webapp/.env
+11. You should have all dependencies already installed at the beginning with 'npm install', so you are now ready to have fun with this API!
