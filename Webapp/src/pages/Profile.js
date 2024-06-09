@@ -1,13 +1,11 @@
-import React from 'react';
-import UserProfileForm from '../components/UserProfileForm';
-import UserProfile from '../components/UserProfile';
+import React from "react";
+import UserProfile from "../components/UserProfile";
 
-export default function Profile () {
+export default function Profile() {
   return (
     <div>
       <UserProfile />
       {/* <UserProfileForm /> */}
-
     </div>
   );
 }

@@ -264,8 +264,8 @@ var trails = [{
     description: "Calderstones Park features beautiful gardens, lakes, and a children's playground, making it an ideal spot for big dogs and families. The park offers scenic walking routes away from water bodies."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, {
   size: "big",
@@ -282,8 +282,8 @@ var trails = [{
     description: "Calderstones Park features beautiful gardens, lakes, and a children's playground, making it an ideal spot for big dogs and families. The park offers scenic walking routes away from water bodies."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, {
   size: "small",
@@ -300,8 +300,8 @@ var trails = [{
     description: "Calderstones Park features beautiful gardens, lakes, and a children's playground, making it an ideal spot for big dogs and families. The park offers scenic walking routes away from water bodies."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, //LIVERPOOL-Y-N
 {
@@ -315,8 +315,8 @@ var trails = [{
     description: "Croxteth Hall and Country Park offers expansive grounds with woodlands and a historic hall. While suitable for big dogs that enjoy water, it's less child-friendly due to uneven terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, {
   size: "medium",
@@ -329,8 +329,8 @@ var trails = [{
     description: "Croxteth Hall and Country Park offers expansive grounds with woodlands and a historic hall. While suitable for big dogs that enjoy water, it's less child-friendly due to uneven terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, {
   size: "small",
@@ -343,8 +343,8 @@ var trails = [{
     description: "Croxteth Hall and Country Park offers expansive grounds with woodlands and a historic hall. While suitable for big dogs that enjoy water, it's less child-friendly due to uneven terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, //LIVERPOOL-N-Y
 {
@@ -358,8 +358,8 @@ var trails = [{
     description: "Newsham Park features open spaces, gardens, and a children's play area, making it suitable for big dogs and families. The park offers walking routes away from water bodies."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, {
   size: "medium",
@@ -372,8 +372,8 @@ var trails = [{
     description: "Newsham Park features open spaces, gardens, and a children's play area, making it suitable for big dogs and families. The park offers walking routes away from water bodies."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, {
   size: "small",
@@ -386,8 +386,8 @@ var trails = [{
     description: "Newsham Park features open spaces, gardens, and a children's play area, making it suitable for big dogs and families. The park offers walking routes away from water bodies."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, //LIVERPOOL-N-N
 {
@@ -401,8 +401,8 @@ var trails = [{
     description: "Croxteth Hall and Country Park offers expansive grounds with woodlands and a historic hall. While suitable for big dogs that enjoy water, it's less child-friendly due to uneven terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, {
   size: "medium",
@@ -415,8 +415,8 @@ var trails = [{
     description: "Croxteth Hall and Country Park offers expansive grounds with woodlands and a historic hall. While suitable for big dogs that enjoy water, it's less child-friendly due to uneven terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, {
   size: "small",
@@ -429,8 +429,8 @@ var trails = [{
     description: "Croxteth Hall and Country Park offers expansive grounds with woodlands and a historic hall. While suitable for big dogs that enjoy water, it's less child-friendly due to uneven terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 53.4084,
+    lng: -2.9916
   }]
 }, //LONDON
 //LONDON-Y-Y
@@ -449,8 +449,8 @@ var trails = [{
     description: "Hampstead Heath features ponds and open spaces, suitable for big dogs that enjoy water. However, it may not be ideal for families with children due to rugged terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, {
   size: "medium",
@@ -467,8 +467,8 @@ var trails = [{
     description: "Hampstead Heath features ponds and open spaces, suitable for big dogs that enjoy water. However, it may not be ideal for families with children due to rugged terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, {
   size: "small",
@@ -485,8 +485,8 @@ var trails = [{
     description: "Hampstead Heath features ponds and open spaces, suitable for big dogs that enjoy water. However, it may not be ideal for families with children due to rugged terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, //LONDON-Y-N
 {
@@ -500,8 +500,8 @@ var trails = [{
     description: "Hampstead Heath features ponds and open spaces, suitable for big dogs that enjoy water. However, it may not be ideal for families with children due to rugged terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, {
   size: "medium",
@@ -514,8 +514,8 @@ var trails = [{
     description: "Hampstead Heath features ponds and open spaces, suitable for big dogs that enjoy water. However, it may not be ideal for families with children due to rugged terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, {
   size: "small",
@@ -528,8 +528,8 @@ var trails = [{
     description: "Hampstead Heath features ponds and open spaces, suitable for big dogs that enjoy water. However, it may not be ideal for families with children due to rugged terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, //LONDON-N-Y
 {
@@ -543,8 +543,8 @@ var trails = [{
     description: "Richmond Park offers expansive grounds and woodlands, perfect for big dogs that prefer dry walks. It's also suitable for families with children, with plenty of open spaces to explore."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, {
   size: "medium",
@@ -557,8 +557,8 @@ var trails = [{
     description: "Richmond Park offers expansive grounds and woodlands, perfect for big dogs that prefer dry walks. It's also suitable for families with children, with plenty of open spaces to explore."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, {
   size: "small",
@@ -571,8 +571,8 @@ var trails = [{
     description: "Richmond Park offers expansive grounds and woodlands, perfect for big dogs that prefer dry walks. It's also suitable for families with children, with plenty of open spaces to explore."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, //LONDON-N-N
 {
@@ -586,8 +586,8 @@ var trails = [{
     description: "Epping Forest provides a natural woodland environment, suitable for big dogs that prefer dry walks. It may not be ideal for families with children due to rugged terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, {
   size: "medium",
@@ -600,8 +600,8 @@ var trails = [{
     description: "Epping Forest provides a natural woodland environment, suitable for big dogs that prefer dry walks. It may not be ideal for families with children due to rugged terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }, {
   size: "small",
@@ -614,8 +614,8 @@ var trails = [{
     description: "Epping Forest provides a natural woodland environment, suitable for big dogs that prefer dry walks. It may not be ideal for families with children due to rugged terrain."
   }],
   locations: [{
-    lat: 53.483959,
-    lng: -2.244644
+    lat: 51.5074,
+    lng: -0.1278
   }]
 }];
 var _default = trails;
