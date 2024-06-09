@@ -103,7 +103,7 @@ Ensure you have the following installed:
     <img src="https://github.com/thisischrissie/group7-CFG-Fullstack/assets/153684178/94b703e4-1f91-472a-ba57-467b3acbd4c4" alt="Design Image 2" style="width: 48%;">
 </div>
 
-- Colour (Law of contracts meaning of color something like that)
+- Applied ‘The Law of Contrast’ for effective, eye-catching UI and used [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=0F8482) to verify contrast ratios.
 - Utilised Figma to design, you can find our wireframe [here](https://www.figma.com/file/aXhDpbtc9nfqlttswALZmx/web-app-design-idea%3F?type=design&node-id=0-1&mode=design&t=uS4Rtrcs5v1xFMbt-0).
 
 ### 🪄 Functional Login/Signup System
