@@ -1,12 +1,9 @@
 import Image from 'react-bootstrap/Image';
 import '../styles/SmallProfilePic.css';
 
-import dogProfilePic from '../images/dog-pic.avif';
 
-function SmallProfilePic({url, src, alt, pupName}) {
-    src= dogProfilePic
-    alt='Dog profile picture'
-    url='/pupProfile/Leroy'
+function SmallProfilePic(props) {
+    const {url, src, alt, pupName} = props
 
     return (
         <>

@@ -2,9 +2,21 @@ import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import "../styles/UserProfile.css";
-import ProfilePicBio from "./ProfilePicBio";
+import ProfilePicBio from "../styles/ProfilePicBio.css";
 
-export default function UserProfile() {
+export default function DogProfile() {
+    const [profiles, setProfiles] = useState([]); //store profiles here
+
+    const fetchProfiles = async () => {
+      try {
+        const pupProfileResponse = await fetch('http://localhost:3001/api/dogs')
+        const profileData = await pupProfileResponse.json()
+        setProfiles(profileData);
+      }
+    catch (error) {
+        console.log("Error fetching profiles:", error)
+      }
+    };
 
   //is loading 
   const [isLoading, setIsLoading] = useState(true);
@@ -21,27 +33,13 @@ export default function UserProfile() {
 
   }, []);
 
+  useEffect(() => {
+    fetchProfiles();
+  },[]);
+
 
   return (
     <div className="userProfileRow">
-      <div className="col-xs-12 col-md-6 " >
-
-        <Card className>
-          <Card.Body className>
-            {isLoading ? <span>loading</span> :
-              <ProfilePicBio
-                name={user.name}
-                src={user.photo}
-                alt='User profile picture'
-                bio={user.bio}
-              />}
-            <span>
-
-            </span>
-          </Card.Body>
-        </Card>
-      </div>
-      <div className="col-xs-12 col-md-6 ">
         <Card >
           <Card.Body >
             {isLoading ? <span>loading</span> :
@@ -52,6 +50,9 @@ export default function UserProfile() {
                 src={dog.images[0]}
                 alt='Dog profile picture'
                 bio={dog.bio}
+                gender= {dog.gender}
+                breed = {dog.breed}
+                birthday = {dog.birthday}
                 />
               </div>)) 
             }
@@ -59,6 +60,5 @@ export default function UserProfile() {
           </Card.Body>
         </Card>
       </div>
-    </div>
       )
 };
