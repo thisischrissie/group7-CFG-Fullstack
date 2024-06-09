@@ -5,6 +5,7 @@ import SmallProfilePic from "../components/SmallProfilePic";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import ProfilePicBio from "../components/ProfilePicBio";
+import Banner from "../components/dogFactAPI.jsx";
 
 export default function HomePage() {
 
@@ -39,7 +40,15 @@ export default function HomePage() {
     fetchProfiles();
   },[]);
 
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleClickAlert = () => {
+    setShowAlert(true); // Show the alert
+  };
+
   return (
+    <>
+  <Banner />
         <div className="row">
           <div className="col-xs-12 col-md-6 " >
             <Card className="myPups">
@@ -71,13 +80,21 @@ export default function HomePage() {
                   </div>
                   <span className="homepageSpan">
                     <ul> 
+                      
                       {profiles.slice(0,3).map((dog) => (
-                        <li className="homepageDog" key={dog.id}>
-                          <Link to={`/DogProfile/${dog.id}`}>
+                        <li className="homepageDog" key={dog._id}>
+                          <Link to="#" onClick={handleClickAlert}>
                           <SmallProfilePic
+                          href={`/dogs/${dog._id}`}
                           src= {dog.images[0]}/>
                           <span className="homepageSpan">{dog.name}</span>
                           </Link>
+                          {showAlert && (
+                            <div className="alert">
+                              <p>Coming soon!</p>
+                              <button onClick={() => setShowAlert(false)}>Close</button>
+                              </div>
+                            )}
                           </li>
                 )
                 )}
@@ -88,7 +105,7 @@ export default function HomePage() {
             </Card>
           </div>
           </div>
-
+          </>
   );
 }
 

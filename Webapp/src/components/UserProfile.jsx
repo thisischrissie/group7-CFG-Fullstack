@@ -3,8 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import "../styles/UserProfile.css";
 import ProfilePicBio from "./ProfilePicBio";
-import userProfilePic from '../images/ColliemeetsbeagleLogo.png';
-import SmallProfilePic from './SmallProfilePic';
 
 export default function UserProfile() {
 
@@ -33,7 +31,7 @@ export default function UserProfile() {
             {isLoading ? <span>loading</span> :
               <ProfilePicBio
                 name={user.name}
-                src={userProfilePic}
+                src={user.photo}
                 alt='User profile picture'
                 bio={user.bio}
               />}
@@ -52,7 +50,7 @@ export default function UserProfile() {
                 <ProfilePicBio
                 name={dog.name}
                 src={dog.images[0]}
-                alt='User profile picture'
+                alt='Dog profile picture'
                 bio={dog.bio}
                 />
               </div>)) 

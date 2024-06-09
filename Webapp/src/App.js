@@ -27,7 +27,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/breeds" element={<Breed />} />
           <Route path="/FindRoute" element={<DogForm trails={trails} />} />
-          <Route path="/DogProfile" element={<DogProfile/>} />
+          <Route path="/dogs" element={<DogProfile/>} />
         </Routes>
       </main>
     </Router>
