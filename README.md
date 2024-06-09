@@ -1,7 +1,8 @@
 # Group 7 Full Stack Project: Collie Meets Beagle 🐾
 ## About
-We want to build a website that will allow dog owners to create a user profile on our site and depending on what breed/preferences they have selected, our site will show tailored information to them. 
-The user signs-up, inputs their preferences and will be allowed to use our LocationAPI to display information based on their sign-up information. E.g. Large breed users will be shown walking routes of 2km+ 
+**_Connecting Pet Pals, One Walk at a Time! Creating a vibrant community for dog enthusiasts, fostering a deeper sense of connection among fellow dog lovers._**
+
+We aim to build a website for dog owners, allowing them to create user profiles and receive tailored information based on their selected breed and preferences. Users can sign up, input their preferences, and utilize the LocationAPI to display relevant information, such as walking routes for large breeds or learn more about their dog in the breed info page.
 
 ## Table of contents
 <!--ts-->
@@ -20,7 +21,7 @@ The user signs-up, inputs their preferences and will be allowed to use our Locat
 
 ## Project Description
 
-The target audience will be mainly dog owners who are looking for recommendations based on their specific breed of dog (using LocationAPI) and to understand their breeds needs better. 
+Our target audience will be mainly dog owners who are looking for recommendations based on their specific breed of dog (using LocationAPI) and to understand their breeds needs better. 
 
 It could help in scenarios where a new dog owner has moved into the area and is searching for walking routes that fit their specific needs. 
 Another scenario is a new dog parent looking to train their puppy and will need to develop their social skills around other dogs.
@@ -52,7 +53,7 @@ As seen on the roadmap, the entire app's progress is shown in phases. Every memb
 Ensure you have the following installed:
 - Node.js (includes npm) - Download and install from nodejs.org.
 - MongoDB - Download and install from mongodb.com. **Ensure MongoDB server is running.**
-- You will also need a Google API key if you don't have one already, you can follow our instructions [here](#how-to-create-google-maps-api-key-for-free) to create one for free.
+- You will also need to use a Google API key and copy that into our project if you don't have one already, you can follow our instructions [here](#how-to-create-google-maps-api-key-for-free) to create one for free.
   
 1. Clone the Repository:
    
@@ -85,9 +86,12 @@ Ensure you have the following installed:
    npm start
    ```
 7. You can log in using our test account if you don't want to create an account:
+
    email: group7@test.com
+
    password: 1234567
-   (for testing purpose only)
+
+   (for testing purposes only)
 
 ## Features
 
@@ -103,21 +107,25 @@ Ensure you have the following installed:
 
 ### 🪄 Functional Login/Signup System
 (needs to insert an image or gif of Login here)
-- Users can sign up for a new account using a username, email and password
-- Utilising hash function to encrypt user's password
-- Implement Redux to manage user's login state across the application
+- Utilises a hash function to securely encrypt users' passwords.
+- Implements Redux to manage user's login state across the application
+- Features a dynamic UI that toggles between login and registration forms.
+- Displays error messages for missing fields or authentication failures.
 
 ### 🪵 Find a Route feature
+- Enter customizable details to tailor walking preferences
 - Location that directs users to the best walks for their dogs
-- 
-- 
+- Perfectly adapt your route to fit your dogs needs
 
 ### 🐶 Breed Info feature
-- Learn more about your breed page
-- any technology incorporated worth mentioning?
+- Displays a searchable list of dog breeds with detailed information on their qualities, temperament, and care requirements.
+- Allows users to click on a breed name to scroll smoothly to its specific section.
+- Includes a "Back to Top" button for easy navigation.
+- Helps users learn more about their dog breed through detailed breed-specific information.
+
 
 ### 🏠 Homepage feature
-- Preview of the user’s profile(?) API?
+- See the pups near your location!
 
 
 ## Future Developments ✨
