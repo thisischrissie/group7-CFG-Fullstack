@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect"; //Important for .toBeInTheDocument
+import '@testing-library/jest-dom';
 import BreedCard from "./BreedCard";
 //tara
 
