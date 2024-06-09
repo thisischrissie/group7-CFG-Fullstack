@@ -1,69 +1,42 @@
-.App {
-    text-align: center;
-  }
-  
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-  
-  /* @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  } */
-
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-    
-  .card {
-    flex: 0 0 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-    width: 100%;
-    padding: 50px;
-    margin-bottom: 20px;
-    transition: .3s;
-    border: 2px solid transparent;
-    border-radius: 0; 
-    background-color: #FEFAE0; 
-  }
-
-.card:hover{
-  border-color: #CAF377;
-
-}
-
- 
 .card {
-    flex: 0 0 calc(50% - 10px);
-    max-width: calc(90% - 0px);
-    width: 500%;;
-
-    }
-        
-.mission-box {
-    background-color: #582f0e; 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-      }
-      
-.mission-box p {
-    color: #FAEDCD;
-    font-size: 1.1em;
-      }
-      
-      @media(max-width: 969px){
-        section {
-            padding:50px 0;
-        }
+  flex: 0 0 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  width: 100%;
+  padding: 50px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  border-radius: 0;
+  background-color: #fefae0;
 }
 
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #caf377;
+  
+}
+
+.card {
+  flex: 0 0 calc(50% - 10px);
+  max-width: calc(90% - 0px);
+  width: 500%;
+}
+
+.mission-box {
+  background-color: #582f0e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.mission-box p {
+  color: #faedcd;
+  font-size: 1.1em;
+}
+
+@media (max-width: 969px) {
+  section {
+    padding: 50px 0;
+  }
+}

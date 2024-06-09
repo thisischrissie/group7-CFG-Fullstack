@@ -1,12 +1,61 @@
 import React, { useState } from "react";
-import "../styles/About.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import BackToTop from "@uiw/react-back-to-top";
+import styled from "styled-components";
+import "../styles/About.css";
+
+//styling components-tara
+const Container = styled.div`
+  font-family: Arial, sans-serif;
+  text-align: center;
+`;
+
+// const Link = styled.a`
+//   color: #606c38;
+//   text-decoration: none;
+//   cursor: pointer;
+
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// `;
+
+const AccordionItem = styled.div`
+  border: 1px solid #ccd5ae;
+  border-radius: 15px;
+  padding: 20px;
+`;
+
+const AccordionHeader = styled.div`
+  padding: 10px;
+  border-radius: 15px;
+  background-color: ${({ isFirst }) => (isFirst ? "#FEFAE0" : "#E9EDC9")};
+  cursor: ${({ isFirst }) => (isFirst ? "default" : "pointer")};
+  padding: 20px;
+`;
+
+const AccordionBody = styled.div`
+  padding: 10px;
+  display: ${({ active }) => (active ? "block" : "none")};
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+`;
+
+const Title = styled.h2`
+  font-size: 18px;
+  margin: 0;
+  color: #582f0e;
+`;
+
+const Text = styled.p`
+  margin-top: 10px;
+  color: #283618;
+`;
 
 function About() {
   const [cards] = useState([
-    //cards for each of the developer profiles
+    // Cards for each of the developer profiles
     {
-      title: "Meet our developers!👩‍💻",
+      title: "Meet our developers👩‍💻",
     },
     {
       title: "Cecilia 🐾",
@@ -26,60 +75,67 @@ function About() {
     },
     {
       title: "Grace 🐩",
-      text: "Born in London and grew up in Kent. I love the idea of connecting dog lovers! Living in London, I often hear of dog owners looking for fellow dog lovers to connect with. Community is often difficult to find, and our app solves this issue. I love miniature dachshunds and often dog-sit. I am currently working as a Tech Recruiter, and keen to switch to being a Developer. I have challenged myself with doing this frontend page with react on this project as my strongest experience is backend with Python and SQL.",
+      text: "Born in London and grew up in Kent. I love theidea of connecting dog lovers! Living in London, I often hear of dog owners looking for fellow dog lovers to connect with. Community is often difficult to find, and our app solves this issue. I love miniature dachshunds and often dog-sit. I am currently working as a Tech Recruiter, and keen to switch to being a Developer. I have challenged myself with doing this frontend page with react on this project as my strongest experience is backend with Python and SQL.",
     },
   ]);
-  // box to contain class names and then bootstrap cards with accordion
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleAccordionClick = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
-    <div className="App">
+    <Container>
       <div className="mission-box">
         <p>
           <strong>Our Mission:</strong> Connecting Pet Pals, One Walk at a Time!
           Creating a vibrant community for dog enthusiasts, fostering a deeper
           sense of connection among fellow dog lovers.
+          {/* <Link
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit React Documentation"
+          >
+            Learn more
+          </Link> */}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
       </div>
       <div className="container">
-        <div className="row row-cols-1 row-cols-md-2">
-          {cards.map((card, i) => (
-            <div key={i} className="col mb-4 about-card">
-              <div className="card">
-                <div className="card-header">
-                  <h2 className="accordion-header" id={`heading${i}`}>
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target={`#collapse${i}`}
-                      aria-expanded="false"
-                      aria-controls={`collapse${i}`}
-                    >
-                      {card.title}
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  id={`collapse${i}`}
-                  className="accordion-collapse collapse"
-                  aria-labelledby={`heading${i}`}
-                  data-bs-parent="#accordionExample"
+        <div className="row">
+          {cards.map((card, index) => (
+            <div key={index} className="col-md-6 mb-4">
+              <AccordionItem className="card">
+                <AccordionHeader
+                  isFirst={index === 0}
+                  className="card-header"
+                  data-bs-toggle="collapse" // Make sure it's data-bs-toggle
+                  data-bs-target={`#collapse${index}`} // Make sure it's data-bs-target
+                  onClick={() => handleAccordionClick(index)}
                 >
-                  <div className="accordion-body">
-                    <p>{card.text}</p>
-                  </div>
-                </div>
-              </div>
+                  <Title className="accordion-header" id={`heading${index}`}>
+                    {card.title}
+                  </Title>
+                </AccordionHeader>
+                <AccordionBody
+                  active={activeIndex === index}
+                  id={`collapse${index}`}
+                  className="accordion-collapse collapse"
+                  aria-labelledby={`heading${index}`}
+                  data-parent="#accordion"
+                >
+                  {card.text && <Text>{card.text}</Text>}
+                </AccordionBody>
+              </AccordionItem>
             </div>
           ))}
         </div>
       </div>
-    </div>
+      <BackToTop top={30} size={50} buttonText="Top">
+        Top
+      </BackToTop>
+    </Container>
   );
 }
 
