@@ -85,11 +85,10 @@ export default function HomePage() {
                         <li className="homepageDog" key={dog._id}>
                           <Link to="#" onClick={handleClickAlert}>
                           <SmallProfilePic
-                          href={`/dogs/${dog._id}`}
                           src= {dog.images[0]}/>
                           <span className="homepageSpan">{dog.name}</span>
                           </Link>
-                          {showAlert && (
+                          {showAlert && ( 
                             <div className="alert">
                               <p>Coming soon!</p>
                               <button onClick={() => setShowAlert(false)}>Close</button>

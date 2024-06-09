@@ -3,11 +3,11 @@ import '../styles/SmallProfilePic.css';
 
 
 function SmallProfilePic(props) {
-    const {url, src, alt, pupName} = props
+    const {src, alt, pupName} = props
 
     return (
         <>
-            <span className="smallProfilePicNameSpan"><Image className="profilePicBioImg" href={url} src={src} alt={alt} roundedCircle />
+            <span className="smallProfilePicNameSpan"><Image className="profilePicBioImg"  src={src} alt={alt} roundedCircle />
             <h2 className='pup-name'> {pupName}</h2></span>
 
         </>
