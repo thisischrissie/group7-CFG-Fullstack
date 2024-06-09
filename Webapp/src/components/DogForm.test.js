@@ -2,7 +2,6 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import '@testing-library/jest-dom';
 import DogForm from './DogForm';
-//tara
 
 // DogForm component tests
 test('renders the DogForm component', () => {
