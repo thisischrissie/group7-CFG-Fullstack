@@ -107,7 +107,6 @@ Ensure you have the following installed:
 - Utilised Figma to design, you can find our wireframe [here](https://www.figma.com/file/aXhDpbtc9nfqlttswALZmx/web-app-design-idea%3F?type=design&node-id=0-1&mode=design&t=uS4Rtrcs5v1xFMbt-0).
 
 ### 🪄 Functional Login/Signup System
-(needs to insert an image or gif of Login here)
 - Utilises a hash function to securely encrypt users' passwords.
 - Implements Redux to manage user's login state across the application
 - Features a dynamic UI that toggles between login and registration forms.
