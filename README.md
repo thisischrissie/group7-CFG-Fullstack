@@ -131,6 +131,10 @@ Ensure you have the following installed:
 ### DEMO
 
 
+https://github.com/thisischrissie/group7-CFG-Fullstack/assets/153684178/d1aa6b62-a4f0-406c-9078-da3cb43b8950
+
+
+
 
 ## Future Developments ✨
 
