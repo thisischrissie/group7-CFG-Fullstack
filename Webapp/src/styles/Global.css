@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
   margin: 0;
   font-family: "Varela Round", sans-serif;
   background-color: #fff2e8;
+  animation: fadeIn 1s ease-in;
 }
 
 code {

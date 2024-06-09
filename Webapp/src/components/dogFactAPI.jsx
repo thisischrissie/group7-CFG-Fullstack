@@ -41,7 +41,7 @@ const Banner = () => {
 const styles = {
   banner: {
     backgroundColor: '#caf377',
-    color: 'white',
+    color: '#BC6C25',
     padding: '20px',
     textAlign: 'center',
     margin:'0 0 10px',
