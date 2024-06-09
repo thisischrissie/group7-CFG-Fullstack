@@ -14,6 +14,7 @@ We aim to build a website for dog owners, allowing them to create user profiles 
     * [Find a Route Feature](#-find-a-route-feature)
     * [Breed Info Feature](#-breed-info-feature)
     * [Homepage Feature](#-homepage-feature)
+    * [Demo](#demo)
 * [Future Improvements](#future-developments-)
 * [Contributors](#contributors)
 
@@ -126,6 +127,9 @@ Ensure you have the following installed:
 
 ### 🏠 Homepage feature
 - See the pups near your location!
+
+### DEMO
+
 
 
 ## Future Developments ✨
