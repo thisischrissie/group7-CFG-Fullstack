@@ -1,19 +1,25 @@
-
-Card .myPups {
+.myPups {
   background-color: #fff2e8;
   color: #8a5d4d;
-  width: 450px;
+  width: auto;
   height: auto;
   margin: 20px;
-  padding: 1vh;
+  padding: 0;
   border-color: #8a5d4d;
   align-content: center;
 }
-
+.homepagePupPals {
+  font-weight: bold;
+  font-size: xx-large;
+  color: #8a5d4d;
+  padding-right: 20px;
+  background-color: transparent;
+}
 div.col-xs-12.col-md-6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content:centerl
 }
 
 .homepageCardBody {
@@ -21,22 +27,30 @@ div.col-xs-12.col-md-6 {
   background-color: transparent;
   width: auto;
 }
+
 ul {
   list-style-type:none;
-  display:block
-  
+  display:block;
+  justify-content: center;
+  align-items: center;
  } 
+
+ li .homepageDog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ 
 
 span .homepageSpan{
   border-style: 1px solid #8a5d4d;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   padding: 5px;
   flex-wrap: wrap;
-  align-self: flex-start;
+  align-content: center;
 }
 
  
-
 

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import '../styles/About.css'; // Importing the CSS file
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 function About() {
-  const [cards] = useState([
+  const [cards] = useState([ //cards for each of the developer profiles
     {
       title: 'Meet our developers!👩‍💻',
     },
@@ -28,10 +29,10 @@ function About() {
       text: 'Born in London and grew up in Kent. I love the idea of connecting dog lovers! Living in London, I often hear of dog owners looking for fellow dog lovers to connect with. Community is often difficult to find, and our app solves this issue. I love miniature dachshunds and often dog-sit. I am currently working as a Tech Recruiter, and keen to switch to being a Developer. I have challenged myself with doing this frontend page with react on this project as my strongest experience is backend with Python and SQL.'
     },
   ]);
-
+// box to contain class names and then bootstrap cards with accordion
   return (
     <div className="App">
-      <div className="mission-box">
+      <div className="mission-box">  
         <p>
           <strong>Our Mission:</strong> Connecting Pet Pals, One Walk at a Time! Creating a vibrant community for dog enthusiasts, fostering a deeper sense of connection among fellow dog lovers. 
         </p>
@@ -47,7 +48,7 @@ function About() {
         <div className="row row-cols-1 row-cols-md-2">
           {
             cards.map((card, i) => (
-              <div key={i} className="col mb-4">
+              <div key={i} className="col mb-4 about-card">
                 <div className="card">
                   <div className="card-header">
                     <h2 className="accordion-header" id={`heading${i}`}>

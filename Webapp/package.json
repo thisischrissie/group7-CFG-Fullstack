@@ -8,8 +8,6 @@
     "@iconify/react": "^5.0.0",
     "@react-google-maps/api": "^2.19.3",
     "@reduxjs/toolkit": "^2.2.5",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -20,7 +18,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "google-map-react": "^2.2.1",
-    "next": "^14.2.3",
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
     "react": "^18.3.1",
     "react-awesome-reveal": "^4.2.11",
     "react-bootstrap": "^2.10.2",
@@ -33,6 +33,7 @@
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "redux-mock-store": "^1.5.4",
     "styled-components": "^6.1.11",
     "web-vitals": "^2.1.4"
   },
@@ -62,6 +63,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^16.0.0",
+    "jest-fetch-mock": "^3.0.3"
   }
 }

@@ -96,14 +96,16 @@ function Login() {
           <Overlay signinIn={signIn}>
             <LeftOverlayPanel signinIn={signIn}>
               <Title>Welcome Back!</Title>
-              <Paragraph>Please login with your personal info</Paragraph>
+              <Paragraph style={{ color: "#faedcd" }}>
+                Please login with your info
+              </Paragraph>
               <GhostBigButton onClick={() => toggle(true)}>
                 Sign In
               </GhostBigButton>
             </LeftOverlayPanel>
             <RightOverlayPanel signinIn={signIn}>
               <SignUpTitle>Don't have an account?</SignUpTitle>
-              <Paragraph>
+              <Paragraph style={{ color: "#faedcd" }}>
                 Enter your personal details <br />
                 and start the journey with us!
               </Paragraph>
@@ -253,6 +255,9 @@ const LeftOverlayPanel = styled(OverlayPanel)`
   justify-content: center;
   align-items: flex-start;
   padding-left: 30px;
+  ${Title} {
+    color: #faedcd;
+  }
 `;
 
 const RightOverlayPanel = styled(OverlayPanel)`

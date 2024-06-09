@@ -1,7 +1,8 @@
 # Group 7 Full Stack Project: Collie Meets Beagle 🐾
 ## About
-We want to build a website that will allow dog owners to create a user profile on our site and depending on what breed/preferences they have selected, our site will show tailored information to them. 
-The user signs-up, inputs their preferences and will be allowed to use our LocationAPI to display information based on their sign-up information. E.g. Large breed users will be shown walking routes of 2km+ 
+**_Connecting Pet Pals, One Walk at a Time! Creating a vibrant community for dog enthusiasts, fostering a deeper sense of connection among fellow dog lovers._**
+
+We aim to build a website for dog owners, allowing them to create user profiles and receive tailored information based on their selected breed and preferences. Users can sign up, input their preferences, and utilize the LocationAPI to display relevant information, such as walking routes for large breeds or learn more about their dog in the breed info page.
 
 ## Table of contents
 <!--ts-->
@@ -20,12 +21,12 @@ The user signs-up, inputs their preferences and will be allowed to use our Locat
 
 ## Project Description
 
-The target audience will be mainly dog owners who are looking for recommendations based on their specific breed of dog (using LocationAPI) and to understand their breeds needs better. 
+Our target audience will be mainly dog owners who are looking for recommendations based on their specific breed of dog (using LocationAPI) and to understand their breeds needs better. 
 
 It could help in scenarios where a new dog owner has moved into the area and is searching for walking routes that fit their specific needs. 
 Another scenario is a new dog parent looking to train their puppy and will need to develop their social skills around other dogs.
 
-### How will you be working? What tools will help with that?
+### Working Methodology and Organisation of Workload
 Our team will be working in short sprint cycles, with constant communication of new changes being stated in our work chat on slack. Additionally meetings will be made whenever any new idea or change is introduced. This allows all team members to be well established with all progress made on the app. 
 We will make use of the paired programme technique, this enables us to work efficiently and learn together in a collaborative setting. Furthermore, the workload of the entire app will be split equally depending on each team member's wants and needs. 
 
@@ -46,21 +47,13 @@ We have created a [roadmap](https://www.figma.com/file/eJMM61TC07tVzUr0sEWPKW/Us
 We have organised the workload split depending on an individual members want to learn more about a specific feature to be implemented. E.g. Working on the Location feature to learn and practise more using APIs. 
 As seen on the roadmap, the entire app's progress is shown in phases. Every member has been assigned work to do in every phase as agreed upon in our zoom meetings beforehand. 
 
-* Week 1
-Design & Planning & Research & Git setup
-* Week 2
-Coding
-* Week 3
-Coding & Testing & Combining entire app
-* Week 4
-Coding & Touch Ups & presentation & submission
 ## Local Setup Instructions
 ### Steps to run the application:
 
 Ensure you have the following installed:
 - Node.js (includes npm) - Download and install from nodejs.org.
 - MongoDB - Download and install from mongodb.com. **Ensure MongoDB server is running.**
-- You will also need a Google API key if you don't have one already, you can follow our instructions [here](#how-to-create-google-maps-api-key-for-free) to create one for free.
+- You will also need to use a Google API key and copy that into our project if you don't have one already, you can follow our instructions [here](#how-to-create-google-maps-api-key-for-free) to create one for free.
   
 1. Clone the Repository:
    
@@ -93,9 +86,12 @@ Ensure you have the following installed:
    npm start
    ```
 7. You can log in using our test account if you don't want to create an account:
+
    email: group7@test.com
+
    password: 1234567
-   (for testing purpose only)
+
+   (for testing purposes only)
 
 ## Features
 
@@ -111,9 +107,10 @@ Ensure you have the following installed:
 
 ### 🪄 Functional Login/Signup System
 (needs to insert an image or gif of Login here)
-- Users can sign up for a new account using a username, email and password
-- Utilising hash function to encrypt user's password
-- Implement Redux to manage user's login state across the application
+- Utilises a hash function to securely encrypt users' passwords.
+- Implements Redux to manage user's login state across the application
+- Features a dynamic UI that toggles between login and registration forms.
+- Displays error messages for missing fields or authentication failures.
 
 ### 🪵 Find a Route feature
 - Enter customizable details to tailor walking preferences
@@ -121,11 +118,14 @@ Ensure you have the following installed:
 - Perfectly adapt your route to fit your dogs needs
 
 ### 🐶 Breed Info feature
-- Learn more about your breed page
-- any technology incorporated worth mentioning?
+- Displays a searchable list of dog breeds with detailed information on their qualities, temperament, and care requirements.
+- Allows users to click on a breed name to scroll smoothly to its specific section.
+- Includes a "Back to Top" button for easy navigation.
+- Helps users learn more about their dog breed through detailed breed-specific information.
+
 
 ### 🏠 Homepage feature
-- Preview of the user’s profile(?) API?
+- See the pups near your location!
 
 
 ## Future Developments ✨
@@ -168,4 +168,4 @@ The Google Maps API (Application Programming Interface) is a set of web services
 7. Navigate to APIs and Services and  click on Credentials
 8. Click on Create Credentials and then the API key will show up your screen
 9. Now you can optionally restrict the API key.
-10. Copy the Key into your project as plain text at the path  /Webapp/.env
+10. Copy the Key into your project as plain text at the path /Webapp/.env

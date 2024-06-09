@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-// import PhotoModel from "./Photo";
-
 const DogSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -30,18 +28,11 @@ const DogSchema = new mongoose.Schema({
   bio: {
     type: String,
   },
-  images: [
-    {
-      URL: {
-        type: String,
-      },
-      Caption: {
-        type: String,
-      },
-    },
-  ],
+  images: {
+    type: [String],
+    default: undefined
+    }
 });
-
 const DogModel = mongoose.model("Dog", DogSchema);
 
 export default DogModel;
