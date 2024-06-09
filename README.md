@@ -139,6 +139,7 @@ https://github.com/thisischrissie/group7-CFG-Fullstack/assets/153684178/d1aa6b62
 ## Future Developments ✨
 
 > Due to time constraints, we were unable to implement certain features that would significantly enhance the user experience. We recommend considering the following additions for future development:
+- **Homepage Connect with more puppy pals**:Link to other user's puppy profiles via homepage
 - **Sending/Accepting Friend Requests**: Enable users to connect with one another, fostering a community of dog walkers.
   
 - **Chatroom**: Provide a platform for users to communicate, facilitating easier scheduling of dog walking times and dates together.
