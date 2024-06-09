@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Map from "../components/Map"; 
+import Map from "../components/Map";
 
 const PageWrapper = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ flex-direction: column;
 
 const SubmitButton = styled.button`
   padding: 10px 20px;
-  background-color: #606C38;
+  background-color: #606c38;
   color: white;
   border: none;
   border-radius: 5px;
@@ -33,7 +33,7 @@ const SubmitButton = styled.button`
   align-self: center;
 
   &:hover {
-    background-color: #CCD5AE;
+    background-color: #ccd5ae;
   }
 `;
 
@@ -66,14 +66,14 @@ const RadioLabel = styled.label`
 const Button = styled.button`
   padding: 10px 20px;
   margin-right: 10px;
-  background-color: #606C38;
+  background-color: #606c38;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 
   &:hover {
-    background-color: #CCD5AE;
+    background-color: #ccd5ae;
   }
 `;
 
@@ -85,33 +85,6 @@ const ResultWrapper = styled.div`
   height: 100%; // Maximum height
   margin: 0 auto;
   overflow: auto; // Enable scrollbars
-
- @media (max-width: 400px) {
-    max-width: 400px;
-    height: 400px
-  }
-
-  @media (max-width: 800px) {
-    max-width: 800px;
-
-  }
-
-  @media (max-width: 1000px) {
-    width: 1000px;
-    max-height:1000px
-  }
-
-   @media (max-width: 1200px) {
-    width: 1200px;
-  }
-
-  @media (max-width: 1600px) {
-    width: 1600px;
-  }
-
-  @media (max-width: 1900px) {
-    width: 1900px;
-  }
 `;
 
 const ResultContainer = styled.div`
@@ -127,11 +100,6 @@ const MapContainer = styled.div`
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100%;
-
-  @media (min-width: 1200px) {
-    width: 100%;
-    height: 100%;
-  }
 `;
 
 const ButtonGroup = styled.div`
@@ -146,19 +114,19 @@ const ImageGroup = styled.div`
   align-self: center;
   width: 50%;
   overflow: hidden;
-
-  @media (min-width: 1200px) {
-    width: 30%;
-    height: 50%;
-  }
 `;
 
 const WalkImage = styled.div`
   display: flex;
   align-self: center;
   overflow: hidden;
-  max-height: 200px;
-  max-width: 700px;
+  width: 100%; // Make sure it takes the full width of its container
+  max-height: 200px; // Set a maximum height to constrain the image size
+  img {
+    width: 100%; // Make the image take the full width of the container
+    height: auto; // Maintain aspect ratio
+    object-fit: cover; // Cover the entire area of the container
+  }
 `;
 
 const DogForm = ({ trails }) => {
